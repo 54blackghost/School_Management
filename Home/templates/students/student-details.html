@@ -1,0 +1,1749 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block body %}
+
+					<div class="student-profile" id="studentProfile">
+
+						<!-- toast container -->
+						<div class="toast-container position-fixed bottom-0 end-0 p-3" id="sp_toasts" style="z-index:1090"></div>
+
+						<!-- ===================== SKELETON ===================== -->
+						<div class="skeleton-loader" aria-hidden="true">
+							<div class="card"><div class="card-body">
+								<div class="d-flex align-items-center gap-3 flex-wrap">
+									<div class="skeleton skeleton-photo"></div>
+									<div class="flex-grow-1">
+										<div class="skeleton skeleton-line mb-2" style="width:220px;height:20px"></div>
+										<div class="skeleton skeleton-line mb-2" style="width:320px"></div>
+										<div class="skeleton skeleton-line" style="width:180px;height:10px"></div>
+									</div>
+									<div class="d-flex gap-3">
+										<div class="skeleton skeleton-ring"></div><div class="skeleton skeleton-ring"></div><div class="skeleton skeleton-ring"></div>
+									</div>
+								</div>
+							</div></div>
+							<div class="row g-3 mb-3">
+								<div class="col-md-3"><div class="skeleton skeleton-ov"></div></div>
+								<div class="col-md-3"><div class="skeleton skeleton-ov"></div></div>
+								<div class="col-md-3"><div class="skeleton skeleton-ov"></div></div>
+								<div class="col-md-3"><div class="skeleton skeleton-ov"></div></div>
+							</div>
+							<div class="row g-3">
+								<div class="col-12 col-xxl-4"><div class="card"><div class="card-body"><div class="skeleton skeleton-card"></div></div></div></div>
+								<div class="col-12 col-xxl-8"><div class="card"><div class="card-body"><div class="skeleton skeleton-chart mb-3"></div><div class="skeleton skeleton-line mb-2" style="width:80%"></div><div class="skeleton skeleton-line" style="width:60%"></div></div></div></div>
+							</div>
+						</div>
+
+						<!-- ===================== LIVE ===================== -->
+						<div class="profile-live">
+
+							<!-- ============ HERO ============ -->
+							<div class="card">
+								<div class="card-body profile-hero accent-primary">
+									<div class="hero-grid">
+										<div class="hero-photo">
+											<img src="assets/img/students/student-01.jpg" alt="Janet Daniel">
+											<span class="presence" title="Online"></span>
+										</div>
+										<div class="hero-id">
+											<h2 class="hero-name justify-content-center justify-content-lg-start">Janet Daniel 
+												<span class="profile-badge accent-success"><span class="profile-dot"></span>Active</span>
+											</h2>
+											<div class="hero-meta">
+												<span><i class="ti ti-id-badge-2"></i>Admission <b>AD1256589</b></span>
+												<span><i class="ti ti-hash"></i>Roll No <b>35013</b></span>
+												<span><i class="ti ti-school"></i>Class <b>III - A</b></span>
+												<span><i class="ti ti-calendar"></i>AY <b>2024 / 2025</b></span>
+												<span><i class="ti ti-home"></i>House <b>Red</b></span>
+												<span><i class="ti ti-droplet"></i>Blood <b>O +ve</b></span>
+											</div>
+											<div class="badges">
+												<span class="profile-badge accent-warning"><i class="ti ti-award"></i>Scholarship</span>
+												<span class="profile-badge accent-info"><i class="ti ti-bus"></i>Transport</span>
+												<span class="profile-badge accent-purple"><i class="ti ti-building"></i>Hostel</span>
+												<span class="profile-badge accent-teal"><i class="ti ti-users"></i>Parent Portal</span>
+											</div>
+											<div class="complete accent-success">
+												<div class="complete-top"><span>Profile Completion</span><b><span data-count="92" data-suffix="%">0%</span></b></div>
+												<div class="profile-bar"><span data-w="92"></span></div>
+											</div>
+										</div>
+										<div class="hero-right">
+											<div class="ring-group">
+												<div class="profile-ring accent-success">
+													<div class="ring-track" data-val="96"><div class="profile-ring-hole"><span data-count="96" data-suffix="%">0%</span></div></div>
+													<span class="ring-lbl">Attendance</span>
+												</div>
+												<div class="profile-ring accent-primary">
+													<div class="ring-track" data-val="88"><div class="profile-ring-hole"><span data-count="8.8">0</span></div></div>
+													<span class="ring-lbl">Academic</span>
+												</div>
+												<div class="profile-ring accent-purple">
+													<div class="ring-track" data-val="82"><div class="profile-ring-hole"><span data-count="82">0</span></div></div>
+													<span class="ring-lbl">Perf. Index</span>
+												</div>
+											</div>
+											<div class="hero-side">
+												<div class="qr-code" title="Student ID QR"><i class="ti ti-qrcode"></i></div>
+												<div class="contact-list">
+													<a href="javascript:void(0);" class="profile-contact c-green" data-sp-action="call" title="Call" aria-label="Call"><i class="ti ti-phone"></i></a>
+													<a href="javascript:void(0);" class="profile-contact c-whatsapp" data-sp-action="whatsapp" title="WhatsApp" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+													<a href="javascript:void(0);" class="profile-contact" data-sp-action="email" title="Email" aria-label="Email"><i class="ti ti-mail"></i></a>
+													<a href="javascript:void(0);" class="profile-contact c-amber" data-sp-action="message" title="Message" aria-label="Message"><i class="ti ti-message"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- ============ EXECUTIVE OVERVIEW ============ -->
+							<div class="profile-overview-grid mb-3">
+								<div class="profile-overview accent-success"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-checks"></i></span><span class="overview-lbl">Attendance</span></div><div class="overview-val" data-count="96" data-suffix="%">0%</div><div class="overview-sub document-upload"><i class="ti ti-trending-up"></i>+2% this month</div></div>
+								<div class="profile-overview accent-primary"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-award"></i></span><span class="overview-lbl">Academic GPA</span></div><div class="overview-val" data-count="8.8">0</div><div class="overview-sub document-upload"><i class="ti ti-trending-up"></i>Top 5% of class</div></div>
+								<div class="profile-overview accent-teal"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-mood-happy"></i></span><span class="overview-lbl">Behavior</span></div><div class="overview-val" data-count="94" data-suffix="/100">0</div><div class="overview-sub document-upload"><i class="ti ti-trending-up"></i>Excellent</div></div>
+								<div class="profile-overview accent-warning"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-report-money"></i></span><span class="overview-lbl">Fee Status</span></div><div class="overview-val">Due</div><div class="overview-sub profile-down"><i class="ti ti-alert-triangle"></i>$2,000 pending</div></div>
+								<div class="profile-overview accent-info"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-bus"></i></span><span class="overview-lbl">Transport</span></div><div class="overview-val">Route 12</div><div class="overview-sub document-upload"><i class="ti ti-map-pin"></i>Bus 04 · Active</div></div>
+								<div class="profile-overview accent-indigo"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-books"></i></span><span class="overview-lbl">Library</span></div><div class="overview-val" data-count="3">0</div><div class="overview-sub document-upload"><i class="ti ti-book"></i>Books issued</div></div>
+								<div class="profile-overview accent-danger"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-heartbeat"></i></span><span class="overview-lbl">Medical</span></div><div class="overview-val">Fit</div><div class="overview-sub document-upload"><i class="ti ti-vaccine"></i>Vaccinated</div></div>
+								<div class="profile-overview accent-slate"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-login-2"></i></span><span class="overview-lbl">Last Login</span></div><div class="overview-val">2h ago</div><div class="overview-sub"><i class="ti ti-clock"></i>Student portal</div></div>
+								<div class="profile-overview accent-purple"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-users"></i></span><span class="overview-lbl">Parent Portal</span></div><div class="overview-val">Active</div><div class="overview-sub document-upload"><i class="ti ti-circle-check"></i>Linked</div></div>
+								<div class="profile-overview accent-pink"><div class="overview-head"><span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-chart-radar"></i></span><span class="overview-lbl">Performance Index</span></div><div class="overview-val" data-count="82" data-suffix="/100">0</div><div class="overview-sub document-upload"><i class="ti ti-trending-up"></i>Rank 3</div></div>
+							</div>
+
+							<div class="row g-3">
+								<!-- ============ LEFT COLUMN ============ -->
+								<div class="col-xxl-4 col-xl-5">
+
+									<!-- Personal Information -->
+									<div class="card">
+										<div class="card-header"><h3 class="profile-card-title accent-primary fs-16 fw-medium"><span class="tab-icon"><i class="ti ti-user"></i></span>Personal Information</h3></div>
+										<div class="card-body">
+											<div class="definition-list">
+												<div><span class="meta-key">Full Name</span><span class="value">Janet Daniel</span></div>
+												<div><span class="meta-key">Date of Birth</span><span class="value">25 Jan 2008</span></div>
+												<div><span class="meta-key">Age</span><span class="value">16 Years</span></div>
+												<div><span class="meta-key">Gender</span><span class="value">Female</span></div>
+												<div><span class="meta-key">Nationality</span><span class="value">American</span></div>
+												<div><span class="meta-key">Religion</span><span class="value">Christianity</span></div>
+												<div><span class="meta-key">Blood Group</span><span class="value text-danger">O +ve</span></div>
+												<div><span class="meta-key">National ID</span><span class="value">•••• •••• 4521</span></div>
+												<div><span class="meta-key">Passport</span><span class="value">P1234567</span></div>
+												<div><span class="meta-key">Emergency</span><span class="value">+1 809 095 5468</span></div>
+												<div><span class="meta-key">Email</span><span class="value">janet.d@example.com</span></div>
+												<div><span class="meta-key">Phone</span><span class="value">+1 46548 84588</span></div>
+											</div>
+											<div class="mt-3">
+												<span class="meta-key text-uppercase" style="font-size:11px;color:var(--sp-muted)">Languages</span>
+												<div class="profile-chip-set mt-2"><span class="profile-chip">English</span><span class="profile-chip">Spanish</span><span class="profile-chip">French</span></div>
+											</div>
+											<div class="mt-3">
+												<span class="meta-key text-uppercase" style="font-size:11px;color:var(--sp-muted)">Address</span>
+												<p class="value mb-0 mt-1" style="font-weight:500">911 Deer Ridge Drive, Cedar Rapids, IA 52402, USA</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- Parent & Guardian -->
+									<div class="card">
+										<div class="card-header"><h4 class="profile-card-title accent-teal fs-16 fw-medium"><span class="tab-icon"><i class="ti ti-users"></i></span>Parent &amp; Guardian</h4></div>
+										<div class="card-body">
+											<div class="profile-person">
+												<img src="assets/img/parents/parent-01.jpg" onerror="this.src='assets/img/students/student-02.jpg'" alt="">
+												<div><div class="profile-person-name">Robert Daniel</div><div class="person-role">Father · Business Owner, Daniel &amp; Co.</div><div class="person-role">+1 809 095 5468 · robert.d@example.com</div></div>
+												<div class="person-actions">
+													<a href="javascript:void(0);" class="profile-contact c-green" data-sp-action="call" title="Call"><i class="ti ti-phone"></i></a>
+													<a href="javascript:void(0);" class="profile-contact c-whatsapp" data-sp-action="whatsapp" title="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+													<a href="javascript:void(0);" class="profile-contact c-amber" data-sp-action="message" title="Message"><i class="ti ti-message"></i></a>
+												</div>
+											</div>
+											<div class="profile-person">
+												<img src="assets/img/parents/parent-02.jpg" onerror="this.src='assets/img/students/student-03.jpg'" alt="">
+												<div><div class="profile-person-name">Sarah Daniel</div><div class="person-role">Mother · Senior Nurse, City Hospital</div><div class="person-role">+1 809 555 1245 · sarah.d@example.com</div></div>
+												<div class="person-actions">
+													<a href="javascript:void(0);" class="profile-contact c-green" data-sp-action="call" title="Call"><i class="ti ti-phone"></i></a>
+													<a href="javascript:void(0);" class="profile-contact" data-sp-action="email" title="Email"><i class="ti ti-mail"></i></a>
+												</div>
+											</div>
+											<div class="profile-person">
+												<span class="profile-contact" style="width:46px;height:46px;border-radius:12px"><i class="ti ti-shield-check"></i></span>
+												<div><div class="profile-person-name">David Miller</div><div class="person-role">Local Guardian · Uncle</div><div class="person-role">Emergency Contact: +1 809 777 3321</div></div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Transport -->
+									<div class="card">
+										<div class="card-header"><h5 class="profile-card-title accent-info"><span class="tab-icon"><i class="ti ti-bus"></i></span>Transport</h5></div>
+										<div class="card-body">
+											<div class="definition-list one-col">
+												<div><span class="meta-key">Bus Number</span><span class="value">BUS-04 / KA-01-1234</span></div>
+												<div><span class="meta-key">Route</span><span class="value">Route 12 — Downtown</span></div>
+												<div><span class="meta-key">Driver</span><span class="value">Michael Doe · +1 4587 220 145</span></div>
+												<div><span class="meta-key">Pickup Point</span><span class="value">Maple Street · 07:45 AM</span></div>
+												<div><span class="meta-key">Drop Point</span><span class="value">Maple Street · 03:30 PM</span></div>
+												<div><span class="meta-key">GPS Status</span><span class="value"><span class="profile-pill ok"><span class="profile-dot"></span>Live Tracking</span></span></div>
+											</div>
+											<div class="transport-track">
+												<div class="transport-track-map">
+													<span class="transport-track-route"></span>
+													<span class="transport-track-bus"><i class="ti ti-bus"></i></span>
+													<span class="transport-track-school"><i class="ti ti-school"></i></span>
+												</div>
+												<div class="transport-track-info">
+													<div class="transport-track-eta"><span class="profile-dot live"></span><b>ETA 07:41 AM</b><span>Bus 04 · 1.2 km away · on time</span></div>
+													<button type="button" class="profile-button profile-button-sm profile-button-primary w-100" data-sp-action="track_bus"><i class="ti ti-map-2"></i>Track Bus Live</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Hostel -->
+									<div class="card">
+										<div class="card-header"><h5 class="profile-card-title accent-purple"><span class="tab-icon"><i class="ti ti-building"></i></span>Hostel</h5></div>
+										<div class="card-body">
+											<div class="definition-list one-col">
+												<div><span class="meta-key">Room Number</span><span class="value">H-204</span></div>
+												<div><span class="meta-key">Block</span><span class="value">Sunrise Girls Block B</span></div>
+												<div><span class="meta-key">Warden</span><span class="value">Mrs. Angela Smith</span></div>
+												<div><span class="meta-key">Roommates</span><span class="value">Lisa, Kathleen (2)</span></div>
+												<div><span class="meta-key">Check-in Date</span><span class="value">12 Jun 2024</span></div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Medical Record -->
+									<div class="card">
+										<div class="card-header"><h5 class="profile-card-title accent-danger"><span class="tab-icon"><i class="ti ti-heartbeat"></i></span>Medical Record</h5></div>
+										<div class="card-body">
+											<div class="definition-list one-col">
+												<div><span class="meta-key">Blood Group</span><span class="value text-danger">O +ve</span></div>
+												<div><span class="meta-key">Allergies</span><span class="value">Peanuts, Dust</span></div>
+												<div><span class="meta-key">Conditions</span><span class="value">Mild Asthma</span></div>
+												<div><span class="meta-key">Vaccinations</span><span class="value"><span class="profile-pill ok"><span class="profile-dot"></span>Up to date</span></span></div>
+												<div><span class="meta-key">Doctor</span><span class="value">Dr. Emily Clark</span></div>
+											</div>
+											<div class="alert alert-light border mt-2 mb-0" style="font-size:12.5px"><i class="ti ti-notes me-1"></i>Carries an inhaler. Notify nurse during sports.</div>
+										</div>
+									</div>
+
+									<!-- AI Insights -->
+									<div class="card">
+										<div class="card-body">
+											<div class="profile-insight">
+												<div class="insight-head">
+													<span class="profile-insight-badge"><i class="ti ti-sparkles"></i></span>
+													<div><h5>AI Student Insights</h5><span>Generated from 12-month activity</span></div>
+												</div>
+												<div class="profile-insight-item">
+													<div class="t"><i class="ti ti-alert-triangle text-warning"></i>Attendance Risk <span class="insight-risk low ms-auto">Low</span></div>
+													<p>Consistent 96% attendance. No intervention required this term.</p>
+												</div>
+												<div class="profile-insight-item">
+													<div class="t"><i class="ti ti-chart-line text-primary"></i>Performance Prediction</div>
+													<p>Projected to finish the year with a <b>9.1 GPA</b> — a 3% improvement, driven by strong Math &amp; Science trends.</p>
+												</div>
+												<div class="profile-insight-item">
+													<div class="t"><i class="ti ti-bulb text-info"></i>Recommended Actions</div>
+													<p>Enrol in the advanced Science club; schedule extra reading support to lift English scores.</p>
+												</div>
+												<div class="profile-insight-item">
+													<div class="t"><i class="ti ti-thumb-up text-success"></i>Strengths &amp; Weaknesses</div>
+													<p><b>Strengths:</b> Mathematics, Science, Sports. <b>Focus areas:</b> English, History.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<!-- ============ RIGHT COLUMN (TABS) ============ -->
+								<div class="col-xxl-8 col-xl-7">
+									<div class="card sticky-item">
+										<div class="card-header">
+											<div class="tab-list" role="tablist" aria-label="Profile sections">
+												<button type="button" class="profile-tab active" data-tab="overview" role="tab" aria-controls="profile-pane-overview" aria-selected="true"><i class="ti ti-layout-dashboard"></i>Overview</button>
+												<button type="button" class="profile-tab" data-tab="attendance" role="tab" aria-controls="profile-pane-attendance" aria-selected="false"><i class="ti ti-calendar-stats"></i>Attendance</button>
+												<button type="button" class="profile-tab" data-tab="academics" role="tab" aria-controls="profile-pane-academics" aria-selected="false"><i class="ti ti-school"></i>Academics</button>
+												<button type="button" class="profile-tab" data-tab="exams" role="tab" aria-controls="profile-pane-exams" aria-selected="false"><i class="ti ti-clipboard-check"></i>Exams &amp; Results</button>
+												<button type="button" class="profile-tab" data-tab="fees" role="tab" aria-controls="profile-pane-fees" aria-selected="false"><i class="ti ti-report-money"></i>Fees</button>
+												<button type="button" class="profile-tab" data-tab="timetable" role="tab" aria-controls="profile-pane-timetable" aria-selected="false"><i class="ti ti-table"></i>Timetable</button>
+												<button type="button" class="profile-tab" data-tab="health" role="tab" aria-controls="profile-pane-health" aria-selected="false"><i class="ti ti-heartbeat"></i>Health</button>
+												<button type="button" class="profile-tab" data-tab="library" role="tab" aria-controls="profile-pane-library" aria-selected="false"><i class="ti ti-books"></i>Library</button>
+												<button type="button" class="profile-tab" data-tab="documents" role="tab" aria-controls="profile-pane-documents" aria-selected="false"><i class="ti ti-files"></i>Documents</button>
+												<button type="button" class="profile-tab" data-tab="timeline" role="tab" aria-controls="profile-pane-timeline" aria-selected="false"><i class="ti ti-timeline"></i>Timeline</button>
+												<button type="button" class="profile-tab" data-tab="achievements" role="tab" aria-controls="profile-pane-achievements" aria-selected="false"><i class="ti ti-trophy"></i>Achievements</button>
+												<button type="button" class="profile-tab" data-tab="discipline" role="tab" aria-controls="profile-pane-discipline" aria-selected="false"><i class="ti ti-gavel"></i>Discipline</button>
+												<button type="button" class="profile-tab" data-tab="communication" role="tab" aria-controls="profile-pane-communication" aria-selected="false"><i class="ti ti-mail-opened"></i>Communication</button>
+												<button type="button" class="profile-tab" data-tab="notes" role="tab" aria-controls="profile-pane-notes" aria-selected="false"><i class="ti ti-notes"></i>Notes <span class="tab-lock" title="Staff only"><i class="ti ti-lock"></i></span></button>
+												<button type="button" class="profile-tab" data-tab="audit" role="tab" aria-controls="profile-pane-audit" aria-selected="false"><i class="ti ti-history"></i>Audit Trail</button>
+											</div>
+										</div>
+										<div class="card-body">
+
+											<!-- Overview pane -->
+											<div id="profile-pane-overview" class="tab-pane-block active" data-pane="overview" role="tabpanel">
+												<h6 class="block-heading"><i class="ti ti-info-circle"></i>Academic Information</h6>
+												<div class="definition-list mb-3">
+													<div><span class="meta-key">Admission Date</span><span class="value">18 Mar 2024</span></div>
+													<div><span class="meta-key">Admission No</span><span class="value">AD1256589</span></div>
+													<div><span class="meta-key">Roll No</span><span class="value">35013</span></div>
+													<div><span class="meta-key">Class / Section</span><span class="value">III - A</span></div>
+													<div><span class="meta-key">Batch</span><span class="value">2024 Morning</span></div>
+													<div><span class="meta-key">Academic Year</span><span class="value">2024 / 2025</span></div>
+													<div><span class="meta-key">House</span><span class="value">Red House</span></div>
+													<div><span class="meta-key">Class Teacher</span><span class="value">Mr. Teresa Susan</span></div>
+													<div><span class="meta-key">Previous School</span><span class="value">Oxford Matriculation, TX</span></div>
+													<div><span class="meta-key">Roll of Honour</span><span class="value">3 times</span></div>
+												</div>
+												<h6 class="block-heading"><i class="ti ti-book"></i>Subjects</h6>
+												<div class="profile-chip-set mb-3">
+													<span class="profile-chip solid">English</span><span class="profile-chip solid">Mathematics</span><span class="profile-chip solid">Science</span>
+													<span class="profile-chip solid">History</span><span class="profile-chip solid">Geography</span><span class="profile-chip solid">Physical Ed.</span>
+												</div>
+												<h6 class="block-heading"><i class="ti ti-star"></i>Elective Subjects</h6>
+												<div class="profile-chip-set">
+													<span class="profile-chip">Computer Science</span><span class="profile-chip">Music</span><span class="profile-chip">Art &amp; Craft</span>
+												</div>
+											</div>
+
+											<!-- Attendance pane -->
+											<div id="profile-pane-attendance" class="tab-pane-block" data-pane="attendance" role="tabpanel">
+												<div class="row g-3 mb-3 align-items-stretch">
+													<div class="col-xl-12 col-md-5">
+														<div class="attendance-ringcard">
+															<div class="ring-track attendance-ring accent-success" data-val="96">
+																<div class="profile-ring-hole big"><span data-count="96" data-suffix="%">0%</span><small>Present Rate</small></div>
+															</div>
+															<div class="attendance-ringcap"><i class="ti ti-calendar-check"></i><b>184 / 192</b> school days attended</div>
+														</div>
+													</div>
+													<div class="col-xl-12 col-md-7">
+														<div class="fee-stats attendance-stats">
+															<div class="fee-stat accent-success"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-circle-check"></i></span><div class="fee-stat-body"><div class="v" data-count="184">0</div><div class="l">Present Days</div></div></div>
+															<div class="fee-stat accent-danger"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-circle-x"></i></span><div class="fee-stat-body"><div class="v" data-count="4">0</div><div class="l">Absent Days</div></div></div>
+															<div class="fee-stat accent-warning"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-clock-exclamation"></i></span><div class="fee-stat-body"><div class="v" data-count="2">0</div><div class="l">Late Arrivals</div></div></div>
+															<div class="fee-stat accent-info"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-plane-departure"></i></span><div class="fee-stat-body"><div class="v" data-count="3">0</div><div class="l">On Leave</div></div></div>
+														</div>
+													</div>
+												</div>
+
+												<div class="profile-tile mb-4">
+													<div class="profile-tile-head"><h6 class="block-heading mb-0"><i class="ti ti-chart-bar"></i>Monthly Attendance</h6><span class="attendance-avg"><i class="ti ti-trending-up"></i>Avg 93% · Trending up</span></div>
+													<div class="bar-group bar-group-target">
+														<div class="b"><span class="val">92%</span><div class="col" data-h="92"></div><span class="cap">Jul</span></div>
+														<div class="b"><span class="val">88%</span><div class="col" data-h="88"></div><span class="cap">Aug</span></div>
+														<div class="b"><span class="val">95%</span><div class="col" data-h="95"></div><span class="cap">Sep</span></div>
+														<div class="b"><span class="val">90%</span><div class="col" data-h="90"></div><span class="cap">Oct</span></div>
+														<div class="b"><span class="val">97%</span><div class="col" data-h="97"></div><span class="cap">Nov</span></div>
+														<div class="b"><span class="val">96%</span><div class="col" data-h="96"></div><span class="cap">Dec</span></div>
+													</div>
+												</div>
+
+												<div class="row g-3">
+													<div class="col-xl-12 col-md-7">
+														<h6 class="block-heading"><i class="ti ti-calendar-month"></i>Attendance Heatmap <span class="attendance-sub">last 4 weeks</span></h6>
+														<div class="heatmap-block-wrap">
+															<div class="heatmap-block-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+															<div class="heatmap-block">
+																<div class="d l4" title="Present"></div><div class="d l3" title="Present"></div><div class="d l4" title="Present"></div><div class="d l4" title="Present"></div><div class="d late" title="Late"></div><div class="d l2" title="Half day"></div><div class="d l1" title="Holiday"></div>
+																<div class="d l4" title="Present"></div><div class="d l4" title="Present"></div><div class="d l3" title="Present"></div><div class="d l4" title="Present"></div><div class="d l4" title="Present"></div><div class="d l3" title="Present"></div><div class="d l2" title="Holiday"></div>
+																<div class="d l4" title="Present"></div><div class="d absent" title="Absent"></div><div class="d l4" title="Present"></div><div class="d l3" title="Present"></div><div class="d l4" title="Present"></div><div class="d l4" title="Present"></div><div class="d l1" title="Holiday"></div>
+																<div class="d l3" title="Present"></div><div class="d l4" title="Present"></div><div class="d l4" title="Present"></div><div class="d late" title="Late"></div><div class="d l4" title="Present"></div><div class="d l3" title="Present"></div><div class="d l2" title="Holiday"></div>
+															</div>
+															<div class="heatmap-block-legend"><span>Less</span><span class="k" style="background:rgba(22,163,74,.25)"></span><span class="k" style="background:rgba(22,163,74,.5)"></span><span class="k" style="background:rgba(22,163,74,.75)"></span><span class="k" style="background:#16a34a"></span><span>More</span><span class="ms-2 d-inline-flex align-items-center gap-1"><span class="k" style="background:rgba(217,119,6,.85)"></span>Late</span><span class="d-inline-flex align-items-center gap-1"><span class="k" style="background:rgba(220,38,38,.8)"></span>Absent</span></div>
+														</div>
+													</div>
+													<div class="col-xl-12 col-md-5">
+														<h6 class="block-heading"><i class="ti ti-history"></i>Leave History</h6>
+														<div class="profile-event mb-2 sub-green"><span class="profile-event-date"><b>12</b><span>Oct</span></span><div class="profile-event-body"><div class="event-title">Sick Leave</div><div class="profile-timeline-time">12–13 Oct 2024 · 2 days</div></div><span class="profile-pill ok ms-auto">Approved</span></div>
+														<div class="profile-event mb-2 sub-green"><span class="profile-event-date"><b>05</b><span>Sep</span></span><div class="profile-event-body"><div class="event-title">Family Function</div><div class="profile-timeline-time">05 Sep 2024 · 1 day</div></div><span class="profile-pill ok ms-auto">Approved</span></div>
+														<div class="profile-event sub-amber"><span class="profile-event-date"><b>22</b><span>Nov</span></span><div class="profile-event-body"><div class="event-title">Casual Leave</div><div class="profile-timeline-time">22 Nov 2024 · 1 day</div></div><span class="profile-pill warn ms-auto">Pending</span></div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Academics pane -->
+											<div id="profile-pane-academics" class="tab-pane-block" data-pane="academics" role="tabpanel">
+												<div class="row g-3 mb-4">
+													<div class="col-md-4">
+														<div class="profile-kpi grad-primary">
+															<span class="kpi-bg"><i class="ti ti-award"></i></span>
+															<div class="kpi-top"><span class="avatar avatar-icon avatar-md avatar-accent-soft"><i class="ti ti-award"></i></span><span class="kpi-tag">Grade A+</span></div>
+															<div class="kpi-val"><span data-count="8.8">0</span><small>/10</small></div>
+															<div class="kpi-lbl">Current GPA</div>
+															<div class="kpi-bar"><span data-w="88"></span></div>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="profile-kpi grad-gold">
+															<span class="kpi-bg"><i class="ti ti-trophy"></i></span>
+															<div class="kpi-top"><span class="avatar avatar-icon avatar-md avatar-accent-soft"><i class="ti ti-medal"></i></span><span class="kpi-tag">Top 8%</span></div>
+															<div class="kpi-val">3<small>rd</small></div>
+															<div class="kpi-lbl">Class Rank · out of 42 students</div>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="profile-kpi">
+															<div class="profile-tile-head mb-2"><h6 class="block-heading mb-0"><i class="ti ti-trending-up"></i>Performance Trend</h6><span class="attendance-avg"><i class="ti ti-arrow-up-right"></i>+6%</span></div>
+															<div class="profile-trend"><svg viewBox="0 0 300 90" preserveAspectRatio="none"><path class="area" d="M0,65 L50,58 L100,60 L150,42 L200,38 L250,26 L300,20 L300,90 L0,90 Z"></path><path class="line" d="M0,65 L50,58 L100,60 L150,42 L200,38 L250,26 L300,20"></path></svg></div>
+															<div class="trend-x"><span>T1</span><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>Now</span></div>
+														</div>
+													</div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-list-numbers"></i>Subject-wise Marks</h6>
+												<div class="subjmarks mb-4">
+													<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-sci"><i class="ti ti-calculator"></i></span><div class="subject-main"><div class="subject-top"><span class="name">Mathematics</span><span class="grade a">A+</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="94"></div></div></div><div class="subject-pct">94%</div></div>
+													<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-math"><i class="ti ti-flask"></i></span><div class="subject-main"><div class="subject-top"><span class="name">Science</span><span class="grade a">A</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="91"></div></div></div><div class="subject-pct">91%</div></div>
+													<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-geo"><i class="ti ti-map-2"></i></span><div class="subject-main"><div class="subject-top"><span class="name">Geography</span><span class="grade b">B+</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="85"></div></div></div><div class="subject-pct">85%</div></div>
+													<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-his"><i class="ti ti-building-monument"></i></span><div class="subject-main"><div class="subject-top"><span class="name">History</span><span class="grade c">C+</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="72"></div></div></div><div class="subject-pct">72%</div></div>
+													<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-eng"><i class="ti ti-book"></i></span><div class="subject-main"><div class="subject-top"><span class="name">English</span><span class="grade c">C</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="68"></div></div></div><div class="subject-pct">68%</div></div>
+												</div>
+
+												<div class="row g-3 mb-4">
+													<div class="col-md-6"><div class="profile-tile"><h6 class="block-heading"><i class="ti ti-arrow-up-circle text-success"></i>Top Subjects</h6><div class="profile-chip-set"><span class="profile-chip solid"><i class="ti ti-star me-1"></i>Mathematics</span><span class="profile-chip solid"><i class="ti ti-star me-1"></i>Science</span></div></div></div>
+													<div class="col-md-6"><div class="profile-tile"><h6 class="block-heading"><i class="ti ti-arrow-down-circle text-danger"></i>Needs Focus</h6><div class="profile-chip-set"><span class="profile-chip">English</span><span class="profile-chip">History</span></div></div></div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-clipboard-check"></i>Recent Exam Results</h6>
+												<div class="exam-table mb-4">
+													<div class="exam-row head"><span>Exam</span><span>Date</span><span>Score</span><span>Grade</span><span>Result</span></div>
+													<div class="exam-row"><span class="ex-name">Unit Test III</span><span class="ex-date">05 Dec 2024</span><span class="ex-score">460<small>/500</small><i class="score-bar"><b style="width:92%"></b></i></span><span><em class="grade a">A+</em></span><span><span class="profile-pill ok">Pass</span></span></div>
+													<div class="exam-row"><span class="ex-name">Mid Term</span><span class="ex-date">18 Oct 2024</span><span class="ex-score">428<small>/500</small><i class="score-bar"><b style="width:86%"></b></i></span><span><em class="grade a">A</em></span><span><span class="profile-pill ok">Pass</span></span></div>
+													<div class="exam-row"><span class="ex-name">Unit Test II</span><span class="ex-date">12 Sep 2024</span><span class="ex-score">441<small>/500</small><i class="score-bar"><b style="width:88%"></b></i></span><span><em class="grade a">A</em></span><span><span class="profile-pill ok">Pass</span></span></div>
+												</div>
+
+												<div class="profile-remark">
+													<span class="remark-quote"><i class="ti ti-quote"></i></span>
+													<div class="remark-body">
+														<p>Janet is a diligent and focused learner with excellent analytical skills. Encouraging more reading will strengthen her language subjects.</p>
+														<div class="remark-by"><img src="assets/img/teachers/teacher-01.jpg" onerror="this.src='assets/img/students/student-05.jpg'" alt=""><div><b>Mr. Teresa Susan</b><span>Class Teacher · III-A</span></div></div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Exams & Results pane -->
+											<div id="profile-pane-exams" class="tab-pane-block" data-pane="exams" role="tabpanel">
+												<div class="profile-tile-head mb-3">
+													<h6 class="block-heading mb-0"><i class="ti ti-clipboard-check"></i>Exams &amp; Results <span class="attendance-sub">2024–25 · Term II</span></h6>
+													<div class="d-flex gap-2 flex-wrap">
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="download_report"><i class="ti ti-download"></i>Report Card</button>
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="print"><i class="ti ti-printer"></i>Print</button>
+													</div>
+												</div>
+
+												<div class="exam-result mb-4">
+													<div class="exam-result-grade">
+														<span class="exam-result-letter">A</span>
+														<span class="exam-result-band"><i class="ti ti-rosette"></i>Distinction</span>
+													</div>
+													<div class="exam-result-mid">
+														<div class="exam-result-scoreline">
+															<div class="exam-result-pct"><span data-count="89">0</span><i>%</i></div>
+															<div class="exam-result-cap"><b>Overall Score</b><span>Term II · 2024–25 · aggregate of 8 exams</span></div>
+															<span class="exam-result-trend"><i class="ti ti-trending-up"></i>+6% vs Term I</span>
+														</div>
+														<div class="exam-result-meter" aria-hidden="true">
+															<span class="seg f"></span><span class="seg p"></span><span class="seg m"></span><span class="seg d"></span>
+															<i class="exam-result-needle" data-pos="89"></i>
+														</div>
+														<div class="exam-result-scale"><span>Fail</span><span>Pass 40</span><span>Merit 60</span><span>Distinction 85+</span></div>
+													</div>
+													<div class="exam-result-side">
+														<div class="exam-result-stat accent-info"><span class="ic"><i class="ti ti-medal"></i></span><div class="tx"><b>3<sup>rd</sup></b><span>Class Rank · of 42</span></div></div>
+														<div class="exam-result-stat accent-success"><span class="ic"><i class="ti ti-checks"></i></span><div class="tx"><b>100%</b><span>Pass Rate</span></div></div>
+														<div class="exam-result-stat accent-warning"><span class="ic"><i class="ti ti-clipboard-list"></i></span><div class="tx"><b>8</b><span>Exams Taken</span></div></div>
+													</div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-calendar-event"></i>Upcoming Exams <span class="attendance-sub">Final Term</span></h6>
+												<div class="mb-4">
+													<div class="profile-event mb-2 sub-teal"><span class="profile-event-date"><b>18</b><span>Mar</span></span><div class="profile-event-body"><div class="event-title">Mathematics — Final Exam</div><div class="profile-timeline-time">09:00 AM · Hall B · 3 hrs · 100 marks</div></div><span class="profile-pill info ms-auto"><i class="ti ti-hourglass"></i>In 12 days</span></div>
+													<div class="profile-event mb-2 sub-green"><span class="profile-event-date"><b>21</b><span>Mar</span></span><div class="profile-event-body"><div class="event-title">Science — Final Exam</div><div class="profile-timeline-time">09:00 AM · Hall B · 3 hrs · 100 marks</div></div><span class="profile-pill ok ms-auto"><i class="ti ti-ticket"></i>Hall Ticket</span></div>
+													<div class="profile-event sub-amber"><span class="profile-event-date"><b>24</b><span>Mar</span></span><div class="profile-event-body"><div class="event-title">English — Final Exam</div><div class="profile-timeline-time">09:00 AM · Hall A · 3 hrs · 100 marks</div></div><span class="profile-pill warn ms-auto"><i class="ti ti-ticket"></i>Hall Ticket</span></div>
+												</div>
+
+												<div class="profile-tile-head mb-2">
+													<h6 class="block-heading mb-0"><i class="ti ti-list-numbers"></i>Recent Exam Results</h6>
+													<div class="profile-chip-set"><span class="profile-chip solid">All Terms</span><span class="profile-chip">Term I</span><span class="profile-chip">Term II</span></div>
+												</div>
+												<div class="exam-table mb-4">
+													<div class="exam-row head"><span>Exam</span><span>Date</span><span>Score</span><span>Grade</span><span>Result</span></div>
+													<div class="exam-row"><span class="ex-name">Unit Test III</span><span class="ex-date">05 Dec 2024</span><span class="ex-score">460<small>/500</small><i class="score-bar"><b style="width:92%"></b></i></span><span><em class="grade a">A+</em></span><span><span class="profile-pill ok">Pass</span></span></div>
+													<div class="exam-row"><span class="ex-name">Mid Term</span><span class="ex-date">18 Oct 2024</span><span class="ex-score">428<small>/500</small><i class="score-bar"><b style="width:86%"></b></i></span><span><em class="grade a">A</em></span><span><span class="profile-pill ok">Pass</span></span></div>
+													<div class="exam-row"><span class="ex-name">Unit Test II</span><span class="ex-date">12 Sep 2024</span><span class="ex-score">441<small>/500</small><i class="score-bar"><b style="width:88%"></b></i></span><span><em class="grade a">A</em></span><span><span class="profile-pill ok">Pass</span></span></div>
+													<div class="exam-row"><span class="ex-name">Unit Test I</span><span class="ex-date">02 Aug 2024</span><span class="ex-score">399<small>/500</small><i class="score-bar"><b style="width:80%"></b></i></span><span><em class="grade b">B+</em></span><span><span class="profile-pill ok">Pass</span></span></div>
+												</div>
+
+												<div class="row g-3 mb-4">
+													<div class="col-12 col-xl-12">
+														<h6 class="block-heading"><i class="ti ti-list-numbers"></i>Subject Grades — Term II</h6>
+														<div class="subjmarks">
+															<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-sci"><i class="ti ti-calculator"></i></span><div class="subject-main"><div class="subject-top"><span class="name">Mathematics</span><span class="grade a">A+</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="94"></div></div></div><div class="subject-pct">94%</div></div>
+															<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-math"><i class="ti ti-flask"></i></span><div class="subject-main"><div class="subject-top"><span class="name">Science</span><span class="grade a">A</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="91"></div></div></div><div class="subject-pct">91%</div></div>
+															<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-geo"><i class="ti ti-map-2"></i></span><div class="subject-main"><div class="subject-top"><span class="name">Geography</span><span class="grade b">B+</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="85"></div></div></div><div class="subject-pct">85%</div></div>
+															<div class="profile-subject"><span class="avatar avatar-icon avatar-accent-soft s-eng"><i class="ti ti-book"></i></span><div class="subject-main"><div class="subject-top"><span class="name">English</span><span class="grade c">C</span></div><div class="histogram-bar-track"><div class="histogram-bar-fill" data-w="68"></div></div></div><div class="subject-pct">68%</div></div>
+														</div>
+													</div>
+													<div class="col-12 col-xl-12">
+														<h6 class="block-heading"><i class="ti ti-chart-histogram"></i>Term-wise Performance</h6>
+														<div class="bar-group">
+															<div class="b"><span class="val">74%</span><div class="col" data-h="74"></div><span class="cap">UT-1</span></div>
+															<div class="b"><span class="val">80%</span><div class="col" data-h="80"></div><span class="cap">Mid</span></div>
+															<div class="b alt"><span class="val">86%</span><div class="col" data-h="86"></div><span class="cap">UT-2</span></div>
+															<div class="b alt"><span class="val">89%</span><div class="col" data-h="89"></div><span class="cap">UT-3</span></div>
+														</div>
+													</div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-file-certificate"></i>Report Cards &amp; Marksheets</h6>
+												<div class="mb-4">
+													<div class="profile-event mb-2 sub-teal"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-file-text"></i></span><div class="profile-event-body"><div class="event-title">Term II Progress Report — 2024–25</div><div class="profile-timeline-time">Issued 10 Dec 2024 · PDF · 240 KB</div></div><button type="button" class="profile-button profile-button-sm ms-auto" data-sp-action="download_doc"><i class="ti ti-download"></i>Download</button></div>
+													<div class="profile-event sub-green"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-file-text"></i></span><div class="profile-event-body"><div class="event-title">Term I Progress Report — 2024–25</div><div class="profile-timeline-time">Issued 22 Oct 2024 · PDF · 232 KB</div></div><button type="button" class="profile-button profile-button-sm ms-auto" data-sp-action="download_doc"><i class="ti ti-download"></i>Download</button></div>
+												</div>
+
+												<div class="profile-remark remark-teal">
+													<span class="remark-quote"><i class="ti ti-quote"></i></span>
+													<div class="remark-body">
+														<p>Consistent upward trend across all four assessments this year. Strong command of Mathematics and Science; a steady focus on reading will lift the language grades further.</p>
+														<div class="remark-by"><img src="assets/img/teachers/teacher-01.jpg" onerror="this.src='assets/img/students/student-05.jpg'" alt=""><div><b>Mr. Teresa Susan</b><span>Examination In-charge · III-A</span></div><span class="profile-pill ok ms-auto"><i class="ti ti-calendar-check"></i>Reviewed 11 Dec</span></div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Fees pane -->
+											<div id="profile-pane-fees" class="tab-pane-block" data-pane="fees" role="tabpanel">
+
+												<!-- Due payment banner -->
+												<div class="fee-banner">
+													<span class="avatar avatar-icon avatar-lg avatar-accent"><i class="ti ti-calendar-due"></i></span>
+													<div class="fee-banner-txt">
+														<b>Next Payment Due</b>
+														<span>Term II Tuition · <strong>$2,000</strong> · due 25 Dec 2024</span>
+													</div>
+													<div class="d-flex gap-2 ms-auto flex-wrap">
+														<button type="button" class="btn btn-primary btn-sm" data-sp-action="pay" data-amount="2500" data-for="Term II Tuition + Transport"><i class="ti ti-credit-card me-1"></i>Pay Now</button>
+														<a href="student-details.html" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#add_fees_collect"><i class="ti ti-cash me-1"></i>Collect Fees</a>
+													</div>
+												</div>
+
+												<div class="row g-3 mb-1">
+													<!-- Donut -->
+													<div class="col-12 col-xl-12">
+														<div class="fee-donut-card">
+															<div class="fee-donut">
+																<svg viewBox="0 0 140 140">
+																	<circle class="track" cx="70" cy="70" r="54"></circle>
+																	<circle cx="70" cy="70" r="54" stroke="#16a34a" stroke-dasharray="245.1 339" stroke-dashoffset="0"></circle>
+																	<circle cx="70" cy="70" r="54" stroke="#d97706" stroke-dasharray="75.4 339" stroke-dashoffset="-245.1"></circle>
+																	<circle cx="70" cy="70" r="54" stroke="#dc2626" stroke-dasharray="18.9 339" stroke-dashoffset="-320.5"></circle>
+																</svg>
+																<div class="fee-donut-center"><span class="pct" data-count="72" data-suffix="%">0%</span><span class="lbl">Collected</span></div>
+															</div>
+															<div class="donut-legend">
+																<div><span class="k" style="background:#16a34a"></span>Paid <b>$6,500</b></div>
+																<div><span class="k" style="background:#d97706"></span>Pending <b>$2,000</b></div>
+																<div><span class="k" style="background:#dc2626"></span>Overdue <b>$500</b></div>
+															</div>
+														</div>
+													</div>
+													<!-- Stat tiles -->
+													<div class="col-12 col-xl-12">
+														<div class="fee-stats">
+															<div class="fee-stat accent-primary"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-wallet"></i></span><div class="fee-stat-body"><div class="v">$9,000</div><div class="l">Total Fees</div></div></div>
+															<div class="fee-stat accent-success"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-circle-check"></i></span><div class="fee-stat-body"><div class="v">$6,500</div><div class="l">Paid</div><div class="fee-mini"><span data-w="72" style="background:#16a34a"></span></div></div></div>
+															<div class="fee-stat accent-warning"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-clock-dollar"></i></span><div class="fee-stat-body"><div class="v">$2,000</div><div class="l">Pending</div><div class="fee-mini"><span data-w="22" style="background:#d97706"></span></div></div></div>
+															<div class="fee-stat accent-danger"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-alert-triangle"></i></span><div class="fee-stat-body"><div class="v">$500</div><div class="l">Overdue</div><div class="fee-mini"><span data-w="6" style="background:#dc2626"></span></div></div></div>
+														</div>
+														<div class="fee-progress">
+															<div class="top"><span>Collection Progress</span><b>$6,500 / $9,000</b></div>
+															<div class="profile-bar"><span data-w="72" style="background:linear-gradient(90deg,#16a34a,#22c55e)"></span></div>
+														</div>
+														<div class="d-flex gap-2 flex-wrap mt-3">
+															<span class="profile-pill info"><i class="ti ti-award"></i>Scholarship 15%</span>
+															<span class="profile-pill ok"><i class="ti ti-discount"></i>Sibling Discount 5%</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="row g-3 mt-1">
+													<!-- Invoices -->
+													<div class="col-12 col-xl-12">
+														<h6 class="block-heading"><i class="ti ti-file-invoice"></i>Invoices</h6>
+														<div class="fee-invoices">
+															<div class="profile-invoice">
+																<span class="avatar avatar-icon avatar-md bg-warning-transparent"><i class="ti ti-file-dollar"></i></span>
+																<div class="invoice-main"><div class="invoice-title">Term II Tuition</div><div class="invoice-sub">#INV-2043 · 01 Dec 2024</div></div>
+																<div class="invoice-amt">$2,000<span class="profile-pill warn">Pending</span></div>
+																<button type="button" class="profile-button profile-button-sm profile-button-primary" data-sp-action="pay" data-amount="2000" data-for="Term II Tuition (#INV-2043)"><i class="ti ti-credit-card"></i>Pay</button>
+																<a href="javascript:void(0);" class="profile-button profile-icon-button" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a>
+															</div>
+															<div class="profile-invoice">
+																<span class="avatar avatar-icon avatar-md bg-danger-transparent"><i class="ti ti-file-dollar"></i></span>
+																<div class="invoice-main"><div class="invoice-title">Transport Fee</div><div class="invoice-sub">#INV-1988 · 02 Nov 2024</div></div>
+																<div class="invoice-amt">$500<span class="profile-pill bad">Overdue</span></div>
+																<button type="button" class="profile-button profile-button-sm profile-button-primary" data-sp-action="pay" data-amount="500" data-for="Transport Fee (#INV-1988)"><i class="ti ti-credit-card"></i>Pay</button>
+																<a href="javascript:void(0);" class="profile-button profile-icon-button" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a>
+															</div>
+															<div class="profile-invoice">
+																<span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-file-dollar"></i></span>
+																<div class="invoice-main"><div class="invoice-title">Term I Tuition</div><div class="invoice-sub">#INV-1902 · 05 Sep 2024</div></div>
+																<div class="invoice-amt">$3,000<span class="profile-pill ok">Paid</span></div>
+																<a href="javascript:void(0);" class="profile-button profile-icon-button" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a>
+															</div>
+															<div class="profile-invoice">
+																<span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-file-dollar"></i></span>
+																<div class="invoice-main"><div class="invoice-title">Admission Fee</div><div class="invoice-sub">#INV-1855 · 18 Mar 2024</div></div>
+																<div class="invoice-amt">$3,500<span class="profile-pill ok">Paid</span></div>
+																<a href="javascript:void(0);" class="profile-button profile-icon-button" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a>
+															</div>
+														</div>
+													</div>
+													<!-- Payment timeline -->
+													<div class="col-12 col-xl-12">
+														<h6 class="block-heading"><i class="ti ti-history"></i>Payment Timeline</h6>
+														<div class="profile-timeline">
+															<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-success"><i class="ti ti-cash"></i></span><div class="profile-timeline-time">05 Sep 2024</div><div class="timeline-title">$3,000 Paid</div><div class="timeline-desc">Term I Tuition · Card ····4521</div></div>
+															<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-success"><i class="ti ti-cash"></i></span><div class="profile-timeline-time">18 Mar 2024</div><div class="timeline-title">$3,500 Paid</div><div class="timeline-desc">Admission Fee · Bank Transfer</div></div>
+															<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-warning"><i class="ti ti-clock"></i></span><div class="profile-timeline-time">01 Dec 2024</div><div class="timeline-title">$2,000 Pending</div><div class="timeline-desc">Term II Tuition · Awaiting payment</div></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Timetable pane -->
+											<div id="profile-pane-timetable" class="tab-pane-block" data-pane="timetable" role="tabpanel">
+												<div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+													<h6 class="block-heading mb-0"><i class="ti ti-clock-hour-4"></i>Today's Classes <span class="today-chip">Monday · 5 Periods</span></h6>
+												</div>
+												<div class="profile-schedule mb-4">
+													<div class="schedule-item now sub-blue">
+														<div class="profile-schedule-time"><b>08:00</b><span>08:45</span></div>
+														<span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-calculator"></i></span>
+														<div class="schedule-body"><div class="schedule-subj">Mathematics</div><div class="profile-schedule-meta"><i class="ti ti-user"></i>Mr. Teresa Susan<i class="ti ti-door ms-2"></i>Room 101</div></div>
+														<span class="schedule-status now"><span class="profile-dot"></span>Now</span>
+													</div>
+													<div class="schedule-item sub-green">
+														<div class="profile-schedule-time"><b>08:45</b><span>09:30</span></div>
+														<span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-flask"></i></span>
+														<div class="schedule-body"><div class="schedule-subj">Science</div><div class="profile-schedule-meta"><i class="ti ti-user"></i>Ms. Amelia Grant<i class="ti ti-door ms-2"></i>Lab 2</div></div>
+														<span class="schedule-status next">Next</span>
+													</div>
+													<div class="schedule-item sub-purple">
+														<div class="profile-schedule-time"><b>09:45</b><span>10:30</span></div>
+														<span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-book"></i></span>
+														<div class="schedule-body"><div class="schedule-subj">English</div><div class="profile-schedule-meta"><i class="ti ti-user"></i>Mr. John Reed<i class="ti ti-door ms-2"></i>Room 101</div></div>
+														<span class="schedule-status">Upcoming</span>
+													</div>
+													<div class="schedule-item sub-teal">
+														<div class="profile-schedule-time"><b>11:00</b><span>11:45</span></div>
+														<span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-map-2"></i></span>
+														<div class="schedule-body"><div class="schedule-subj">Geography</div><div class="profile-schedule-meta"><i class="ti ti-user"></i>Ms. Kate Ford<i class="ti ti-door ms-2"></i>Room 104</div></div>
+														<span class="schedule-status">Upcoming</span>
+													</div>
+													<div class="schedule-item sub-amber">
+														<div class="profile-schedule-time"><b>12:00</b><span>12:45</span></div>
+														<span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-run"></i></span>
+														<div class="schedule-body"><div class="schedule-subj">Physical Education</div><div class="profile-schedule-meta"><i class="ti ti-user"></i>Coach Ryan<i class="ti ti-map-pin ms-2"></i>Ground</div></div>
+														<span class="schedule-status">Upcoming</span>
+													</div>
+												</div>
+												<h6 class="block-heading"><i class="ti ti-table"></i>Weekly Timetable</h6>
+												<div class="timetable-wrap mb-2">
+													<table class="profile-timetable">
+														<thead><tr><th>Day</th><th>P1<span>08:00</span></th><th>P2<span>08:45</span></th><th>P3<span>09:45</span></th><th>P4<span>11:00</span></th><th>P5<span>12:00</span></th></tr></thead>
+														<tbody>
+															<tr><th>Mon</th><td><span class="tt-chip s-math">Math</span></td><td><span class="tt-chip s-sci">Science</span></td><td><span class="tt-chip s-eng">English</span></td><td><span class="tt-chip s-geo">Geo</span></td><td><span class="tt-chip s-pe">PE</span></td></tr>
+															<tr><th>Tue</th><td><span class="tt-chip s-eng">English</span></td><td><span class="tt-chip s-math">Math</span></td><td><span class="tt-chip s-his">History</span></td><td><span class="tt-chip free">Free</span></td><td><span class="tt-chip s-mus">Music</span></td></tr>
+															<tr><th>Wed</th><td><span class="tt-chip s-sci">Science</span></td><td><span class="tt-chip s-math">Math</span></td><td><span class="tt-chip s-geo">Geo</span></td><td><span class="tt-chip s-eng">English</span></td><td><span class="tt-chip s-art">Art</span></td></tr>
+															<tr><th>Thu</th><td><span class="tt-chip s-math">Math</span></td><td><span class="tt-chip s-his">History</span></td><td><span class="tt-chip s-sci">Science</span></td><td><span class="tt-chip s-pe">PE</span></td><td><span class="tt-chip s-cs">CS</span></td></tr>
+															<tr><th>Fri</th><td><span class="tt-chip s-eng">English</span></td><td><span class="tt-chip s-sci">Science</span></td><td><span class="tt-chip s-math">Math</span></td><td><span class="tt-chip s-geo">Geo</span></td><td><span class="tt-chip free">Library</span></td></tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="timetable-legend mb-4">
+													<span><i class="tt-key s-math"></i>Math</span><span><i class="tt-key s-sci"></i>Science</span><span><i class="tt-key s-eng"></i>English</span><span><i class="tt-key s-geo"></i>Geography</span><span><i class="tt-key s-his"></i>History</span><span><i class="tt-key s-pe"></i>PE</span><span><i class="tt-key s-mus"></i>Music</span><span><i class="tt-key s-art"></i>Art</span><span><i class="tt-key s-cs"></i>CS</span>
+												</div>
+												<div class="row g-3">
+													<div class="col-12 col-xl-12">
+														<h6 class="block-heading"><i class="ti ti-notebook"></i>Upcoming Exams</h6>
+														<div class="profile-event mb-2 sub-pink"><span class="profile-event-date"><b>12</b><span>Jan</span></span><div class="profile-event-body"><div class="event-title">Final Term — Math</div><div class="profile-timeline-time">09:00 AM · Hall A</div></div><span class="profile-pill info ms-auto">In 6 days</span></div>
+														<div class="profile-event sub-green"><span class="profile-event-date"><b>14</b><span>Jan</span></span><div class="profile-event-body"><div class="event-title">Final Term — Science</div><div class="profile-timeline-time">09:00 AM · Lab 2</div></div><span class="profile-pill info ms-auto">In 8 days</span></div>
+													</div>
+													<div class="col-12 col-xl-12">
+														<h6 class="block-heading"><i class="ti ti-checkbox"></i>Assignments &amp; Homework</h6>
+														<div class="profile-event mb-2 sub-amber"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-clipboard-list"></i></span><div class="profile-event-body"><div class="event-title">Algebra Worksheet 5</div><div class="profile-timeline-time">Due 09 Jan 2025</div></div><span class="profile-pill warn ms-auto">Pending</span></div>
+														<div class="profile-event sub-green"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-clipboard-check"></i></span><div class="profile-event-body"><div class="event-title">Science Project — Ecosystems</div><div class="profile-timeline-time">Submitted 04 Jan 2025</div></div><span class="profile-pill ok ms-auto">Done</span></div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Health & Vaccination pane -->
+											<div id="profile-pane-health" class="tab-pane-block" data-pane="health" role="tabpanel">
+												<div class="profile-tile-head mb-3">
+													<h6 class="block-heading mb-0"><i class="ti ti-heartbeat"></i>Health &amp; Wellness <span class="attendance-sub">Last checkup 12 Nov 2024</span></h6>
+													<div class="d-flex gap-2 flex-wrap">
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="download_doc"><i class="ti ti-download"></i>Health Card</button>
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="call"><i class="ti ti-phone"></i>Call Nurse</button>
+													</div>
+												</div>
+
+												<!-- Emergency banner -->
+												<div class="emergency mb-4">
+													<span class="avatar avatar-icon bg-danger"><i class="ti ti-urgent"></i></span>
+													<div class="emergency-body">
+														<b>Emergency Protocol · Allergy Alert</b>
+														<span>Severe <strong>peanut allergy</strong> — carries EpiPen. Mild asthma (inhaler in bag). Blood group <strong>O+</strong>.</span>
+													</div>
+													<div class="emergency-contact">
+														<div><span class="l">Emergency Contact</span><b>Robert Daniel · +1 809 095 5468</b></div>
+														<button type="button" class="profile-button profile-button-sm profile-button-primary" data-sp-action="call"><i class="ti ti-phone-call"></i>Call</button>
+													</div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-activity-heartbeat"></i>Vitals &amp; Measurements</h6>
+												<div class="vital-group mb-4">
+													<div class="vital"><span class="ic accent-danger"><i class="ti ti-ruler-2"></i></span><div class="tx"><b>142 <small>cm</small></b><span>Height</span></div></div>
+													<div class="vital"><span class="ic accent-info"><i class="ti ti-weight"></i></span><div class="tx"><b>36 <small>kg</small></b><span>Weight</span></div></div>
+													<div class="vital"><span class="ic accent-success"><i class="ti ti-heartbeat"></i></span><div class="tx"><b>17.9</b><span>BMI · Normal</span></div></div>
+													<div class="vital"><span class="ic accent-danger"><i class="ti ti-droplet"></i></span><div class="tx"><b>O+</b><span>Blood Group</span></div></div>
+													<div class="vital"><span class="ic accent-warning"><i class="ti ti-eye"></i></span><div class="tx"><b>6 / 6</b><span>Vision</span></div></div>
+													<div class="vital"><span class="ic accent-purple"><i class="ti ti-dental"></i></span><div class="tx"><b>Good</b><span>Dental</span></div></div>
+												</div>
+
+												<div class="row g-3 mb-4">
+													<div class="col-12 col-lg-12">
+														<h6 class="block-heading"><i class="ti ti-vaccine"></i>Immunization History</h6>
+														<div class="exam-table">
+															<div class="exam-row vaccination-row head"><span>Vaccine</span><span>Dose</span><span>Date</span><span>Status</span></div>
+															<div class="exam-row vaccination-row"><span class="ex-name">MMR</span><span>2 of 2</span><span class="ex-date">14 Apr 2021</span><span><span class="profile-pill ok"><i class="ti ti-check"></i>Completed</span></span></div>
+															<div class="exam-row vaccination-row"><span class="ex-name">DPT Booster</span><span>Booster</span><span class="ex-date">09 Sep 2022</span><span><span class="profile-pill ok"><i class="ti ti-check"></i>Completed</span></span></div>
+															<div class="exam-row vaccination-row"><span class="ex-name">Hepatitis B</span><span>3 of 3</span><span class="ex-date">21 Jan 2020</span><span><span class="profile-pill ok"><i class="ti ti-check"></i>Completed</span></span></div>
+															<div class="exam-row vaccination-row"><span class="ex-name">Influenza (annual)</span><span>2024–25</span><span class="ex-date">Due 15 Aug 2025</span><span><span class="profile-pill warn"><i class="ti ti-clock"></i>Due Soon</span></span></div>
+															<div class="exam-row vaccination-row"><span class="ex-name">Typhoid</span><span>Booster</span><span class="ex-date">Overdue</span><span><span class="profile-pill bad"><i class="ti ti-alert-triangle"></i>Overdue</span></span></div>
+														</div>
+													</div>
+													<div class="col-12 col-lg-12">
+														<h6 class="block-heading"><i class="ti ti-alert-hexagon"></i>Allergies &amp; Conditions</h6>
+														<div class="mb-3">
+															<div class="profile-condition sev-high"><span class="avatar avatar-icon avatar-md bg-light text-muted"><i class="ti ti-nut"></i></span><div class="condition-body"><b>Peanut Allergy</b><span>Severe · anaphylaxis risk</span></div><span class="profile-pill bad ms-auto">High</span></div>
+															<div class="profile-condition sev-mid"><span class="avatar avatar-icon avatar-md bg-light text-muted"><i class="ti ti-lungs"></i></span><div class="condition-body"><b>Asthma</b><span>Mild · exercise-induced</span></div><span class="profile-pill warn ms-auto">Medium</span></div>
+															<div class="profile-condition sev-low"><span class="avatar avatar-icon avatar-md bg-light text-muted"><i class="ti ti-eyeglass"></i></span><div class="condition-body"><b>Myopia</b><span>Corrected with lenses</span></div><span class="profile-pill info ms-auto">Low</span></div>
+														</div>
+														<h6 class="block-heading"><i class="ti ti-pill"></i>Current Medication</h6>
+														<div class="profile-condition sev-low"><span class="avatar avatar-icon avatar-md bg-light text-muted"><i class="ti ti-first-aid-kit"></i></span><div class="condition-body"><b>Salbutamol Inhaler</b><span>As needed · in school bag</span></div></div>
+													</div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-stethoscope"></i>Medical Checkup History</h6>
+												<div class="mb-4">
+													<div class="profile-event mb-2 sub-teal"><span class="profile-event-date"><b>12</b><span>Nov</span></span><div class="profile-event-body"><div class="event-title">Annual Health Screening</div><div class="profile-timeline-time">Height/weight normal · vision 6/6 · no concerns</div></div><span class="profile-pill ok ms-auto">Cleared</span></div>
+													<div class="profile-event mb-2 sub-green"><span class="profile-event-date"><b>18</b><span>Aug</span></span><div class="profile-event-body"><div class="event-title">Dental Camp</div><div class="profile-timeline-time">No cavities · routine cleaning advised</div></div><span class="profile-pill ok ms-auto">Healthy</span></div>
+													<div class="profile-event sub-amber"><span class="profile-event-date"><b>02</b><span>Jul</span></span><div class="profile-event-body"><div class="event-title">Sick Bay Visit</div><div class="profile-timeline-time">Mild fever · sent home · recovered</div></div><span class="profile-pill warn ms-auto">Resolved</span></div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-list-check"></i>Emergency Response Steps</h6>
+												<div class="row g-3 mb-4">
+													<div class="col-md-4"><div class="profile-step"><span class="step-n">1</span><div><b>Allergic Reaction</b><p>Administer EpiPen from bag, call school nurse &amp; parent immediately.</p></div></div></div>
+													<div class="col-md-4"><div class="profile-step"><span class="step-n">2</span><div><b>Asthma Attack</b><p>Use Salbutamol inhaler, keep upright, monitor breathing.</p></div></div></div>
+													<div class="col-md-4"><div class="profile-step"><span class="step-n">3</span><div><b>Escalation</b><p>If no improvement in 5 min, call emergency services (911).</p></div></div></div>
+												</div>
+
+												<div class="profile-remark remark-teal">
+													<span class="remark-quote"><i class="ti ti-quote"></i></span>
+													<div class="remark-body">
+														<p>Overall healthy and active. Ensure influenza and typhoid boosters are updated before the new term. Allergy protocol is well managed by staff and family.</p>
+														<div class="remark-by"><img src="assets/img/teachers/teacher-05.jpg" onerror="this.src='assets/img/students/student-09.jpg'" alt=""><div><b>Dr. Anita Rao</b><span>School Medical Officer</span></div><span class="profile-pill ok ms-auto"><i class="ti ti-calendar-check"></i>12 Nov 2024</span></div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Library pane -->
+											<div id="profile-pane-library" class="tab-pane-block" data-pane="library" role="tabpanel">
+												<div class="fee-stats library-stats mb-4">
+													<div class="fee-stat accent-primary"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-book"></i></span><div class="fee-stat-body"><div class="v" data-count="3">0</div><div class="l">Issued</div></div></div>
+													<div class="fee-stat accent-success"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-book-upload"></i></span><div class="fee-stat-body"><div class="v" data-count="24">0</div><div class="l">Returned</div></div></div>
+													<div class="fee-stat accent-danger"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-alert-triangle"></i></span><div class="fee-stat-body"><div class="v" data-count="1">0</div><div class="l">Overdue</div></div></div>
+													<div class="fee-stat accent-info"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-bookmark"></i></span><div class="fee-stat-body"><div class="v" data-count="2">0</div><div class="l">Reserved</div></div></div>
+												</div>
+
+												<div class="row g-3">
+													<div class="col-12 col-lg-12">
+														<h6 class="block-heading"><i class="ti ti-book"></i>Issued Books</h6>
+														<div class="books">
+															<div class="profile-book overdue">
+																<span class="avatar avatar-initial bg-pink">S</span>
+																<div class="book-main">
+																	<div class="book-title">The Secret Garden</div>
+																	<div class="book-author">F. H. Burnett</div>
+																	<div class="book-meta"><span><i class="ti ti-calendar-plus"></i>Issued 02 Dec</span><span class="text-danger"><i class="ti ti-clock-hour-3"></i>Due 16 Dec · 6 days late</span></div>
+																</div>
+																<div class="book-side"><span class="profile-pill bad">Overdue</span><a href="javascript:void(0);" class="profile-button profile-button-sm" data-sp-action="download_doc"><i class="ti ti-refresh"></i>Renew</a></div>
+															</div>
+															<div class="profile-book">
+																<span class="avatar avatar-initial bg-warning">M</span>
+																<div class="book-main">
+																	<div class="book-title">Matilda</div>
+																	<div class="book-author">Roald Dahl</div>
+																	<div class="book-meta"><span><i class="ti ti-calendar-plus"></i>Issued 20 Dec</span><span><i class="ti ti-clock-hour-3"></i>Due 03 Jan</span></div>
+																</div>
+																<div class="book-side"><span class="profile-pill ok">On time</span><a href="javascript:void(0);" class="profile-button profile-button-sm" data-sp-action="download_doc"><i class="ti ti-refresh"></i>Renew</a></div>
+															</div>
+															<div class="profile-book">
+																<span class="avatar avatar-initial bg-purple">A</span>
+																<div class="book-main">
+																	<div class="book-title">A Brief History of Time</div>
+																	<div class="book-author">Stephen Hawking</div>
+																	<div class="book-meta"><span><i class="ti ti-calendar-plus"></i>Issued 28 Dec</span><span><i class="ti ti-clock-hour-3"></i>Due 11 Jan</span></div>
+																</div>
+																<div class="book-side"><span class="profile-pill ok">On time</span><a href="javascript:void(0);" class="profile-button profile-button-sm" data-sp-action="download_doc"><i class="ti ti-refresh"></i>Renew</a></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 col-lg-12">
+														<h6 class="block-heading"><i class="ti ti-bookmark"></i>Reservations</h6>
+														<div class="books mb-4">
+															<div class="profile-book resv">
+																<span class="avatar avatar-initial bg-primary">H</span>
+																<div class="book-main"><div class="book-title">Harry Potter I</div><div class="book-author">J. K. Rowling</div></div>
+																<span class="profile-queue">Queue #1</span>
+															</div>
+															<div class="profile-book resv">
+																<span class="avatar avatar-initial bg-teal">T</span>
+																<div class="book-main"><div class="book-title">The Hobbit</div><div class="book-author">J. R. R. Tolkien</div></div>
+																<span class="profile-queue">Queue #2</span>
+															</div>
+														</div>
+														<h6 class="block-heading"><i class="ti ti-history"></i>Reading History</h6>
+														<div class="reading-history">
+															<div class="reading-mini"><span class="avatar avatar-icon avatar-md avatar-accent-soft"><i class="ti ti-book-2"></i></span><div class="flex-grow-1"><b>Charlotte's Web</b><div class="star-rating"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div></div></div>
+															<div class="reading-mini"><span class="avatar avatar-icon avatar-md avatar-accent-soft"><i class="ti ti-book-2"></i></span><div class="flex-grow-1"><b>The Jungle Book</b><div class="star-rating"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star"></i></div></div></div>
+															<div class="reading-mini"><span class="avatar avatar-icon avatar-md avatar-accent-soft"><i class="ti ti-book-2"></i></span><div class="flex-grow-1"><b>Wonder</b><div class="star-rating"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div></div></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Documents pane -->
+											<div id="profile-pane-documents" class="tab-pane-block" data-pane="documents" role="tabpanel">
+												<div class="profile-tile-head mb-3">
+													<h6 class="block-heading mb-0"><i class="ti ti-files"></i>Documents <span class="attendance-sub">6 files</span></h6>
+													<div class="d-flex gap-2">
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="upload"><i class="ti ti-upload"></i>Upload</button>
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="download"><i class="ti ti-download"></i>Download All</button>
+													</div>
+												</div>
+												<div class="row g-3">
+													<div class="col-md-6 col-xl-4">
+														<div class="profile-document accent-primary">
+															<div class="document-top"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-file-certificate"></i></span><span class="document-ext">PDF</span></div>
+															<div class="document-name">Birth Certificate</div>
+															<div class="document-meta"><i class="ti ti-database"></i>240 KB<i class="ti ti-calendar ms-2"></i>12 Mar 2024</div>
+															<div class="document-foot"><span class="profile-pill ok"><i class="ti ti-discount"></i>Verified</span><span class="document-actions"><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" title="View"><i class="ti ti-eye"></i></a><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a></span></div>
+														</div>
+													</div>
+													<div class="col-md-6 col-xl-4">
+														<div class="profile-document accent-info">
+															<div class="document-top"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-file-text"></i></span><span class="document-ext">PDF</span></div>
+															<div class="document-name">Transfer Certificate</div>
+															<div class="document-meta"><i class="ti ti-database"></i>180 KB<i class="ti ti-calendar ms-2"></i>18 Mar 2024</div>
+															<div class="document-foot"><span class="profile-pill ok"><i class="ti ti-discount"></i>Verified</span><span class="document-actions"><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" title="View"><i class="ti ti-eye"></i></a><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a></span></div>
+														</div>
+													</div>
+													<div class="col-md-6 col-xl-4">
+														<div class="profile-document accent-success">
+															<div class="document-top"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-report"></i></span><span class="document-ext">PDF</span></div>
+															<div class="document-name">Mark Sheets (2023-24)</div>
+															<div class="document-meta"><i class="ti ti-database"></i>320 KB<i class="ti ti-calendar ms-2"></i>30 Jun 2024</div>
+															<div class="document-foot"><span class="profile-pill ok"><i class="ti ti-discount"></i>Verified</span><span class="document-actions"><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" title="View"><i class="ti ti-eye"></i></a><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a></span></div>
+														</div>
+													</div>
+													<div class="col-md-6 col-xl-4">
+														<div class="profile-document accent-danger">
+															<div class="document-top"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-heartbeat"></i></span><span class="document-ext">PDF</span></div>
+															<div class="document-name">Medical Records</div>
+															<div class="document-meta"><i class="ti ti-database"></i>150 KB<i class="ti ti-calendar ms-2"></i>12 Jun 2024</div>
+															<div class="document-foot"><span class="profile-pill ok"><i class="ti ti-discount"></i>Verified</span><span class="document-actions"><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" title="View"><i class="ti ti-eye"></i></a><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a></span></div>
+														</div>
+													</div>
+													<div class="col-md-6 col-xl-4">
+														<div class="profile-document accent-warning">
+															<div class="document-top"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-id"></i></span><span class="document-ext">JPG</span></div>
+															<div class="document-name">Identity Proof</div>
+															<div class="document-meta"><i class="ti ti-database"></i>210 KB<i class="ti ti-calendar ms-2"></i>15 Mar 2024</div>
+															<div class="document-foot"><span class="profile-pill warn"><i class="ti ti-clock"></i>Pending</span><span class="document-actions"><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" title="View"><i class="ti ti-eye"></i></a><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a></span></div>
+														</div>
+													</div>
+													<div class="col-md-6 col-xl-4">
+														<div class="profile-document accent-purple">
+															<div class="document-top"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-photo"></i></span><span class="document-ext">ZIP</span></div>
+															<div class="document-name">Passport Photos</div>
+															<div class="document-meta"><i class="ti ti-database"></i>1.2 MB<i class="ti ti-calendar ms-2"></i>15 Mar 2024</div>
+															<div class="document-foot"><span class="profile-pill ok"><i class="ti ti-discount"></i>Verified</span><span class="document-actions"><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" title="View"><i class="ti ti-eye"></i></a><a href="javascript:void(0);" class="profile-button profile-icon-button profile-button-sm" data-sp-action="download_doc" title="Download"><i class="ti ti-download"></i></a></span></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Timeline pane -->
+											<div id="profile-pane-timeline" class="tab-pane-block" data-pane="timeline" role="tabpanel">
+												<h6 class="block-heading"><i class="ti ti-timeline"></i>Activity Timeline</h6>
+												<div class="profile-timeline">
+													<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-success"><i class="ti ti-trophy"></i></span><div class="profile-timeline-time">05 Dec 2024</div><div class="timeline-title">Achievement Unlocked</div><div class="timeline-desc">Won 1st place in the Inter-School Math Olympiad.</div></div>
+													<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-primary"><i class="ti ti-clipboard-check"></i></span><div class="profile-timeline-time">05 Dec 2024</div><div class="timeline-title">Exam Result Published</div><div class="timeline-desc">Unit Test III — Scored 460/500 (Grade A+).</div></div>
+													<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-warning"><i class="ti ti-cash"></i></span><div class="profile-timeline-time">01 Dec 2024</div><div class="timeline-title">Fee Invoice Generated</div><div class="timeline-desc">Term II tuition invoice #INV-2043 of $2,000.</div></div>
+													<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-info"><i class="ti ti-book"></i></span><div class="profile-timeline-time">28 Nov 2024</div><div class="timeline-title">Library Book Issued</div><div class="timeline-desc">"A Brief History of Time" issued from the library.</div></div>
+													<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-teal"><i class="ti ti-message"></i></span><div class="profile-timeline-time">22 Nov 2024</div><div class="timeline-title">Teacher Note Added</div><div class="timeline-desc">Class teacher praised improvement in problem solving.</div></div>
+													<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-success"><i class="ti ti-calendar-check"></i></span><div class="profile-timeline-time">01 Nov 2024</div><div class="timeline-title">Perfect Attendance</div><div class="timeline-desc">100% attendance for the month of October.</div></div>
+													<div class="profile-timeline"><span class="avatar avatar-icon avatar-sm avatar-rounded avatar-accent-soft accent-primary"><i class="ti ti-user-plus"></i></span><div class="profile-timeline-time">18 Mar 2024</div><div class="timeline-title">Admission Completed</div><div class="timeline-desc">Enrolled into Class III - A for AY 2024/2025.</div></div>
+												</div>
+											</div>
+
+											<!-- Achievements pane -->
+											<div id="profile-pane-achievements" class="tab-pane-block" data-pane="achievements" role="tabpanel">
+												<div class="fee-stats library-stats mb-4">
+													<div class="fee-stat accent-warning"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-trophy"></i></span><div class="fee-stat-body"><div class="v" data-count="12">0</div><div class="l">Total Awards</div></div></div>
+													<div class="fee-stat accent-danger"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-medal"></i></span><div class="fee-stat-body"><div class="v" data-count="3">0</div><div class="l">Gold Medals</div></div></div>
+													<div class="fee-stat accent-info"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-certificate"></i></span><div class="fee-stat-body"><div class="v" data-count="8">0</div><div class="l">Certificates</div></div></div>
+													<div class="fee-stat accent-purple"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-badges"></i></span><div class="fee-stat-body"><div class="v" data-count="6">0</div><div class="l">Badges</div></div></div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-trophy"></i>Awards &amp; Honors</h6>
+												<div class="row g-3 mb-4">
+													<div class="col-6 col-md-4"><div class="profile-award gold"><span class="award-ribbon">1st</span><span class="award-medal"><i class="ti ti-medal"></i></span><div class="award-title">Math Olympiad</div><div class="award-cat"><i class="ti ti-school"></i>Academic · 2024</div></div></div>
+													<div class="col-6 col-md-4"><div class="profile-award gold"><span class="award-ribbon">Gold</span><span class="award-medal"><i class="ti ti-run"></i></span><div class="award-title">100m Sprint</div><div class="award-cat"><i class="ti ti-ball-football"></i>Sports · Sports Day</div></div></div>
+													<div class="col-6 col-md-4"><div class="profile-award gold"><span class="award-ribbon">1st</span><span class="award-medal"><i class="ti ti-flask"></i></span><div class="award-title">Science Fair</div><div class="award-cat"><i class="ti ti-school"></i>Academic · 2024</div></div></div>
+													<div class="col-6 col-md-4"><div class="profile-award silver"><span class="award-ribbon">2nd</span><span class="award-medal"><i class="ti ti-microphone-2"></i></span><div class="award-title">Debate Championship</div><div class="award-cat"><i class="ti ti-masks-theater"></i>Cultural · 2024</div></div></div>
+													<div class="col-6 col-md-4"><div class="profile-award bronze"><span class="award-ribbon">3rd</span><span class="award-medal"><i class="ti ti-vocabulary"></i></span><div class="award-title">Spelling Bee</div><div class="award-cat"><i class="ti ti-masks-theater"></i>Cultural · 2024</div></div></div>
+													<div class="col-6 col-md-4"><div class="profile-award blue"><span class="award-ribbon">Cert</span><span class="award-medal"><i class="ti ti-calendar-check"></i></span><div class="award-title">Perfect Attendance</div><div class="award-cat"><i class="ti ti-checks"></i>Attendance · Oct</div></div></div>
+												</div>
+
+												<div class="row g-3">
+													<div class="col-md-7">
+														<h6 class="block-heading"><i class="ti ti-sparkles"></i>Recent Achievements</h6>
+														<div class="profile-event mb-2 sub-amber"><span class="profile-event-date"><b>05</b><span>Dec</span></span><div class="profile-event-body"><div class="event-title">Won 1st place — Math Olympiad</div><div class="profile-timeline-time">Inter-School · Academic</div></div><span class="profile-pill warn ms-auto"><i class="ti ti-medal"></i>Gold</span></div>
+														<div class="profile-event mb-2 sub-green"><span class="profile-event-date"><b>01</b><span>Nov</span></span><div class="profile-event-body"><div class="event-title">Perfect Attendance Award</div><div class="profile-timeline-time">October · Certificate</div></div><span class="profile-pill ok ms-auto">Certificate</span></div>
+														<div class="profile-event sub-teal"><span class="profile-event-date"><b>18</b><span>Oct</span></span><div class="profile-event-body"><div class="event-title">Gold — 100m Sprint</div><div class="profile-timeline-time">Annual Sports Day · Sports</div></div><span class="profile-pill info ms-auto"><i class="ti ti-medal"></i>Gold</span></div>
+													</div>
+													<div class="col-md-5">
+														<h6 class="block-heading"><i class="ti ti-badges"></i>Earned Badges</h6>
+														<div class="badge-alt-group">
+															<div class="badge-alt b-1"><span class="avatar avatar-icon avatar-lg avatar-rounded avatar-accent"><i class="ti ti-star"></i></span><span>Star Performer</span></div>
+															<div class="badge-alt b-2"><span class="avatar avatar-icon avatar-lg avatar-rounded avatar-accent"><i class="ti ti-brain"></i></span><span>Quick Learner</span></div>
+															<div class="badge-alt b-3"><span class="avatar avatar-icon avatar-lg avatar-rounded avatar-accent"><i class="ti ti-friends"></i></span><span>Team Player</span></div>
+															<div class="badge-alt b-4"><span class="avatar avatar-icon avatar-lg avatar-rounded avatar-accent"><i class="ti ti-book"></i></span><span>Bookworm</span></div>
+															<div class="badge-alt b-5"><span class="avatar avatar-icon avatar-lg avatar-rounded avatar-accent"><i class="ti ti-target-arrow"></i></span><span>Top Scorer</span></div>
+															<div class="badge-alt b-6"><span class="avatar avatar-icon avatar-lg avatar-rounded avatar-accent"><i class="ti ti-calendar-star"></i></span><span>Perfect Week</span></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Discipline pane -->
+											<div id="profile-pane-discipline" class="tab-pane-block" data-pane="discipline" role="tabpanel">
+												<div class="row g-3 mb-4 align-items-stretch">
+													<div class="col-md-5">
+														<div class="attendance-ringcard">
+															<div class="ring-track attendance-ring accent-success" data-val="94">
+																<div class="profile-ring-hole big"><span data-count="94">0</span><small>Conduct Score</small></div>
+															</div>
+															<div class="attendance-ringcap"><i class="ti ti-mood-happy"></i><b>Excellent</b> behaviour this term</div>
+														</div>
+													</div>
+													<div class="col-md-7">
+														<div class="fee-stats attendance-stats">
+															<div class="fee-stat accent-success"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-thumb-up"></i></span><div class="fee-stat-body"><div class="v" data-count="86">0</div><div class="l">Positive Points</div></div></div>
+															<div class="fee-stat accent-warning"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-alert-triangle"></i></span><div class="fee-stat-body"><div class="v" data-count="1">0</div><div class="l">Warnings</div></div></div>
+															<div class="fee-stat accent-danger"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-ban"></i></span><div class="fee-stat-body"><div class="v" data-count="0">0</div><div class="l">Suspensions</div></div></div>
+															<div class="fee-stat accent-info"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-messages"></i></span><div class="fee-stat-body"><div class="v" data-count="2">0</div><div class="l">Counselling</div></div></div>
+														</div>
+													</div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-clipboard-list"></i>Behaviour Reports</h6>
+												<div class="mb-4">
+													<div class="profile-event mb-2 sub-green"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-thumb-up"></i></span><div class="profile-event-body"><div class="event-title">Helped a peer in class</div><div class="profile-timeline-time">18 Nov 2024 · Positive behaviour</div></div><span class="profile-pill ok ms-auto">+5 pts</span></div>
+													<div class="profile-event mb-2 sub-amber"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-alert-triangle"></i></span><div class="profile-event-body"><div class="event-title">Late submission of homework</div><div class="profile-timeline-time">02 Nov 2024 · Advisory issued</div></div><span class="profile-pill warn ms-auto">Warning</span></div>
+													<div class="profile-event sub-green"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-star"></i></span><div class="profile-event-body"><div class="event-title">Excellent conduct in assembly</div><div class="profile-timeline-time">14 Oct 2024 · Recognised by staff</div></div><span class="profile-pill ok ms-auto">+8 pts</span></div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-messages"></i>Counselling &amp; Teacher Feedback</h6>
+												<div class="profile-remark remark-teal">
+													<span class="remark-quote"><i class="ti ti-quote"></i></span>
+													<div class="remark-body">
+														<p>Well-behaved and respectful. Occasionally needs reminders on deadlines. Recommended a light time-management session.</p>
+														<div class="remark-by"><img src="assets/img/teachers/teacher-02.jpg" onerror="this.src='assets/img/students/student-07.jpg'" alt=""><div><b>Ms. Rita Owen</b><span>School Counsellor</span></div><span class="profile-pill ok ms-auto"><i class="ti ti-calendar-check"></i>Last session 20 Nov</span></div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Communication pane -->
+											<div id="profile-pane-communication" class="tab-pane-block" data-pane="communication" role="tabpanel">
+												<div class="profile-tile-head mb-3">
+													<h6 class="block-heading mb-0"><i class="ti ti-mail-opened"></i>Communication Log <span class="attendance-sub">28 interactions</span></h6>
+													<div class="d-flex gap-2 flex-wrap">
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="message"><i class="ti ti-message"></i>Message</button>
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="email"><i class="ti ti-mail"></i>Email</button>
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="call"><i class="ti ti-phone"></i>Call</button>
+														<button type="button" class="profile-button profile-button-sm" data-sp-action="meeting"><i class="ti ti-calendar-plus"></i>Meeting</button>
+													</div>
+												</div>
+
+												<div class="fee-stats library-stats mb-4">
+													<div class="fee-stat accent-info"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-mail"></i></span><div class="fee-stat-body"><div class="v" data-count="12">0</div><div class="l">Emails</div></div></div>
+													<div class="fee-stat accent-success"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-message"></i></span><div class="fee-stat-body"><div class="v" data-count="8">0</div><div class="l">Messages</div></div></div>
+													<div class="fee-stat accent-warning"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-device-mobile"></i></span><div class="fee-stat-body"><div class="v" data-count="5">0</div><div class="l">SMS</div></div></div>
+													<div class="fee-stat accent-teal"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-phone"></i></span><div class="fee-stat-body"><div class="v" data-count="3">0</div><div class="l">Calls</div></div></div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-messages"></i>Recent Messages &amp; Emails</h6>
+												<div class="msgs mb-4">
+													<div class="profile-message">
+														<span class="avatar avatar-icon bg-primary-transparent"><i class="ti ti-mail"></i></span>
+														<div class="message-main">
+															<div class="message-top"><b class="message-title">Term II Fee Reminder</b><span class="message-date">01 Dec 2024</span></div>
+															<div class="message-sub">To Robert Daniel <span class="message-chan email">Email</span></div>
+															<div class="message-snippet">Gentle reminder that the Term II tuition of $2,000 is due on 25 Dec. Kindly clear the pending amount.</div>
+														</div>
+														<span class="profile-pill ok ms-auto"><i class="ti ti-check"></i>Delivered</span>
+													</div>
+													<div class="profile-message">
+														<span class="avatar avatar-icon bg-success-transparent"><i class="ti ti-message"></i></span>
+														<div class="message-main">
+															<div class="message-top"><b class="message-title">Parent-Teacher Meeting</b><span class="message-date">25 Nov 2024</span></div>
+															<div class="message-sub">To Sarah Daniel <span class="message-chan message">Message</span></div>
+															<div class="message-snippet">You are invited to the Term II PTM on 28 Nov at 10:00 AM in Room 101 to discuss progress.</div>
+														</div>
+														<span class="profile-pill ok ms-auto"><i class="ti ti-checks"></i>Read</span>
+													</div>
+													<div class="profile-message">
+														<span class="avatar avatar-icon bg-warning-transparent"><i class="ti ti-device-mobile"></i></span>
+														<div class="message-main">
+															<div class="message-top"><b class="message-title">Holiday Notice</b><span class="message-date">20 Nov 2024</span></div>
+															<div class="message-sub">To Both Parents <span class="message-chan sms">SMS</span></div>
+															<div class="message-snippet">School will remain closed on 22 Nov for the state holiday. Regular classes resume on 23 Nov.</div>
+														</div>
+														<span class="profile-pill info ms-auto"><i class="ti ti-send"></i>Sent</span>
+													</div>
+													<div class="profile-message">
+														<span class="avatar avatar-icon bg-teal-transparent"><i class="ti ti-phone"></i></span>
+														<div class="message-main">
+															<div class="message-top"><b class="message-title">Attendance Follow-up</b><span class="message-date">12 Nov 2024</span></div>
+															<div class="message-sub">Call to Robert Daniel <span class="message-chan call">Call · 4m 12s</span></div>
+															<div class="message-snippet">Discussed Janet's attendance and confirmed the upcoming sick-leave dates.</div>
+														</div>
+														<span class="profile-pill ok ms-auto"><i class="ti ti-phone-check"></i>Completed</span>
+													</div>
+												</div>
+
+												<div class="row g-3">
+													<div class="col-md-6">
+														<h6 class="block-heading"><i class="ti ti-calendar-event"></i>Meeting History</h6>
+														<div class="profile-event mb-2 sub-green"><span class="profile-event-date"><b>28</b><span>Nov</span></span><div class="profile-event-body"><div class="event-title">PTM — Term II</div><div class="profile-timeline-time">With Class Teacher · 10:00 AM</div></div><span class="profile-pill ok ms-auto">Attended</span></div>
+														<div class="profile-event sub-teal"><span class="profile-event-date"><b>15</b><span>Sep</span></span><div class="profile-event-body"><div class="event-title">Career Guidance</div><div class="profile-timeline-time">With Counsellor · 02:00 PM</div></div><span class="profile-pill ok ms-auto">Attended</span></div>
+													</div>
+													<div class="col-md-6">
+														<h6 class="block-heading"><i class="ti ti-speakerphone"></i>Announcements</h6>
+														<div class="announcement pinned mb-2"><span class="avatar avatar-icon bg-purple-transparent"><i class="ti ti-confetti"></i></span><div class="announcement-body"><b>Annual Day — 20 Jan 2025</b><div class="profile-timeline-time">All students to participate</div></div><i class="ti ti-pinned announcement-pin"></i></div>
+														<div class="announcement"><span class="avatar avatar-icon bg-purple-transparent"><i class="ti ti-snowflake"></i></span><div class="announcement-body"><b>Winter Break: 25–31 Dec</b><div class="profile-timeline-time">School reopens 02 Jan 2025</div></div></div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Notes / Counsellor Log pane -->
+											<div id="profile-pane-notes" class="tab-pane-block" data-pane="notes" role="tabpanel">
+												<div class="staff-bar mb-3">
+													<span class="avatar avatar-icon avatar-md bg-warning"><i class="ti ti-lock"></i></span>
+													<div class="staff-bar-txt"><b>Staff-only Notes</b><span>Private log visible to teachers &amp; counsellors. Not shown on the parent portal.</span></div>
+													<label class="switch ms-auto"><input type="checkbox" id="notesPrivateView" checked=""><span class="switch-track"></span><span class="switch-lbl">Private view</span></label>
+												</div>
+
+												<div class="note-composer mb-4">
+													<div class="note-composer-top">
+														<img src="assets/img/profiles/avatar-27.jpg" onerror="this.src='assets/img/students/student-05.jpg'" alt="">
+														<textarea class="form-control" rows="2" placeholder="Add a counsellor / teacher note about Janet…" aria-label="Add a counsellor / teacher note about Janet…"></textarea>
+													</div>
+													<div class="note-composer-foot">
+														<div class="profile-chip-set">
+															<span class="profile-chip solid" data-note-cat=""><i class="ti ti-messages me-1"></i>Counselling</span>
+															<span class="profile-chip" data-note-cat="">Academic</span>
+															<span class="profile-chip" data-note-cat="">Behaviour</span>
+															<span class="profile-chip" data-note-cat="">Health</span>
+														</div>
+														<div class="d-flex align-items-center gap-2 ms-auto">
+															<label class="visibility"><input type="checkbox" id="notePrivate" checked=""><i class="ti ti-lock"></i><span>Private</span></label>
+															<button type="button" class="profile-button profile-button-sm profile-button-primary" data-sp-action="add_note"><i class="ti ti-plus"></i>Add Note</button>
+														</div>
+													</div>
+												</div>
+
+												<h6 class="block-heading"><i class="ti ti-notebook"></i>Counsellor &amp; Teacher Log <span class="attendance-sub">6 entries</span></h6>
+												<div class="profile-notes" id="spNotesList">
+													<div class="profile-note c-counsel">
+														<span class="avatar avatar-40 avatar-r-10"><img src="assets/img/teachers/teacher-02.jpg" onerror="this.src='assets/img/students/student-07.jpg'" alt=""></span>
+														<div class="note-main">
+															<div class="note-top"><b>Ms. Rita Owen</b><span class="note-role">Counsellor</span><span class="badge-cat counsel">Counselling</span><span class="note-vis"><i class="ti ti-lock"></i>Private</span><span class="note-date ms-auto">20 Nov 2024</span></div>
+															<p>Discussed time-management strategies. Janet is receptive and set a goal to submit homework a day early. Follow-up in two weeks.</p>
+														</div>
+													</div>
+													<div class="profile-note c-academic">
+														<span class="avatar avatar-40 avatar-r-10"><img src="assets/img/teachers/teacher-01.jpg" onerror="this.src='assets/img/students/student-05.jpg'" alt=""></span>
+														<div class="note-main">
+															<div class="note-top"><b>Mr. Teresa Susan</b><span class="note-role">Class Teacher</span><span class="badge-cat academic">Academic</span><span class="note-vis shared"><i class="ti ti-users"></i>Shared</span><span class="note-date ms-auto">08 Nov 2024</span></div>
+															<p>Strong improvement in Mathematics. Encouraged her to mentor a peer struggling with fractions.</p>
+														</div>
+													</div>
+													<div class="profile-note c-behaviour">
+														<span class="avatar avatar-40 avatar-r-10"><img src="assets/img/teachers/teacher-03.jpg" onerror="this.src='assets/img/students/student-03.jpg'" alt=""></span>
+														<div class="note-main">
+															<div class="note-top"><b>Ms. Rita Owen</b><span class="note-role">Counsellor</span><span class="badge-cat behaviour">Behaviour</span><span class="note-vis"><i class="ti ti-lock"></i>Private</span><span class="note-date ms-auto">14 Oct 2024</span></div>
+															<p>Recognised for calm conduct in assembly. No behavioural concerns this term.</p>
+														</div>
+													</div>
+													<div class="profile-note c-health">
+														<span class="avatar avatar-40 avatar-r-10"><img src="assets/img/teachers/teacher-05.jpg" onerror="this.src='assets/img/students/student-09.jpg'" alt=""></span>
+														<div class="note-main">
+															<div class="note-top"><b>Dr. Anita Rao</b><span class="note-role">Medical Officer</span><span class="badge-cat health">Health</span><span class="note-vis"><i class="ti ti-lock"></i>Private</span><span class="note-date ms-auto">02 Jul 2024</span></div>
+															<p>Sick-bay visit for mild fever; parent informed and student sent home. Advised rest.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Audit Trail pane -->
+											<div id="profile-pane-audit" class="tab-pane-block" data-pane="audit" role="tabpanel">
+												<div class="profile-tile-head mb-3">
+													<h6 class="block-heading mb-0"><i class="ti ti-history"></i>Audit Trail <span class="attendance-sub">Profile change history</span></h6>
+													<div class="profile-chip-set">
+														<span class="profile-chip solid" data-audit-filter="all">All</span>
+														<span class="profile-chip" data-audit-filter="profile">Profile</span>
+														<span class="profile-chip" data-audit-filter="fees">Fees</span>
+														<span class="profile-chip" data-audit-filter="academic">Academic</span>
+													</div>
+												</div>
+
+												<div class="fee-stats library-stats mb-4">
+													<div class="fee-stat accent-info"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-pencil"></i></span><div class="fee-stat-body"><div class="v" data-count="47">0</div><div class="l">Total Changes</div></div></div>
+													<div class="fee-stat accent-success"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-user-check"></i></span><div class="fee-stat-body"><div class="v" data-count="6">0</div><div class="l">Editors</div></div></div>
+													<div class="fee-stat accent-warning"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-clock-hour-4"></i></span><div class="fee-stat-body"><div class="v">2h</div><div class="l">Last Change</div></div></div>
+													<div class="fee-stat accent-teal"><span class="avatar avatar-icon avatar-accent-soft"><i class="ti ti-shield-check"></i></span><div class="fee-stat-body"><div class="v">100%</div><div class="l">Verified</div></div></div>
+												</div>
+
+												<div class="profile-audit" id="spAuditList">
+													<div class="audit-row" data-cat="academic">
+														<span class="avatar avatar-icon avatar-md avatar-accent-soft accent-info"><i class="ti ti-school"></i></span>
+														<div class="audit-body">
+															<div class="audit-top"><b>Grade updated</b><span class="badge-cat academic">Academic</span></div>
+															<div class="audit-detail">Term II Mathematics <em class="old">A</em><i class="ti ti-arrow-right"></i><em class="new">A+</em></div>
+															<div class="audit-meta"><img src="assets/img/teachers/teacher-01.jpg" onerror="this.src='assets/img/students/student-05.jpg'" alt=""><span>Mr. Teresa Susan</span><i class="ti ti-point"></i><span>Today, 12:40 PM</span><i class="ti ti-point"></i><span>192.168.1.24 · Chrome</span></div>
+														</div>
+													</div>
+													<div class="audit-row" data-cat="fees">
+														<span class="avatar avatar-icon avatar-md avatar-accent-soft accent-success"><i class="ti ti-cash"></i></span>
+														<div class="audit-body">
+															<div class="audit-top"><b>Payment recorded</b><span class="badge-cat fees">Fees</span></div>
+															<div class="audit-detail">Term I Tuition <em class="new">$3,000 · Card ····4521</em></div>
+															<div class="audit-meta"><img src="assets/img/profiles/avatar-27.jpg" onerror="this.src='assets/img/students/student-02.jpg'" alt=""><span>Accounts Office</span><i class="ti ti-point"></i><span>Yesterday, 04:15 PM</span><i class="ti ti-point"></i><span>10.0.0.8 · Edge</span></div>
+														</div>
+													</div>
+													<div class="audit-row" data-cat="profile">
+														<span class="avatar avatar-icon avatar-md avatar-accent-soft accent-warning"><i class="ti ti-phone"></i></span>
+														<div class="audit-body">
+															<div class="audit-top"><b>Contact number changed</b><span class="badge-cat profile">Profile</span></div>
+															<div class="audit-detail">Guardian phone <em class="old">+1 809 095 5400</em><i class="ti ti-arrow-right"></i><em class="new">+1 809 095 5468</em></div>
+															<div class="audit-meta"><img src="assets/img/profiles/avatar-01.jpg" onerror="this.src='assets/img/students/student-06.jpg'" alt=""><span>Admin · Sarah W.</span><i class="ti ti-point"></i><span>18 Nov 2024, 09:22 AM</span><i class="ti ti-point"></i><span>192.168.1.10 · Firefox</span></div>
+														</div>
+													</div>
+													<div class="audit-row" data-cat="profile">
+														<span class="avatar avatar-icon avatar-md avatar-accent-soft accent-purple"><i class="ti ti-photo"></i></span>
+														<div class="audit-body">
+															<div class="audit-top"><b>Profile photo updated</b><span class="badge-cat profile">Profile</span></div>
+															<div class="audit-detail"><em class="new">New photograph uploaded</em></div>
+															<div class="audit-meta"><img src="assets/img/profiles/avatar-01.jpg" onerror="this.src='assets/img/students/student-06.jpg'" alt=""><span>Admin · Sarah W.</span><i class="ti ti-point"></i><span>02 Nov 2024, 11:05 AM</span><i class="ti ti-point"></i><span>192.168.1.10 · Firefox</span></div>
+														</div>
+													</div>
+													<div class="audit-row" data-cat="academic">
+														<span class="avatar avatar-icon avatar-md avatar-accent-soft accent-info"><i class="ti ti-calendar-check"></i></span>
+														<div class="audit-body">
+															<div class="audit-top"><b>Attendance corrected</b><span class="badge-cat academic">Academic</span></div>
+															<div class="audit-detail">14 Oct 2024 <em class="old">Absent</em><i class="ti ti-arrow-right"></i><em class="new">On Leave</em></div>
+															<div class="audit-meta"><img src="assets/img/teachers/teacher-01.jpg" onerror="this.src='assets/img/students/student-05.jpg'" alt=""><span>Mr. Teresa Susan</span><i class="ti ti-point"></i><span>16 Oct 2024, 08:50 AM</span><i class="ti ti-point"></i><span>192.168.1.24 · Chrome</span></div>
+														</div>
+													</div>
+												</div>
+												<p class="audit-note"><i class="ti ti-info-circle"></i>Audit records are immutable and retained for 7 years per school data policy.</p>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- /sp-live -->
+					</div>
+					<!-- /sprofile -->
+			</div>
+		</div>
+		<!-- /Page Wrapper -->
+
+		<!-- ============ Message Parent ============ -->
+		<div class="modal fade" id="sp_message" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title"><i class="ti ti-message me-2"></i>Message Parent</h4>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					</div>
+					<form class="vform" novalidate="">
+						<div class="modal-body">
+							<div class="mb-3"><label class="form-label" for="recipient">Recipient</label><input type="text" class="form-control" value="Robert Daniel (Parent of Janet Daniel)" readonly="" id="recipient"></div>
+							<div class="mb-3"><label class="form-label" for="subject">Subject <span class="text-danger">*</span></label><input type="text" class="form-control" name="subject" required="" placeholder="Enter subject" id="subject"><div class="invalid-feedback">Please enter a subject.</div></div>
+							<div class="mb-0"><label class="form-label" for="message">Message <span class="text-danger">*</span></label><textarea class="form-control" name="body" rows="4" required="" placeholder="Type your message…" id="message"></textarea><div class="invalid-feedback">Please enter a message.</div></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary submit" data-success="Message sent to parent"><i class="ti ti-send me-1"></i>Send Message</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============ Email ============ -->
+		<div class="modal fade" id="sp_email" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title"><i class="ti ti-mail me-2"></i>Send Email</h4>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					</div>
+					<form class="vform" novalidate="">
+						<div class="modal-body">
+							<div class="mb-3"><label class="form-label" for="to">To <span class="text-danger">*</span></label><input type="email" class="form-control" name="to" required="" value="robert.d@example.com" id="to"><div class="invalid-feedback">Please enter a valid email.</div></div>
+							<div class="mb-3"><label class="form-label" for="subject-2">Subject <span class="text-danger">*</span></label><input type="text" class="form-control" name="subject" required="" placeholder="Enter subject" id="subject-2"><div class="invalid-feedback">Please enter a subject.</div></div>
+							<div class="mb-0"><label class="form-label" for="message-2">Message <span class="text-danger">*</span></label><textarea class="form-control" name="body" rows="4" required="" placeholder="Type your email…" id="message-2"></textarea><div class="invalid-feedback">Please enter a message.</div></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary submit" data-success="Email sent successfully"><i class="ti ti-send me-1"></i>Send Email</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============ Call ============ -->
+		<div class="modal fade" id="sp_call" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-sm">
+				<div class="modal-content">
+					<div class="modal-body text-center p-4">
+						<span class="avatar avatar-xl rounded-circle flex-shrink-0 bg-success-transparent text-success mb-3 mx-auto d-flex align-items-center justify-content-center"><i class="ti ti-phone fs-24"></i></span>
+						<h5 class="mb-1">Robert Daniel</h5>
+						<p class="text-muted mb-1">Parent / Guardian</p>
+						<h4 class="mb-3">+1 809 095 5468</h4>
+						<div class="d-flex justify-content-center gap-2">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-success call-now" data-bs-dismiss="modal"><i class="ti ti-phone-call me-1"></i>Call Now</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============ Schedule Meeting ============ -->
+		<div class="modal fade" id="sp_meeting" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title"><i class="ti ti-calendar-plus me-2"></i>Schedule Meeting</h4>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					</div>
+					<form class="vform" novalidate="">
+						<div class="modal-body">
+							<div class="mb-3"><label class="form-label" for="title">Title <span class="text-danger">*</span></label><input type="text" class="form-control" name="title" required="" placeholder="e.g. Parent-Teacher Meeting" id="title"><div class="invalid-feedback">Please enter a title.</div></div>
+							<div class="row">
+								<div class="col-6 mb-3"><label class="form-label" for="date">Date <span class="text-danger">*</span></label><input type="text" class="form-control datetimepicker" name="date" required="" id="date"><div class="invalid-feedback">Select a date.</div></div>
+								<div class="col-6 mb-3"><label class="form-label" for="time">Time <span class="text-danger">*</span></label><input type="time" class="form-control" name="time" required="" id="time"><div class="invalid-feedback">Select a time.</div></div>
+							</div>
+							<div class="mb-0"><label class="form-label" for="with">With</label><select class="form-select" name="with" id="with"><option>Class Teacher</option><option>Both Parents</option><option>Father</option><option>Mother</option><option>Counsellor</option></select></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary submit" data-success="Meeting scheduled"><i class="ti ti-calendar-check me-1"></i>Schedule</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============ Assign Homework ============ -->
+		<div class="modal fade" id="sp_homework" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title"><i class="ti ti-notebook me-2"></i>Assign Homework</h4>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					</div>
+					<form class="vform" novalidate="">
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-6 mb-3"><label class="form-label" for="subject-3">Subject <span class="text-danger">*</span></label><select class="form-select" name="subject" required="" id="subject-3"><option value="">Select</option><option>Mathematics</option><option>Science</option><option>English</option><option>History</option><option>Geography</option></select><div class="invalid-feedback">Choose a subject.</div></div>
+								<div class="col-6 mb-3"><label class="form-label" for="due-date">Due Date <span class="text-danger">*</span></label><input type="text" class="form-control datetimepicker" name="due" required="" id="due-date"><div class="invalid-feedback">Select a due date.</div></div>
+							</div>
+							<div class="mb-3"><label class="form-label" for="title-2">Title <span class="text-danger">*</span></label><input type="text" class="form-control" name="title" required="" placeholder="e.g. Algebra Worksheet 6" id="title-2"><div class="invalid-feedback">Please enter a title.</div></div>
+							<div class="mb-0"><label class="form-label" for="instructions">Instructions</label><textarea class="form-control" name="desc" rows="3" placeholder="Optional details…" id="instructions"></textarea></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary submit" data-success="Homework assigned"><i class="ti ti-check me-1"></i>Assign</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============ ID Card ============ -->
+		<div class="modal fade" id="sp_idcard" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title"><i class="ti ti-id me-2"></i>Student ID Card</h4>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					</div>
+					<div class="modal-body">
+						<div class="idcard">
+							<div class="idcard-head">
+								<span class="idcard-logo"><i class="ti ti-school"></i></span>
+								<div class="idcard-brand"><h5 class="fs-15">PRESKOOL ACADEMY</h5><span>Excellence in Education</span></div>
+								<div class="idcard-wave"></div>
+							</div>
+							<div class="idcard-photo-wrap"><img src="assets/img/students/student-01.jpg" alt="Janet Daniel"></div>
+							<div class="idcard-identity"><h5>Janet Daniel</h5><span class="idcard-role">STUDENT</span></div>
+							<div class="idcard-info">
+								<div class="idcard-row"><span>Admission No</span><b>AD1256589</b></div>
+								<div class="idcard-row"><span>Class</span><b>III - A</b></div>
+								<div class="idcard-row"><span>Date of Birth</span><b>25 Jan 2008</b></div>
+								<div class="idcard-row"><span>Blood Group</span><b class="text-danger">O +ve</b></div>
+							</div>
+							<div class="idcard-barcode"><div class="idcard-bars"></div><span>AD1256589</span></div>
+							<div class="idcard-foot"><i class="ti ti-map-pin"></i>123 Education Blvd &nbsp;·&nbsp; Valid till 31 Mar 2025</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-sp-action="print"><i class="ti ti-printer me-1"></i>Print ID</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============ Generic Confirm ============ -->
+		<div class="modal fade" id="sp_confirm" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body text-center p-4">
+						<span class="avatar avatar-icon avatar-xl avatar-rounded bg-danger-transparent"><i class="ti ti-alert-triangle"></i></span>
+						<h4 class="confirm-title mt-3">Are you sure?</h4>
+						<p class="confirm-text text-muted">This action cannot be undone.</p>
+						<div class="d-flex justify-content-center gap-2">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-danger confirm-ok">Confirm</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pay Now — online payment gateway -->
+		<div class="modal fade" id="sp_pay" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title"><i class="ti ti-credit-card me-2"></i>Secure Payment</h4>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					</div>
+					<div class="modal-body">
+						<form class="vform" novalidate="">
+							<div class="payment-summary">
+								<div><span>Paying for</span><b class="payment-for">Term II Tuition</b></div>
+								<div class="payment-amt">$<span class="payment-amount">2,000</span></div>
+							</div>
+							<label class="profile-lbl mt-3">Payment Method</label>
+							<div class="paymethods">
+								<label class="payment-method"><input type="radio" name="payMethod" value="card" checked=""><span class="payment-method-b"><i class="ti ti-credit-card"></i>Card</span></label>
+								<label class="payment-method"><input type="radio" name="payMethod" value="upi"><span class="payment-method-b"><i class="ti ti-qrcode"></i>UPI</span></label>
+								<label class="payment-method"><input type="radio" name="payMethod" value="netbank"><span class="payment-method-b"><i class="ti ti-building-bank"></i>Net Banking</span></label>
+							</div>
+							<div class="payment-fields">
+								<div class="mb-2">
+									<label class="profile-lbl" for="card-number">Card Number</label>
+									<input type="text" class="form-control" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required="" id="card-number">
+									<div class="invalid-feedback">Enter a valid card number.</div>
+								</div>
+								<div class="row g-2">
+									<div class="col-7"><label class="profile-lbl" for="name-on-card">Name on Card</label><input type="text" class="form-control" placeholder="Robert Daniel" required="" id="name-on-card"></div>
+									<div class="col-3"><label class="profile-lbl" for="expiry">Expiry</label><input type="text" class="form-control" placeholder="MM/YY" maxlength="5" required="" id="expiry"></div>
+									<div class="col-2"><label class="profile-lbl" for="cvv">CVV</label><input type="password" autocomplete="current-password" class="form-control" maxlength="4" placeholder="•••" required="" id="cvv"></div>
+								</div>
+							</div>
+							<div class="payment-secure"><i class="ti ti-lock-check"></i>256-bit SSL encrypted · PCI-DSS compliant</div>
+							<button type="submit" class="btn btn-primary w-100 mt-3 submit" data-success="Payment successful — receipt generated.">Pay $<span class="payment-amount">2,000</span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Track Bus Live -->
+		<div class="modal fade" id="sp_track" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content livemap-content">
+					<button type="button" class="livemap-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					<div class="livemap-map">
+						<svg class="livemap-svg" viewBox="0 0 400 210" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+							<defs>
+								<linearGradient id="lmProgGrad" x1="0" y1="0" x2="1" y2="0">
+									<stop offset="0" stop-color="#4f46e5"></stop><stop offset="1" stop-color="#7b61ff"></stop>
+								</linearGradient>
+								<radialGradient id="lmVignette" cx="50%" cy="42%" r="75%">
+									<stop offset="55%" stop-color="#000" stop-opacity="0"></stop><stop offset="100%" stop-color="#0b1020" stop-opacity="0.22"></stop>
+								</radialGradient>
+								<filter id="lmShadow" x="-40%" y="-40%" width="180%" height="180%">
+									<fedropshadow dx="0" dy="2" stdDeviation="2.4" flood-color="#4f46e5" flood-opacity="0.5"></fedropshadow>
+								</filter>
+							</defs>
+							<g class="livemap-blocks">
+								<rect x="18" y="20" width="60" height="40" rx="7"></rect><rect x="92" y="14" width="48" height="34" rx="7"></rect>
+								<rect x="150" y="24" width="70" height="30" rx="7"></rect><rect x="300" y="90" width="70" height="46" rx="7"></rect>
+								<rect x="24" y="96" width="70" height="52" rx="7"></rect><rect x="120" y="150" width="80" height="44" rx="7"></rect>
+								<rect x="236" y="150" width="70" height="44" rx="7"></rect><rect x="248" y="18" width="44" height="40" rx="7"></rect>
+							</g>
+							<g class="livemap-grid-lines">
+								<path d="M0,70 H400 M0,140 H400 M100,0 V210 M200,0 V210 M300,0 V210"></path>
+							</g>
+							<path class="livemap-road" d="M36,172 C92,172 98,132 152,132 C198,132 202,94 252,94 C302,94 300,58 366,42"></path>
+							<path class="livemap-route" d="M36,172 C92,172 98,132 152,132 C198,132 202,94 252,94 C302,94 300,58 366,42"></path>
+							<path id="lmProg" class="livemap-prog" d="M36,172 C92,172 98,132 152,132 C198,132 202,94 252,94 C302,94 300,58 366,42" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100">
+								<animate attributeName="stroke-dashoffset" from="100" to="0" dur="9s" repeatCount="indefinite"></animate>
+							</path>
+							<g class="livemap-node done"><circle cx="36" cy="172" r="5.5"></circle></g>
+							<g class="livemap-node done"><circle cx="152" cy="132" r="5.5"></circle></g>
+							<g class="livemap-node"><circle cx="252" cy="94" r="5.5"></circle></g>
+							<g class="livemap-school">
+								<circle cx="366" cy="42" r="13"></circle>
+								<path transform="translate(357.5,33.5) scale(0.7)" d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+								<path transform="translate(357.5,33.5) scale(0.7)" d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+							</g>
+							<g class="livemap-vehicle" filter="url(#lmShadow)">
+								<circle class="livemap-pulse" r="9"></circle>
+								<circle class="livemap-disc" r="11.5"></circle>
+								<g class="livemap-glyph" transform="translate(-7.9,-7.9) scale(0.66)">
+									<path d="M6 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+									<path d="M18 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+									<path d="M4 17h-2v-11a1 1 0 0 1 1 -1h14a5 7 0 0 1 5 7v5h-2m-4 0h-8"></path>
+									<path d="M16 5l1.5 7l4.5 0"></path><path d="M2 10l15 0"></path>
+								</g>
+								<animateMotion dur="9s" repeatCount="indefinite" rotate="0">
+									<mpath xlink:href="student-details.html"></mpath>
+								</animateMotion>
+							</g>
+							<rect x="0" y="0" width="400" height="210" fill="url(#lmVignette)"></rect>
+						</svg>
+
+						<div class="livemap-topbar">
+							<span class="livemap-live"><span class="d"></span>LIVE TRACKING</span>
+							<span class="livemap-route-tag"><i class="ti ti-bus"></i>Route 12 · Bus 04</span>
+						</div>
+						<button type="button" class="livemap-recenter" data-sp-action="track_bus" title="Recenter map"><i class="ti ti-focus-2"></i></button>
+
+						<div class="livemap-driver">
+							<span class="avatar avatar-42 avatar-r-11"><img src="assets/img/profiles/avatar-12.jpg" onerror="this.src='assets/img/students/student-08.jpg'" alt=""><i class="avatar-status"></i></span>
+							<div class="livemap-driver-info">
+								<b>Michael Doe</b>
+								<span><i class="ti ti-star-filled"></i>4.9 <em>· KA-01-1234</em></span>
+							</div>
+							<a href="javascript:void(0);" class="livemap-driver-call" data-sp-action="call" aria-label="Call driver"><i class="ti ti-phone"></i></a>
+						</div>
+					</div>
+
+					<div class="livemap-sheet">
+						<div class="livemap-hero">
+							<div class="livemap-hero-eta"><span class="l">Arriving in</span><b>4<em>min</em></b></div>
+							<div class="livemap-hero-meta">
+								<span class="livemap-chip ok"><i class="ti ti-clock-check"></i>On time</span>
+								<span class="livemap-hero-sub"><i class="ti ti-map-pin"></i>1.2 km away · next stop <strong>Oak Avenue</strong></span>
+							</div>
+						</div>
+
+						<div class="livemap-pbar"><span style="width:62%"></span></div>
+						<div class="livemap-pbar-x"><span><i class="ti ti-current-location"></i>Maple Street</span><span>Preskool Academy<i class="ti ti-flag-3"></i></span></div>
+
+						<div class="livemap-stops">
+							<div class="livemap-stop done"><span class="dot"><i class="ti ti-check"></i></span><div class="tx"><b>Maple Street</b><span>Pickup</span></div><span class="tm">07:32 AM</span><em class="livemap-chip ok">Boarded</em></div>
+							<div class="livemap-stop now"><span class="dot"></span><div class="tx"><b>Oak Avenue</b><span>En route now</span></div><span class="tm">07:38 AM</span><em class="livemap-chip info">Approaching</em></div>
+							<div class="livemap-stop"><span class="dot"></span><div class="tx"><b>Downtown Cross</b><span>Upcoming</span></div><span class="tm">07:41 AM</span></div>
+							<div class="livemap-stop"><span class="dot flag"><i class="ti ti-flag-3"></i></span><div class="tx"><b>Preskool Academy</b><span>Drop-off</span></div><span class="tm">07:45 AM</span></div>
+						</div>
+
+						<div class="livemap-grid">
+							<div class="livemap-stat"><span class="ic"><i class="ti ti-gauge"></i></span><div class="tx"><b>32<em>km/h</em></b><span>Speed</span></div></div>
+							<div class="livemap-stat"><span class="ic"><i class="ti ti-users"></i></span><div class="tx"><b>28<em>/40</em></b><span>On board</span></div></div>
+							<div class="livemap-stat"><span class="ic"><i class="ti ti-route"></i></span><div class="tx"><b>3<em>km</em></b><span>Distance left</span></div></div>
+							<div class="livemap-stat"><span class="ic ok"><i class="ti ti-satellite"></i></span><div class="tx"><b>Strong</b><span>GPS signal</span></div></div>
+						</div>
+					</div>
+
+					<div class="modal-footer livemap-foot">
+						<span class="livemap-updated"><i class="ti ti-refresh"></i>Updated just now</span>
+						<a href="javascript:void(0);" class="btn btn-primary" data-sp-action="call"><i class="ti ti-phone me-1"></i>Call Driver</a>
+						<a href="student-details.html" class="btn btn-light" data-bs-dismiss="modal">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Login Details -->
+		<div class="modal fade" id="login_detail" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content credential-content">
+					<button type="button" class="credential-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+					<div class="credential-head">
+						<span class="avatar avatar-icon avatar-lg"><i class="ti ti-key"></i></span>
+						<div class="credential-head-tx">
+							<h4>Login &amp; Access</h4>
+							<span>Portal credentials · Janet Daniel · Class III-A</span>
+						</div>
+					</div>
+					<div class="modal-body credential-body">
+						<div class="credential-status">
+							<span class="credential-status-on"><span class="d"></span>Portal Active</span>
+							<span class="credential-status-meta"><i class="ti ti-login-2"></i>Last login Today, 08:12 AM · iPhone · Safari</span>
+						</div>
+
+						<div class="credential-creds">
+							<div class="credential-cred c-parent">
+								<div class="credential-cred-top">
+									<span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-user-shield"></i></span>
+									<div class="credential-cred-id"><b>Parent Account</b><span>Robert Daniel</span></div>
+									<em class="profile-pill ok"><i class="ti ti-circle-check"></i>Active</em>
+								</div>
+								<div class="credential-field">
+									<span class="k"><i class="ti ti-at"></i>Username</span>
+									<span class="v">parent53</span>
+									<button type="button" class="credential-ib" data-sp-action="copy" data-copy="parent53" title="Copy username"><i class="ti ti-copy"></i></button>
+								</div>
+								<div class="credential-field">
+									<span class="k"><i class="ti ti-lock"></i>Password</span>
+									<span class="v pw" data-pw="parent@53">••••••••</span>
+									<button type="button" class="credential-ib" data-sp-action="reveal_pw" title="Show / hide"><i class="ti ti-eye"></i></button>
+									<button type="button" class="credential-ib" data-sp-action="copy" data-copy="parent@53" title="Copy password"><i class="ti ti-copy"></i></button>
+								</div>
+							</div>
+
+							<div class="credential-cred c-student">
+								<div class="credential-cred-top">
+									<span class="avatar avatar-icon avatar-md avatar-accent"><i class="ti ti-backpack"></i></span>
+									<div class="credential-cred-id"><b>Student Account</b><span>Janet Daniel</span></div>
+									<em class="profile-pill ok"><i class="ti ti-circle-check"></i>Active</em>
+								</div>
+								<div class="credential-field">
+									<span class="k"><i class="ti ti-at"></i>Username</span>
+									<span class="v">student20</span>
+									<button type="button" class="credential-ib" data-sp-action="copy" data-copy="student20" title="Copy username"><i class="ti ti-copy"></i></button>
+								</div>
+								<div class="credential-field">
+									<span class="k"><i class="ti ti-lock"></i>Password</span>
+									<span class="v pw" data-pw="stdt@53">•••••••</span>
+									<button type="button" class="credential-ib" data-sp-action="reveal_pw" title="Show / hide"><i class="ti ti-eye"></i></button>
+									<button type="button" class="credential-ib" data-sp-action="copy" data-copy="stdt@53" title="Copy password"><i class="ti ti-copy"></i></button>
+								</div>
+							</div>
+						</div>
+
+						<h5 class="credential-h fs-15"><i class="ti ti-history"></i>Recent Login Activity</h5>
+						<div class="login-log">
+							<div class="login-log-row"><span class="ic accent-success"><i class="ti ti-device-mobile"></i></span><div class="tx"><b>Parent · parent53</b><span>iPhone 13 · Safari · Downtown</span></div><span class="login-log-time">Today, 08:12 AM<em class="profile-pill ok">Success</em></span></div>
+							<div class="login-log-row"><span class="ic accent-info"><i class="ti ti-device-laptop"></i></span><div class="tx"><b>Student · student20</b><span>Windows PC · Chrome · School Lab</span></div><span class="login-log-time">Yesterday, 02:40 PM<em class="profile-pill ok">Success</em></span></div>
+							<div class="login-log-row"><span class="ic accent-danger"><i class="ti ti-shield-x"></i></span><div class="tx"><b>Parent · parent53</b><span>Unknown device · Firefox</span></div><span class="login-log-time">18 Nov, 11:02 PM<em class="profile-pill bad">Blocked</em></span></div>
+						</div>
+					</div>
+					<div class="modal-footer credential-foot">
+						<button type="button" class="btn btn-outline-danger me-auto" data-sp-action="reset_password"><i class="ti ti-lock-cog me-1"></i>Reset Password</button>
+						<a href="student-details.html" class="btn btn-light" data-bs-dismiss="modal">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Login Details -->
+
+		<!-- Add Fees Collect -->
+		<div class="modal fade" id="add_fees_collect">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="d-flex align-items-center">
+							<h4 class="modal-title">Collect Fees</h4>
+							<span class="badge badge-sm bg-primary ms-2">AD124556</span>
+						</div>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
+							<i class="ti ti-x"></i>
+						</button>
+					</div>		
+					<form action="collect-fees.html">
+						<div class="modal-body">
+							<div class="bg-light-300 p-3 pb-0 rounded mb-4">
+								<div class="row align-items-center">
+									<div class="col-lg-3 col-md-6">
+										<div class="d-flex align-items-center mb-3">
+											<a href="student-details.html" class="avatar avatar-md me-2">
+												<img src="assets/img/students/student-01.jpg" alt="img">
+											</a>
+											<a href="student-details.html" class="d-flex flex-column"><span class="text-dark">Janet</span>III, A</a>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6">
+										<div class="mb-3">
+											<span class="fs-12 mb-1">Total Outstanding</span>
+											<p class="text-dark">2000</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6">
+										<div class="mb-3">
+											<span class="fs-12 mb-1">Last Date</span>
+											<p class="text-dark">25 May 2024</p>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-6">
+										<div class="mb-3">
+											<span class="badge badge-soft-danger"><i class="ti ti-circle-filled me-2"></i>Unpaid</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-6 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label" for="fees-group">Fees Group</label>
+										<select class="select" id="fees-group">
+											<option>Select</option>
+											<option>Class 1 General</option>
+											<option>Monthly Fees</option>
+											<option>Admission-Fees</option>
+											<option>Class 1- I Installment</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label" for="fees-type">Fees Type</label>
+										<select class="select" id="fees-type">
+											<option>Select</option>
+											<option>Tuition Fees</option>
+											<option>Monthly Fees</option>
+											<option>Admission Fees</option>
+											<option>Bus Fees</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label" for="amount">Amount</label>
+										<input type="text" class="form-control" placeholder="Enter Amout" id="amount">
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label" for="collection-date">Collection Date</label>
+										<div class="date-pic">
+											<input type="text" class="form-control datetimepicker" placeholder="Select" id="collection-date">
+											<span class="cal-icon"><i class="ti ti-calendar"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label" for="payment-type">Payment Type</label>
+										<select class="select" id="payment-type">
+											<option>Select</option>
+											<option>Paytm</option>
+											<option>Cash On Delivery</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-lg-6">
+									<div class="mb-3">
+										<label class="form-label" for="payment-reference-no">Payment Reference No</label>
+										<input type="text" class="form-control" placeholder="Enter Payment Reference No" id="payment-reference-no">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="d-flex align-items-center justify-content-between">
+										<div class="status-title">
+											<h5>Status</h5>
+											<p>Change the Status by toggle </p>
+										</div>
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" role="switch" id="switch-sm2" aria-label="Toggle option">
+										</div>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="mb-0">
+										<label class="form-label" for="notes">Notes</label>
+										<textarea rows="4" class="form-control" placeholder="Add Notes" id="notes"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a href="student-details.html" class="btn btn-light me-2" data-bs-dismiss="modal">Cancel</a>
+							<button type="submit" class="btn btn-primary">Pay Fees</button>
+						</div>
+					</form>	
+				</div>
+			</div>
+		</div>
+		<!-- Add Fees Collect -->
+
+	</div>
+		<!-- Global Search Popup -->
+	<div class="mui-search-modal" id="muiSearchModal" role="dialog" aria-modal="true" aria-label="Search" hidden="">
+		<div class="mui-search-backdrop" data-search-close=""></div>
+		<div class="mui-search-panel">
+			<div class="mui-search-top">
+				<i class="ti ti-search"></i>
+				<input type="text" id="muiSearchInput" placeholder="Search students, staff, classes, invoices..." autocomplete="off" aria-label="Search">
+				<span class="mui-search-esc" data-search-close="">ESC</span>
+			</div>
+			<div class="mui-search-body">
+				<div class="mui-search-sec" data-search-recent="">
+					<div class="mui-search-sec-hdr">Recent</div>
+					<a href="fees-master.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Fee collection report</span><i class="ti ti-corner-down-left msr-go"></i></a>
+					<a href="student-attendance.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Today's attendance</span><i class="ti ti-corner-down-left msr-go"></i></a>
+					<a href="schedule-exam.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Term-1 exam schedule</span><i class="ti ti-corner-down-left msr-go"></i></a>
+				</div>
+				<div class="mui-search-sec">
+					<div class="mui-search-sec-hdr">Quick links</div>
+					<a href="students.html" class="mui-search-row"><span class="msr-ic ic-blue"><i class="ti ti-users-group"></i></span><span class="msr-txt">Students</span><span class="msr-tag">Page</span></a>
+					<a href="teachers.html" class="mui-search-row"><span class="msr-ic ic-green"><i class="ti ti-chalkboard"></i></span><span class="msr-txt">Teachers</span><span class="msr-tag">Page</span></a>
+					<a href="fees-master.html" class="mui-search-row"><span class="msr-ic ic-amber"><i class="ti ti-report-money"></i></span><span class="msr-txt">Fees</span><span class="msr-tag">Page</span></a>
+					<a href="exams.html" class="mui-search-row"><span class="msr-ic ic-purple"><i class="ti ti-file-certificate"></i></span><span class="msr-txt">Examinations</span><span class="msr-tag">Page</span></a>
+					<a href="library-books.html" class="mui-search-row"><span class="msr-ic ic-teal"><i class="ti ti-books"></i></span><span class="msr-txt">Library</span><span class="msr-tag">Page</span></a>
+				</div>
+				<div class="mui-search-empty" data-search-empty=""><i class="ti ti-search-off"></i>No results found</div>
+			</div>
+			<div class="mui-search-foot">
+				<span><span class="mui-kbd">↑</span><span class="mui-kbd">↓</span>navigate</span>
+				<span><span class="mui-kbd">↵</span>open</span>
+				<span><span class="mui-kbd">esc</span>close</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- /Main Wrapper -->
+
+
+	
+
+</body></html>

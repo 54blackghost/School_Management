@@ -1,0 +1,1062 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block body %}
+	
+
+
+
+
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<div class="content widget-canvas">
+
+				<!-- Page Header -->
+				<div class="d-flex flex-wrap gap-3 align-items-center justify-content-between mb-3">
+					<div class="my-auto mb-2">
+						<h3 class="page-title mb-1">Admin Dashboard</h3>
+						<nav>
+							<ol class="breadcrumb mb-0">
+								<li class="breadcrumb-item">
+									<a href="index.html">Dashboard</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="d-flex my-xl-auto right-content align-items-center flex-wrap justify-content-md-end gap-2">
+						<div class="dropdown mb-2">
+							<a href="javascript:void(0);" class="btn btn-white btn-3d fw-medium d-inline-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown"><i class="ti ti-calendar me-1"></i>AY 2025-26</a>
+							<ul class="dropdown-menu dropdown-menu-end p-2">
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">AY 2025-26</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">AY 2024-26</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">AY 2023-24</a></li>
+							</ul>
+						</div>
+						<div class="dropdown mb-2">
+							<a href="javascript:void(0);" class="btn btn-white btn-3d fw-medium d-inline-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown"><i class="ti ti-calendar-due me-1"></i>This Month</a>
+							<ul class="dropdown-menu dropdown-menu-end p-2">
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">Today</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">This Week</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">This Month</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">This Quarter</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1">This Year</a></li>
+							</ul>
+						</div>
+						<div class="dropdown mb-2">
+							<a href="javascript:void(0);" class="btn btn-white btn-3d fw-medium d-inline-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown"><i class="ti ti-download me-1"></i>Export</a>
+							<ul class="dropdown-menu dropdown-menu-end p-2">
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1"><i class="ti ti-file-type-pdf me-2"></i>Export as PDF</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1"><i class="ti ti-file-type-xls me-2"></i>Export as Excel</a></li>
+								<li><a href="javascript:void(0);" class="dropdown-item rounded-1"><i class="ti ti-printer me-2"></i>Print</a></li>
+							</ul>
+						</div>
+						<a href="javascript:void(0);" class="btn btn-white btn-3d btn-icon mb-2" title="Refresh" aria-label="Refresh"><i class="ti ti-refresh fs-16"></i></a>
+						<div class="dropdown mb-2">
+							<a href="javascript:void(0);" class="btn btn-primary btn-3d fw-medium d-inline-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown"><i class="ti ti-square-rounded-plus me-1"></i>Quick Add</a>
+							<ul class="dropdown-menu dropdown-menu-end p-2">
+								<li><a href="add-student/" class="dropdown-item rounded-1"><i class="ti ti-user-plus me-2"></i>Add Student</a></li>
+								<li><a href="add-teacher.html" class="dropdown-item rounded-1"><i class="ti ti-chalkboard me-2"></i>Add Teacher</a></li>
+								<li><a href="add-admission.html" class="dropdown-item rounded-1"><i class="ti ti-notebook me-2"></i>New Admission</a></li>
+								<li><a href="collect-fees.html" class="dropdown-item rounded-1"><i class="ti ti-report-money me-2"></i>Collect Fees</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /Page Header -->
+
+				<!-- School Hero -->
+				<div class="row g-4">
+					<div class="col-12 d-flex">
+						<div class="card flex-fill welcome-banner mb-4">
+							<div class="card-body">
+								<div class="row g-4 align-items-center">
+									<!-- Greeting + CTAs -->
+									<div class="col-xxl-5 col-lg-12">
+										<div class="d-flex align-items-center mb-3">
+											<span class="avatar avatar-icon avatar-xl welcome-banner-brand me-3"><i class="ti ti-school"></i></span>
+											<div>
+												<h2 class="mb-1">Good Morning, Administrator</h2>
+												<p class="stat-label mb-0"><b>Oxford International School</b><span class="opacity-50 mx-1">•</span>Mon, 20 Jul 2026<span class="opacity-50 mx-1">•</span>AY 2025-26</p>
+											</div>
+										</div>
+										<div class="d-flex flex-wrap gap-2">
+											<a href="add-admission.html" class="btn btn-primary btn-3d fw-medium d-inline-flex align-items-center"><i class="ti ti-square-rounded-plus me-1"></i>New Admission</a>
+											<a href="collect-fees.html" class="btn btn-white btn-3d fw-medium d-inline-flex align-items-center"><i class="ti ti-report-money me-1"></i>Collect Fees</a>
+											<a href="javascript:void(0);" class="btn btn-white btn-3d fw-medium d-inline-flex align-items-center"><i class="ti ti-file-analytics me-1"></i>Report</a>
+										</div>
+									</div>
+									<!-- KPI strip -->
+									<div class="col-xxl-7 col-lg-12">
+										<div class="row g-3">
+											<div class="col-sm-6 col-md-3">
+												<div class="stat-tile stat-tile-hover">
+													<div class="d-flex align-items-center justify-content-between mb-2">
+														<span class="avatar avatar-icon bg-success-transparent"><i class="ti ti-checkbox"></i></span>
+														<span class="stat-delta stat-delta-sm stat-delta-up"><i class="ti ti-trending-up"></i>0.8%</span>
+													</div>
+													<h3 class="mb-0 fs-18">94.8%</h3>
+													<span class="stat-label stat-label-sm">Today's Attendance</span>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3">
+												<div class="stat-tile stat-tile-hover">
+													<div class="d-flex align-items-center justify-content-between mb-2">
+														<span class="avatar avatar-icon bg-primary-transparent"><i class="ti ti-user-plus"></i></span>
+														<span class="stat-delta stat-delta-sm stat-delta-up"><i class="ti ti-trending-up"></i>12</span>
+													</div>
+													<h4 class="mb-0">128</h4>
+													<span class="stat-label stat-label-sm">New Admissions</span>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3">
+												<div class="stat-tile stat-tile-hover">
+													<div class="d-flex align-items-center justify-content-between mb-2">
+														<span class="avatar avatar-icon bg-warning-transparent"><i class="ti ti-currency-dollar"></i></span>
+														<span class="stat-delta stat-delta-sm stat-delta-up"><i class="ti ti-trending-up"></i>3.2%</span>
+													</div>
+													<h4 class="mb-0">$48.6K</h4>
+													<span class="stat-label stat-label-sm">Fees Today</span>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3">
+												<div class="stat-tile stat-tile-hover">
+													<div class="d-flex align-items-center justify-content-between mb-2">
+														<span class="avatar avatar-icon bg-purple-transparent"><i class="ti ti-file-certificate"></i></span>
+														<span class="stat-delta stat-delta-sm stat-delta-down"><i class="ti ti-clock"></i>2d</span>
+													</div>
+													<h4 class="mb-0">09</h4>
+													<span class="stat-label stat-label-sm">Upcoming Exams</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /School Hero -->
+
+
+
+				<div class="row">
+					<div class="col-xxl-4 col-lg-6 d-flex">
+						<div class="d-flex flex-column flex-fill">
+							<!-- Best Performer -->
+							<div class="card spotlight-card perf-green flex-fill mb-4 p-3 d-flex flex-column">
+								<div class="d-flex align-items-start justify-content-between">
+									<span class="badge bg-white text-success"><i class="ti ti-trophy me-1"></i>Best Teacher</span>
+									<span class="chip chip-warning"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-half-filled"></i></span>
+								</div>
+								<div class="mt-2">
+									<h4 class="mb-1 text-white fw-bold">Sarah Mitchell</h4>
+									<p class="text-white opacity-75 fs-13"><i class="ti ti-atom me-1"></i>Physics Department</p>
+									<span class="chip chip-soft chip-on-media chip-lg"><i class="ti ti-medal"></i>Teacher of the Year 2024</span>
+								</div>
+								<div class="d-flex align-items-end justify-content-between mt-auto">
+									<div class="d-flex gap-2">
+										<div class="stat-tile stat-tile-on-media text-white text-center"><h5 class="mb-0 text-white fw-bold">4.9</h5><span class="fs-11 opacity-75">Rating</span></div>
+										<div class="stat-tile stat-tile-on-media text-white text-center"><h5 class="mb-0 text-white fw-bold">98%</h5><span class="fs-11 opacity-75">Pass</span></div>
+										<div class="stat-tile stat-tile-on-media text-white text-center"><h5 class="mb-0 text-white fw-bold">320</h5><span class="fs-11 opacity-75">Students</span></div>
+									</div>
+									<img src="assets/img/performer/performer-01.png" alt="img" class="spotlight-img">
+								</div>
+							</div>
+							<!-- /Best Performer -->
+							<!-- Star Students -->
+							<div class="card spotlight-card perf-blue flex-fill mb-4 p-3 d-flex flex-column">
+								<div class="d-flex align-items-start justify-content-between">
+									<span class="badge bg-white text-primary"><i class="ti ti-award me-1"></i>Top Student</span>
+									<span class="chip chip-warning"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></span>
+								</div>
+								<div class="mt-2">
+									<h4 class="mb-1 text-white fw-bold">Emily Carter</h4>
+									<p class="text-white opacity-75 fs-13"><i class="ti ti-school me-1"></i>Grade XII-A · Science</p>
+									<span class="chip chip-soft chip-on-media chip-lg"><i class="ti ti-medal-2"></i>National Olympiad Gold</span>
+								</div>
+								<div class="d-flex align-items-end justify-content-between mt-auto">
+									<div class="d-flex gap-2">
+										<div class="stat-tile stat-tile-on-media text-white text-center"><h5 class="mb-0 text-white fw-bold">3.98</h5><span class="fs-11 opacity-75">GPA</span></div>
+										<div class="stat-tile stat-tile-on-media text-white text-center"><h5 class="mb-0 text-white fw-bold">#1</h5><span class="fs-11 opacity-75">Rank</span></div>
+										<div class="stat-tile stat-tile-on-media text-white text-center"><h5 class="mb-0 text-white fw-bold">99%</h5><span class="fs-11 opacity-75">Attendance</span></div>
+									</div>
+									<img src="assets/img/performer/student-performer-01.png" alt="img" class="spotlight-img">
+								</div>
+							</div>
+							<!-- /Star Students -->
+						</div>
+					</div>
+					<div class="col-xxl-4 col-lg-6 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Capacity</span><h4 class="card-title mb-0">Class-wise Distribution</h4></div>
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex align-items-center justify-content-between mb-3 pb-3">
+									<div><h3 class="mb-0 fw-bold">3,654</h3><span class="stat-label">Total Students Enrolled</span></div>
+									<span class="badge badge-soft-success"><i class="ti ti-arrow-up-right"></i>4.6% YoY</span>
+								</div>
+								<div class="flex-grow-1 d-flex flex-column justify-content-between">
+									<div><div class="d-flex justify-content-between fs-13 mb-1"><span>Pre-Primary (KG)</span><span class="fw-semibold">312 · 9%</span></div><div class="meter meter-purple"><span style="width:22%"></span></div></div>
+									<div><div class="d-flex justify-content-between fs-13 mb-1"><span>Primary (I–V)</span><span class="fw-semibold">1,180 · 32%</span></div><div class="meter meter-primary"><span style="width:92%"></span></div></div>
+									<div><div class="d-flex justify-content-between fs-13 mb-1"><span>Middle (VI–VIII)</span><span class="fw-semibold">902 · 25%</span></div><div class="meter meter-info"><span style="width:72%"></span></div></div>
+									<div><div class="d-flex justify-content-between fs-13 mb-1"><span>Secondary (IX–X)</span><span class="fw-semibold">748 · 20%</span></div><div class="meter meter-success"><span style="width:60%"></span></div></div>
+									<div><div class="d-flex justify-content-between fs-13 mb-1"><span>Senior (XI–XII)</span><span class="fw-semibold">512 · 14%</span></div><div class="meter meter-warning"><span style="width:42%"></span></div></div>
+								</div>
+								<div class="row g-2 mt-3">
+									<div class="col-6"><div class="border rounded-3 p-2 text-center"><h4 class="mb-0 fs-15 fw-medium">114</h4><span class="stat-label">Sections</span></div></div>
+									<div class="col-6"><div class="border rounded-3 p-2 text-center"><h5 class="mb-0 fs-15">32</h5><span class="stat-label">Avg. Class Size</span></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-lg-12 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Heat</span><h4 class="card-title mb-0">Performance Risk Matrix</h4></div>
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex align-items-center justify-content-between mb-3 pb-3">
+									<div><h3 class="mb-0 fw-bold">3,654</h3><span class="stat-label">Students Assessed</span></div>
+									<span class="badge badge-soft-success"><i class="ti ti-shield-check me-1"></i>78% Healthy</span>
+								</div>
+								<div class="progress progress-md mb-2">
+									<div class="progress-bar bg-success" style="width:78%"></div>
+									<div class="progress-bar bg-warning" style="width:18%"></div>
+									<div class="progress-bar bg-danger" style="width:4%"></div>
+								</div>
+								<div class="flex-grow-1 mt-2">
+									<div id="risk-matrix"></div>
+									<div class="d-flex align-items-center justify-content-center flex-wrap gap-3 mt-1">
+										<span class="chip chip-lg"><span class="status-dot status-dot-lg bg-success"></span>Low <b>2,851</b><small>78%</small></span>
+										<span class="chip chip-lg"><span class="status-dot status-dot-lg bg-warning"></span>Medium <b>642</b><small>18%</small></span>
+										<span class="chip chip-lg"><span class="status-dot status-dot-lg bg-danger"></span>High <b>161</b><small>4%</small></span>
+									</div>
+								</div>
+								<div class="insight-card justify-content-between mt-3"><span class="fs-13"><i class="ti ti-clipboard-check text-success me-1"></i>Intervention Plans Active</span><span class="badge badge-soft-success">142 Students</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Student Intelligence -->
+
+				<div class="row">
+					<div class="col-xxl-8 col-xl-7 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header">
+								<span class="stat-caption">Intelligence</span>
+								<h4 class="card-title mb-0">Student Attendance Heatmap</h4>
+							</div>
+							<div class="card-body d-flex flex-column">
+								<div id="attendance_heatmap" class="chart-fill mb-2"></div>
+								<div class="d-flex align-items-center justify-content-between border-top pt-3 mt-auto">
+									<span class="stat-label">Weekly average attendance across all classes</span>
+									<span class="badge badge-soft-success">94.8%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-5 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Today</span><h4 class="card-title mb-0">Attendance Breakdown</h4></div>
+							<div class="card-body">
+								<div class="d-flex align-items-center gap-3 mb-3 pb-3">
+									<div class="gauge gauge-success"><span class="gauge-value">94.8%</span></div>
+									<div>
+										<h3 class="mb-0 fw-bold">3,464 <span class="fs-14 text-muted fw-normal">/ 3,654</span></h3>
+										<p class="stat-label mb-2">Students present today</p>
+										<span class="badge badge-soft-success"><i class="ti ti-arrow-up-right"></i>0.8% vs yesterday</span>
+									</div>
+								</div>
+								<div class="row g-2 mb-3">
+									<div class="col-sm-6">
+										<div class="d-flex align-items-center gap-2 border rounded-3 p-2">
+											<span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-user-check"></i></span>
+											<div><h4 class="mb-0 fs-16 fw-medium">3,464</h4><span class="stat-label">Present · 94%</span></div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="d-flex align-items-center gap-2 border rounded-3 p-2">
+											<span class="avatar avatar-icon avatar-md bg-danger-transparent"><i class="ti ti-user-x"></i></span>
+											<div><h5 class="mb-0">190</h5><span class="stat-label">Absent · 5%</span></div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="d-flex align-items-center gap-2 border rounded-3 p-2">
+											<span class="avatar avatar-icon avatar-md bg-warning-transparent"><i class="ti ti-user-exclamation"></i></span>
+											<div><h5 class="mb-0">64</h5><span class="stat-label">On Leave · 1%</span></div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="d-flex align-items-center gap-2 border rounded-3 p-2">
+											<span class="avatar avatar-icon avatar-md bg-info-transparent"><i class="ti ti-clock-hour-8"></i></span>
+											<div><h5 class="mb-0">37</h5><span class="stat-label">Late · 1.0%</span></div>
+										</div>
+									</div>
+								</div>
+								<h6 class="stat-caption mb-2">By Group</h6>
+								<div class="mb-3">
+									<div class="d-flex align-items-center justify-content-between fs-13 mb-1"><span><i class="ti ti-users-group text-success me-1"></i>Students</span><span class="fw-semibold">95%</span></div>
+									<div class="meter meter-success"><span style="width:95%"></span></div>
+								</div>
+								<div class="mb-3">
+									<div class="d-flex align-items-center justify-content-between fs-13 mb-1"><span><i class="ti ti-chalkboard text-primary me-1"></i>Teachers</span><span class="fw-semibold">96%</span></div>
+									<div class="meter meter-primary"><span style="width:96%"></span></div>
+								</div>
+								<div class="mb-0">
+									<div class="d-flex align-items-center justify-content-between fs-13 mb-1"><span><i class="ti ti-briefcase text-info me-1"></i>Staff</span><span class="fw-semibold">91%</span></div>
+									<div class="meter meter-info"><span style="width:91%"></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Parent Communication -->
+				<div class="row">
+					<div class="col-xxl-8 col-xl-7 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Engagement</span><h4 class="card-title mb-0">Weekly Communication Trend</h4></div>
+							<div class="card-body pb-0">
+								<div class="d-flex align-items-center flex-wrap gap-4 mb-2">
+									<div><p class="stat-label mb-0">Total Sent</p><h4 class="mb-0">8,942 <span class="badge badge-soft-success fs-11 align-middle">+6.2%</span></h4></div>
+									<div class="d-flex align-items-center gap-3">
+										<span class="d-inline-flex align-items-center fs-13"><i class="ti ti-point-filled text-primary me-1 fs-18"></i>SMS</span>
+										<span class="d-inline-flex align-items-center fs-13"><i class="ti ti-point-filled text-info me-1 fs-18"></i>Email</span>
+										<span class="d-inline-flex align-items-center fs-13"><i class="ti ti-point-filled text-success me-1 fs-18"></i>App</span>
+									</div>
+								</div>
+								<div id="performance_chart"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-5 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Reach</span><h4 class="card-title mb-0">Parent Engagement</h4></div>
+							<div class="card-body d-flex flex-column">
+								<div id="class-chart"></div>
+								<div class="text-center pt-3">
+									<h2 class="mb-0 fw-bold">78%</h2>
+									<p class="stat-label mb-2">Overall Engagement Score <span class="badge badge-soft-success ms-1"><i class="ti ti-arrow-up-right"></i>3.4%</span></p>
+								</div>
+								<div class="mt-1">
+									<div class="mb-2"><div class="d-flex align-items-center justify-content-between fs-13 mb-1"><span><i class="ti ti-point-filled text-success me-1 fs-18"></i>Highly Active</span><span class="fw-semibold">42%</span></div><div class="meter meter-success"><span style="width:42%"></span></div></div>
+									<div class="mb-2"><div class="d-flex align-items-center justify-content-between fs-13 mb-1"><span><i class="ti ti-point-filled text-primary me-1 fs-18"></i>Active</span><span class="fw-semibold">36%</span></div><div class="meter meter-primary"><span style="width:36%"></span></div></div>
+									<div class="mb-0"><div class="d-flex align-items-center justify-content-between fs-13 mb-1"><span><i class="ti ti-point-filled text-warning me-1 fs-18"></i>Occasional / Inactive</span><span class="fw-semibold">22%</span></div><div class="meter meter-warning"><span style="width:22%"></span></div></div>
+								</div>
+								<div class="row g-2 mt-auto pt-3">
+									<div class="col-4"><div class="border rounded-3 p-2 text-center"><h3 class="mb-0 fs-16 fw-medium">2,851</h3><span class="stat-label">Active</span></div></div>
+									<div class="col-4"><div class="border rounded-3 p-2 text-center"><h4 class="mb-0 fs-16 fw-medium">24</h4><span class="stat-label">Meetings</span></div></div>
+									<div class="col-4"><div class="border rounded-3 p-2 text-center"><h5 class="mb-0">1h 12m</h5><span class="stat-label">Response</span></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xxl-4 col-xl-6 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Realtime</span><h4 class="card-title mb-0">Activity Timeline</h4></div>
+							<div class="card-body d-flex flex-column">
+								<ul class="activity-feed activity-feed-roomy mb-3">
+									<li class="activity-feed-divider"><span>Today</span></li>
+									<li><span class="avatar avatar-icon avatar-md bg-primary-transparent"><i class="ti ti-send"></i></span><div class="d-flex align-items-start justify-content-between"><div><h5 class="mb-1 fs-15">Fee reminder circular sent to <span class="fw-semibold">412 parents</span></h5><div class="d-flex align-items-center gap-2"><span class="badge bg-light text-dark d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-clock"></i>20m</span><span class="chip chip-square chip-soft chip-danger"><i class="ti ti-flag-3-filled"></i>High</span></div></div><span class="badge badge-soft-primary flex-shrink-0">Circular</span></div></li>
+									<li><span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-message-2"></i></span><div class="d-flex align-items-start justify-content-between"><div><h6 class="mb-1">SMS batch delivered — <span class="fw-semibold">98.6%</span> success</h6><span class="badge bg-light text-dark d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-clock"></i>1h</span></div><span class="badge badge-soft-success flex-shrink-0">Delivered</span></div></li>
+									<li><span class="avatar avatar-icon avatar-md bg-info-transparent"><i class="ti ti-calendar-event"></i></span><div class="d-flex align-items-start justify-content-between"><div class="d-flex align-items-center"><a href="index.html" class="avatar avatar-sm me-2 flex-shrink-0"><img src="assets/img/parents/parent-01.jpg" class="rounded-circle flex-shrink-0" alt="img"></a><div><h6 class="mb-1"><span class="fw-semibold">Robert Daniel</span> requested a meeting</h6><div class="d-flex align-items-center gap-2"><span class="badge bg-light text-dark d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-clock"></i>2h</span><span class="chip chip-square chip-soft chip-warning"><i class="ti ti-flag-3-filled"></i>Med</span></div></div></div><span class="badge badge-soft-info flex-shrink-0">Meeting</span></div></li>
+									<li class="activity-feed-divider"><span>Yesterday</span></li>
+									<li><span class="avatar avatar-icon avatar-md bg-warning-transparent"><i class="ti ti-speakerphone"></i></span><div class="d-flex align-items-start justify-content-between"><div><h6 class="mb-1">Sports Day circular published</h6><span class="badge bg-light text-dark d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-clock"></i>4:12 PM</span></div><span class="badge badge-soft-warning flex-shrink-0">Notice</span></div></li>
+									<li><span class="avatar avatar-icon avatar-md bg-purple-transparent"><i class="ti ti-mail-forward"></i></span><div class="d-flex align-items-start justify-content-between"><div class="d-flex align-items-center"><a href="index.html" class="avatar avatar-sm me-2 flex-shrink-0"><img src="assets/img/parents/parent-05.jpg" class="rounded-circle flex-shrink-0" alt="img"></a><div><h6 class="mb-1"><span class="fw-semibold">Steven Vance</span> replied to newsletter</h6><span class="badge bg-light text-dark d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-clock"></i>11:03 AM</span></div></div><span class="badge badge-soft-primary flex-shrink-0">Email</span></div></li>
+									<li class="activity-feed-divider"><span>Earlier</span></li>
+									<li><span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-checks"></i></span><div class="d-flex align-items-start justify-content-between"><div><h6 class="mb-1">Term 1 report cards approved — <span class="fw-semibold">18 classes</span></h6><span class="badge bg-light text-dark d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-clock"></i>2 days ago</span></div><span class="badge badge-soft-success flex-shrink-0">Approved</span></div></li>
+								</ul>
+								<div class="mt-auto pt-3 border-top text-center"><a href="index.html" class="link-primary fw-medium fs-13">View All Activity <i class="ti ti-arrow-right ms-1"></i></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-6 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Inbox</span><h4 class="card-title mb-0">Recent Parent Messages</h4></div>
+							<div class="card-body p-0 d-flex flex-column data-list data-list-inset data-list-hover">
+								<div class="data-list-header"><span class="fs-13 fw-semibold text-dark">Inbox <span class="badge badge-soft-danger ms-1">3 unread</span></span><span class="stat-label"><i class="ti ti-mail me-1"></i>24 today</span></div>
+								<div class="data-list-item data-list-item-top is-unread">
+									<a href="index.html" class="avatar avatar-md flex-shrink-0"><img src="assets/img/parents/parent-01.jpg" class="rounded-circle flex-shrink-0" alt="img"><span class="avatar-status avatar-status-sm avatar-status-inset is-online"></span></a>
+									<div class="flex-fill overflow-hidden">
+										<div class="d-flex align-items-center justify-content-between mb-1"><span class="data-list-title text-truncate">Robert Daniel <span class="status-dot status-dot-primary ms-1"></span></span><span class="stat-label flex-shrink-0 ms-2"><i class="ti ti-clock me-1"></i>2m</span></div>
+										<p class="mb-1 fs-13 fw-medium">Fee clarification for Term 2 <span class="badge badge-soft-danger ms-1">High</span></p>
+										<p class="stat-label mb-2 text-truncate">Could you please confirm the revised due date for the second term…</p>
+										<div class="data-list-meta"><span class="chip chip-muted"><i class="ti ti-paperclip"></i>2 files</span><span class="chip chip-soft chip-warning"><i class="ti ti-alarm"></i>SLA 1h left</span></div>
+										<div class="hover-actions d-flex gap-2 mt-2"><a href="index.html" class="btn btn-primary btn-sm"><i class="ti ti-arrow-back-up me-1"></i>Reply</a><a href="index.html" class="btn btn-light btn-sm"><i class="ti ti-eye me-1"></i>View</a></div>
+									</div>
+								</div>
+								<div class="data-list-item data-list-item-top">
+									<a href="index.html" class="avatar avatar-md flex-shrink-0"><img src="assets/img/parents/parent-02.jpg" class="rounded-circle flex-shrink-0" alt="img"><span class="avatar-status avatar-status-sm avatar-status-inset is-away"></span></a>
+									<div class="flex-fill overflow-hidden">
+										<div class="d-flex align-items-center justify-content-between mb-1"><span class="data-list-title text-truncate">Linda Michael</span><span class="stat-label flex-shrink-0 ms-2"><i class="ti ti-clock me-1"></i>1h</span></div>
+										<p class="mb-1 fs-13 fw-medium">Progress report received <span class="badge badge-soft-success ms-1">Replied</span></p>
+										<p class="stat-label mb-2 text-truncate">Thank you for sharing the detailed progress report — very helpful…</p>
+										<div class="data-list-meta"><span class="chip chip-soft chip-info"><i class="ti ti-circle-check"></i>Replied in 42m</span></div>
+										<div class="hover-actions d-flex gap-2 mt-2"><a href="index.html" class="btn btn-primary btn-sm"><i class="ti ti-arrow-back-up me-1"></i>Reply</a><a href="index.html" class="btn btn-light btn-sm"><i class="ti ti-eye me-1"></i>View</a></div>
+									</div>
+								</div>
+								<div class="data-list-item data-list-item-top is-unread">
+									<a href="index.html" class="avatar avatar-md flex-shrink-0"><img src="assets/img/parents/parent-05.jpg" class="rounded-circle flex-shrink-0" alt="img"><span class="avatar-status avatar-status-sm avatar-status-inset is-online"></span></a>
+									<div class="flex-fill overflow-hidden">
+										<div class="d-flex align-items-center justify-content-between mb-1"><span class="data-list-title text-truncate">Steven Vance <span class="status-dot status-dot-primary ms-1"></span></span><span class="stat-label flex-shrink-0 ms-2"><i class="ti ti-clock me-1"></i>3h</span></div>
+										<p class="mb-1 fs-13 fw-medium">Sports day participation <span class="badge badge-soft-warning ms-1">Medium</span></p>
+										<p class="stat-label mb-2 text-truncate">Will Rachel be able to join the annual sports day this year?</p>
+										<div class="data-list-meta"><span class="chip chip-muted"><i class="ti ti-photo"></i>1 image</span><span class="chip chip-soft chip-info"><i class="ti ti-alarm"></i>SLA 4h left</span></div>
+										<div class="input-group input-group-sm mt-2"><input type="text" class="form-control" placeholder="Type a quick reply…" aria-label="Quick reply"><button type="button" class="btn btn-primary px-2" aria-label="Send reply"><i class="ti ti-send"></i></button></div>
+									</div>
+								</div>
+								<div class="data-list-footer mt-auto flex-wrap"><span class="stat-label"><i class="ti ti-clock-hour-4 me-1"></i>Avg. reply 42m</span><a href="index.html" class="link-primary fw-medium fs-13">View all messages <i class="ti ti-arrow-right ms-1"></i></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-lg-12 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Delivery</span><h4 class="card-title mb-0">Delivery Success</h4></div>
+							<div class="card-body d-flex flex-column data-list data-list-dashed">
+								<div class="text-center mb-3">
+									<div class="gauge mx-auto mb-2 gauge-success"><span class="gauge-value">95.6%</span></div>
+									<p class="stat-label mb-0">Overall Success Rate <span class="badge badge-soft-success ms-1"><i class="ti ti-arrow-up-right"></i>1.2%</span></p>
+								</div>
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-message-2"></i></span><span class="data-list-title flex-shrink-0">SMS</span><div id="sms_chart" class="mx-auto"></div><span class="data-list-end stat-label">98.6%<small>8.9k sent</small></span></div>
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-primary-transparent"><i class="ti ti-mail-opened"></i></span><span class="data-list-title flex-shrink-0">Email</span><div id="email_chart" class="mx-auto"></div><span class="data-list-end stat-label">92.3%<small>6.2k sent</small></span></div>
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-warning-transparent"><i class="ti ti-bell-ringing"></i></span><span class="data-list-title flex-shrink-0">App Push</span><div id="app_push_chart" class="mx-auto"></div><span class="data-list-end stat-label">96.1%<small>5.1k sent</small></span></div>
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-brand-whatsapp"></i></span><span class="data-list-title flex-shrink-0">WhatsApp</span><div id="whatsapp_chart" class="mx-auto"></div>										<span class="data-list-end stat-label">99.1%<small>4.4k sent</small></span></div>
+								<div class="mt-3">
+									<div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-caption">7-Day Delivery</span><span class="stat-label">24.6k delivered</span></div>
+									<div id="delivery_chart"></div>
+								</div>
+								<div class="row g-2 mt-auto">
+									<div class="col-4"><div class="stat-tile stat-tile-plain"><div class="stat-value stat-value-xs text-danger">142</div><span class="stat-label stat-label-sm">Failed</span></div></div>
+									<div class="col-4"><div class="stat-tile stat-tile-plain"><div class="stat-value stat-value-xs text-warning">68</div><span class="stat-label stat-label-sm">Pending</span></div></div>
+									<div class="col-4"><div class="stat-tile stat-tile-plain"><div class="stat-value stat-value-xs text-primary">213</div><span class="stat-label stat-label-sm">Queue</span></div></div>
+								</div>
+								<div class="insight-card justify-content-between mt-2"><span class="fs-13"><i class="ti ti-clock-hour-4 text-primary me-1"></i>Avg. Response</span><span class="badge badge-soft-success">1h 12m</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Parent Communication -->
+
+				<!-- Student Intelligence -->
+				<div class="row">
+					<div class="col-xxl-8 col-xl-12 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Insights</span><h4 class="card-title mb-0">Enrollment &amp; Growth Trend</h4></div>
+							<div class="card-body">
+								<div class="row g-3 mb-3">
+									<div class="col-sm-4"><div class="border rounded-3 p-3 h-100"><div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-label">Total Students</span><span class="badge badge-soft-success"><i class="ti ti-arrow-up-right"></i>4.6%</span></div><h3 class="mb-0 fw-bold">3,654</h3><span class="stat-label"><i class="ti ti-point-filled text-primary me-1"></i>vs 3,493 last year</span></div></div>
+									<div class="col-sm-4"><div class="border rounded-3 p-3 h-100"><div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-label">Growth Rate</span><span class="badge badge-soft-success"><i class="ti ti-arrow-up-right"></i>0.8%</span></div><h3 class="mb-0 fw-bold">4.6%</h3><span class="stat-label"><i class="ti ti-point-filled text-success me-1"></i>Above 3.8% target</span></div></div>
+									<div class="col-sm-4"><div class="border rounded-3 p-3 h-100"><div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-label">New Admissions</span><span class="badge badge-soft-success"><i class="ti ti-arrow-up-right"></i>12</span></div><h3 class="mb-0 fw-bold">128</h3><span class="stat-label"><i class="ti ti-point-filled text-warning me-1"></i>this term</span></div></div>
+								</div>
+								<div id="total-earning"></div>
+								<div class="insight-card mt-2">
+									<span class="avatar avatar-icon avatar-md bg-info-transparent me-2 flex-shrink-0"><i class="ti ti-bulb"></i></span>
+									<p class="mb-0 fs-13">Enrollments are up <span class="fw-semibold text-dark">18%</span> vs last term, outpacing graduations by <span class="fw-semibold text-dark">2.1×</span> — capacity utilisation now at <span class="fw-semibold text-dark">86%</span>.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-12 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Demographics</span><h4 class="card-title mb-0">Gender Distribution</h4></div>
+							<div class="card-body">
+								<div id="student-chart"></div>
+								<div class="text-center pt-3 mb-3">
+									<div class="stat-value">3,654</div>
+									<p class="stat-label mb-0">Total Students <span class="badge badge-soft-success ms-1"><i class="ti ti-arrow-up-right"></i>4.6% YoY</span></p>
+								</div>
+								<div class="data-list data-list-cards data-list-cards-accent data-list-hover">
+									<div class="data-list-item accent-primary">
+										<span class="avatar avatar-icon avatar-md bg-primary-transparent"><i class="ti ti-gender-male"></i></span>
+										<div class="data-list-body">
+											<div class="d-flex align-items-center justify-content-between">
+												<span class="data-list-title">Male</span>
+												<span class="data-list-title">1,965 · 53.8%</span>
+											</div>
+											<div class="meter meter-primary mt-1"><span style="width:53.8%"></span></div>
+										</div>
+									</div>
+									<div class="data-list-item accent-pink">
+										<span class="avatar avatar-icon avatar-md bg-pink-transparent"><i class="ti ti-gender-female"></i></span>
+										<div class="data-list-body">
+											<div class="d-flex align-items-center justify-content-between">
+												<span class="data-list-title">Female</span>
+												<span class="data-list-title">1,689 · 46.2%</span>
+											</div>
+											<div class="meter meter-pink mt-1"><span style="width:46.2%"></span></div>
+										</div>
+									</div>
+									<div class="data-list-item accent-purple">
+										<span class="avatar avatar-icon avatar-md bg-purple-transparent"><i class="ti ti-friends"></i></span>
+										<div class="data-list-body">
+											<div class="d-flex align-items-center justify-content-between">
+												<span class="data-list-title">Other</span>
+												<span class="data-list-title">0 · 0.0%</span>
+											</div>
+											<div class="meter meter-purple mt-1"><span style="width:0%"></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Library Analytics -->
+				<div class="row">
+					<div class="col-xxl-8 col-xl-12 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Resources</span><h4 class="card-title mb-0">Books Issued Trend</h4></div>
+							<div class="card-body d-flex flex-column">
+								<div class="row g-3 mb-3">
+									<div class="col-sm-6 col-lg-3">
+										<div class="border rounded-3 p-3 h-100">
+											<div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-label">Issued (Month)</span><span class="badge badge-soft-success"><i class="ti ti-arrow-up-right"></i>5.4%</span></div>
+											<h4 class="mb-0 fw-bold">6,842</h4>
+										</div>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="border rounded-3 p-3 h-100">
+											<div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-label">Returned</span><i class="ti ti-book-download text-success"></i></div>
+											<h4 class="mb-0 fw-bold">6,120</h4>
+										</div>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="border rounded-3 p-3 h-100">
+											<div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-label">Overdue</span><i class="ti ti-alarm text-danger"></i></div>
+											<h4 class="mb-0 fw-bold text-danger">58</h4>
+										</div>
+									</div>
+									<div class="col-sm-6 col-lg-3">
+										<div class="border rounded-3 p-3 h-100">
+											<div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-label">Peak Day</span><i class="ti ti-calendar-star text-warning"></i></div>
+											<h4 class="mb-0 fw-bold">Wed</h4>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex align-items-center justify-content-between mb-2 flex-wrap"><span class="stat-caption">12-Month Trend</span><span class="stat-label"><span class="text-success fw-semibold">+5.4%</span> vs last year · 8,486 issued</span></div>
+								<div class="flex-grow-1 d-flex align-items-center">
+									<div id="fees-chart" class="w-100"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-12 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Inventory</span><h4 class="card-title mb-0">Book Availability</h4></div>
+							<div class="card-body d-flex flex-column">
+								<div class="text-center pb-3 mb-3">
+									<div class="gauge gauge-lg mx-auto mb-2 gauge-primary"><span class="gauge-value">81%</span></div>
+									<h5 class="mb-0">14,982 <span class="text-muted fw-normal fs-14">/ 18,420 titles</span></h5>
+									<span class="stat-label">Available across all shelves</span>
+								</div>
+								<div class="row g-2 mb-3">
+									<div class="col-sm-4"><div class="border rounded-3 p-2 text-center"><h6 class="mb-0">2,684</h6><span class="stat-label">Issued</span></div></div>
+									<div class="col-sm-4"><div class="border rounded-3 p-2 text-center"><h6 class="mb-0">754</h6><span class="stat-label">Reserved</span></div></div>
+									<div class="col-sm-4"><div class="border rounded-3 p-2 text-center"><h6 class="mb-0 text-danger">7</h6><span class="stat-label">Low Stock</span></div></div>
+								</div>
+								<h6 class="stat-caption mb-2">Shelf Utilization</h6>
+								<div class="mb-3"><div class="d-flex justify-content-between fs-13 mb-1"><span>Capacity used</span><span class="fw-semibold">72%</span></div><div class="progress progress-sm"><div class="progress-bar bg-primary-gradient" style="width:72%"></div></div></div>
+								<h6 class="stat-caption mb-2">By Category</h6>
+								<div class="row g-2 flex-grow-1 align-content-end">
+									<div class="col-sm-6"><div class="border rounded-3 p-2 d-flex align-items-center justify-content-between"><span class="fs-13"><i class="ti ti-atom text-primary me-1"></i>Science</span><span class="badge badge-soft-success">88%</span></div></div>
+									<div class="col-sm-6"><div class="border rounded-3 p-2 d-flex align-items-center justify-content-between"><span class="fs-13"><i class="ti ti-math text-info me-1"></i>Maths</span><span class="badge badge-soft-success">76%</span></div></div>
+									<div class="col-sm-6"><div class="border rounded-3 p-2 d-flex align-items-center justify-content-between"><span class="fs-13"><i class="ti ti-book text-warning me-1"></i>Literature</span><span class="badge badge-soft-warning">64%</span></div></div>
+									<div class="col-sm-6"><div class="border rounded-3 p-2 d-flex align-items-center justify-content-between"><span class="fs-13"><i class="ti ti-code text-danger me-1"></i>Coding</span><span class="badge badge-soft-danger">42%</span></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xxl-7 col-xl-6 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Trending</span><h4 class="card-title mb-0">Most Borrowed Books</h4></div>
+							<div class="card-body p-0 data-list data-list-inset data-list-hover">
+								<div class="data-list-item is-top"><span class="data-list-index">1</span><span class="avatar avatar-icon bg-warning-gradient"><i class="ti ti-book-2"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">To Kill a Mockingbird</div><div class="data-list-meta"><span class="badge badge-soft-warning">Literature</span><span class="chip chip-muted"><i class="ti ti-users"></i>IX–X</span><span class="badge badge-soft-success d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-trending-up"></i>Trending</span></div></div><div class="data-list-end"><div class="stat-value stat-value-xs">86<span> issues</span></div><div class="meter meter-xs meter-warning"><span style="width:100%"></span></div></div></div>
+								<div class="data-list-item is-top"><span class="data-list-index">2</span><span class="avatar avatar-icon bg-primary-gradient"><i class="ti ti-atom"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">A Brief History of Time</div><div class="data-list-meta"><span class="badge badge-soft-primary">Science</span><span class="chip chip-muted"><i class="ti ti-users"></i>XI–XII</span><span class="badge badge-soft-success d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-trending-up"></i>+9</span></div></div><div class="data-list-end"><div class="stat-value stat-value-xs">74<span> issues</span></div><div class="meter meter-xs meter-primary"><span style="width:86%"></span></div></div></div>
+								<div class="data-list-item is-top"><span class="data-list-index">3</span><span class="avatar avatar-icon bg-success-gradient"><i class="ti ti-code"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">Introduction to Algorithms</div><div class="data-list-meta"><span class="badge badge-soft-success">Programming</span><span class="chip chip-muted"><i class="ti ti-users"></i>XI–XII</span><span class="chip chip-soft chip-sm chip-warning"><i class="ti ti-hourglass"></i>12 waiting</span></div></div><div class="data-list-end"><div class="stat-value stat-value-xs">61<span> issues</span></div><div class="meter meter-xs meter-success"><span style="width:71%"></span></div></div></div>
+								<div class="data-list-item"><span class="data-list-index">4</span><span class="avatar avatar-icon bg-warning-gradient"><i class="ti ti-book"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">The Great Gatsby</div><div class="data-list-meta"><span class="badge badge-soft-warning">Literature</span><span class="chip chip-muted"><i class="ti ti-users"></i>X</span></div></div><div class="data-list-end"><div class="stat-value stat-value-xs">58<span> issues</span></div><div class="meter meter-xs meter-warning"><span style="width:67%"></span></div></div></div>
+								<div class="data-list-item"><span class="data-list-index">5</span><span class="avatar avatar-icon bg-info-gradient"><i class="ti ti-math"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">Calculus Made Easy</div><div class="data-list-meta"><span class="badge badge-soft-info">Mathematics</span><span class="chip chip-muted"><i class="ti ti-users"></i>XII</span></div></div><div class="data-list-end"><div class="stat-value stat-value-xs">47<span> issues</span></div><div class="meter meter-xs meter-info"><span style="width:55%"></span></div></div></div>
+								<div class="data-list-footer flex-wrap pt-3 pb-0"><span class="stat-label"><i class="ti ti-books me-1"></i>326 titles borrowed this week</span><a href="index.html" class="link-primary fw-medium fs-13">Full report <i class="ti ti-arrow-right ms-1"></i></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-5 col-xl-6 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Categories</span><h4 class="card-title mb-0">Popular Categories</h4></div>
+							<div class="card-body d-flex flex-column">
+								<div class="bubble-cloud">
+									<div class="bubble bg-primary-gradient bubble-01"><b>32%</b><span>Science</span></div>
+									<div class="bubble bg-info-gradient bubble-02"><b>26%</b><span>Maths</span></div>
+									<div class="bubble bg-success-gradient bubble-03"><b>20%</b><span>Coding</span></div>
+									<div class="bubble bg-warning-gradient bubble-04"><b>14%</b><span>Lit</span></div>
+									<div class="bubble bg-purple-gradient bubble-05"><b>8%</b><span>Hist</span></div>
+								</div>
+								<div class="data-list data-list-sm border-top pt-2 mt-2">
+									<div class="data-list-item"><span class="status-dot status-dot-lg status-dot-square bg-primary"></span><span class="data-list-body data-list-title">Science</span><span class="badge badge-soft-success d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-trending-up"></i>+6%</span><span class="stat-label stat-label-sm">1,284 books</span></div>
+									<div class="data-list-item"><span class="status-dot status-dot-lg status-dot-square bg-info"></span><span class="data-list-body data-list-title">Mathematics</span><span class="badge badge-soft-success d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-trending-up"></i>+3%</span><span class="stat-label stat-label-sm">1,043 books</span></div>
+									<div class="data-list-item"><span class="status-dot status-dot-lg status-dot-square bg-success"></span><span class="data-list-body data-list-title">Programming</span><span class="badge badge-soft-success d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-trending-up"></i>+11%</span><span class="stat-label stat-label-sm">802 books</span></div>
+									<div class="data-list-item"><span class="status-dot status-dot-lg status-dot-square bg-warning"></span><span class="data-list-body data-list-title">Literature</span><span class="badge badge-soft-success d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-trending-up"></i>+2%</span><span class="stat-label stat-label-sm">560 books</span></div>
+									<div class="data-list-item"><span class="status-dot status-dot-lg status-dot-square bg-purple"></span><span class="data-list-body data-list-title">History</span><span class="badge badge-soft-danger d-inline-flex align-items-center gap-1 rounded-pill"><i class="ti ti-trending-down"></i>-1%</span><span class="stat-label stat-label-sm">318 books</span></div>
+								</div>
+								<div class="d-flex align-items-center justify-content-between border-top pt-3 mt-auto">
+									<div>
+										<span class="stat-caption d-block mb-2">Most Active Readers</span>
+										<div class="avatar-list-stacked avatar-group-overlapped avatar-group-sm d-flex align-items-center">
+											<span class="avatar avatar-rounded"><img src="assets/img/profiles/avatar-02.jpg" alt=""></span>
+											<span class="avatar avatar-rounded"><img src="assets/img/profiles/avatar-06.jpg" alt=""></span>
+											<span class="avatar avatar-rounded"><img src="assets/img/profiles/avatar-13.jpg" alt=""></span>
+											<span class="avatar avatar-rounded"><img src="assets/img/profiles/avatar-19.jpg" alt=""></span>
+											<span class="stat-label ms-2">+128 readers</span>
+										</div>
+									</div>
+									<div class="text-end">
+										<div class="stat-value stat-value-sm">4,249</div>
+										<span class="stat-label">Total borrowed</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Library Analytics -->
+
+				<!-- Transport Dashboard -->
+				<div class="row g-4">
+					<div class="col-xxl-8 col-xl-7 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Operations</span><h4 class="card-title mb-0">Fuel Consumption Trend</h4></div>
+							<div class="card-body pb-0">
+								<div class="d-flex align-items-center flex-wrap gap-4 mb-2">
+									<div><p class="stat-label mb-0">This Week</p><h4 class="mb-0">3,284 <span class="fs-14 text-muted">gal</span></h4></div>
+									<div><p class="stat-label mb-0">Avg / Route</p><h4 class="mb-0">18.4 <span class="fs-14 text-muted">gal</span></h4></div>
+									<div><p class="stat-label mb-0">Cost</p><h4 class="mb-0">$11,540</h4></div>
+								</div>
+								<div id="attendance_chart" class="mb-0"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-5 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Fleet</span><h4 class="card-title mb-0">Fleet Utilization</h4></div>
+							<div class="card-body d-flex flex-column">
+								<div class="row g-2 mb-3">
+									<div class="col-sm-4"><div class="border rounded-3 p-2 text-center"><h5 class="mb-0 fs-15">42<span class="fs-11 text-muted fw-normal">/48</span></h5><span class="stat-label">Active</span></div></div>
+									<div class="col-sm-4"><div class="border rounded-3 p-2 text-center"><h6 class="mb-0">186</h6><span class="stat-label">Trips</span></div></div>
+									<div class="col-sm-4"><div class="border rounded-3 p-2 text-center"><h6 class="mb-0">2,340<span class="fs-11 text-muted fw-normal"> km</span></h6><span class="stat-label">Distance</span></div></div>
+								</div>
+								<div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-caption">Fleet Status</span><span class="stat-label">48 vehicles</span></div>
+								<div class="meter meter-lg meter-segmented mb-2"><span class="bg-success" style="width:75%"></span><span class="bg-warning" style="width:10%"></span><span class="bg-info" style="width:10%"></span><span class="bg-gray-500" style="width:5%"></span></div>
+								<div class="d-flex flex-wrap gap-3 mb-3"><span class="chip"><i class="bg-success"></i>Active <b>36</b></span><span class="chip"><i class="bg-warning"></i>Idle <b>5</b></span><span class="chip"><i class="bg-info"></i>Service <b>5</b></span><span class="chip"><i class="bg-gray-500"></i>Offline <b>2</b></span></div>
+								<div class="row text-center g-2 mb-3">
+									<div class="col-4"><div class="gauge mx-auto mb-2 gauge-success gauge-sm"><span class="gauge-value fs-14">93%</span></div><p class="stat-label mb-0">Active</p></div>
+									<div class="col-4"><div class="gauge mx-auto mb-2 gauge-primary gauge-sm"><span class="gauge-value fs-14">87%</span></div><p class="stat-label mb-0">Occupancy</p></div>
+									<div class="col-4"><div class="gauge mx-auto mb-2 gauge-info gauge-sm"><span class="gauge-value fs-14">95%</span></div><p class="stat-label mb-0">On-Time</p></div>
+								</div>
+								<div class="d-flex align-items-center justify-content-between mb-1"><span class="stat-caption">7-Day Utilization</span><span class="stat-label"><span class="text-success fw-semibold">+4.2%</span> vs last week</span></div>
+								<div id="utilization_chart" class="mb-3"></div>
+								<div class="d-flex align-items-center justify-content-between border rounded-3 p-2 mt-auto"><span class="fs-13"><i class="ti ti-steering-wheel text-primary me-1"></i>Drivers Available</span><span class="fw-semibold">39 / 45</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xxl-4 col-xl-6 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Live</span><h4 class="card-title mb-0">Live Route Status</h4></div>
+							<div class="card-body data-list data-list-cards data-list-cards-accent data-list-hover">
+								<div class="data-list-item flex-column align-items-stretch accent-success"><div class="d-flex align-items-center justify-content-between"><span class="data-list-title"><i class="ti ti-bus"></i>Route 01 — North</span><span class="chip chip-lg text-success"><span class="status-dot status-dot-sm status-dot-pulse"></span>LIVE</span></div><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm flex-shrink-0"><img src="assets/img/profiles/avatar-14.jpg" alt="driver"></span><span class="data-list-title">James Cooper<br><span class="stat-label">Driver</span></span><span class="chip chip-muted"><i class="ti ti-gps"></i>GPS OK</span></div><div class="stat-grid"><div class="stat-tile stat-tile-plain"><b>42</b><span class="d-block">Onboard</span></div><div class="stat-tile stat-tile-plain"><b>8 min</b><span class="d-block">ETA</span></div><div class="stat-tile stat-tile-plain"><b>34 km/h</b><span class="d-block">Speed</span></div></div></div>
+								
+								<div class="data-list-item flex-column align-items-stretch accent-danger"><div class="d-flex align-items-center justify-content-between"><span class="data-list-title"><i class="ti ti-bus"></i>Route 07 — South</span><span class="chip chip-lg text-danger"><span class="status-dot status-dot-sm status-dot-pulse"></span>DELAYED</span></div><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm flex-shrink-0"><img src="assets/img/profiles/avatar-16.jpg" alt="driver"></span><span class="data-list-title">Owen Blake<br><span class="stat-label">Driver</span></span><span class="chip chip-muted text-warning"><i class="ti ti-traffic-cone"></i>Traffic</span></div><div class="stat-grid"><div class="stat-tile stat-tile-plain"><b>29</b><span class="d-block">Onboard</span></div><div class="stat-tile stat-tile-plain"><b>+12 min</b><span class="d-block">ETA</span></div><div class="stat-tile stat-tile-plain"><b>12 km/h</b><span class="d-block">Speed</span></div></div></div>
+								<div class="data-list-item flex-column align-items-stretch accent-warning"><div class="d-flex align-items-center justify-content-between"><span class="data-list-title"><i class="ti ti-bus-stop"></i>Route 09 — West</span><span class="chip chip-lg text-warning"><span class="status-dot status-dot-sm status-dot-pulse"></span>IDLE</span></div><div class="d-flex align-items-center gap-2"><span class="avatar avatar-sm flex-shrink-0"><img src="assets/img/profiles/avatar-11.jpg" alt="driver"></span><span class="data-list-title">Nathan Hill<br><span class="stat-label">Depot</span></span><span class="chip chip-muted text-muted"><i class="ti ti-tools"></i>Service</span></div><div class="stat-grid"><div class="stat-tile stat-tile-plain"><b>0</b><span class="d-block">Onboard</span></div><div class="stat-tile stat-tile-plain"><b>—</b><span class="d-block">ETA</span></div><div class="stat-tile stat-tile-plain"><b>0 km/h</b><span class="d-block">Speed</span></div></div></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-6 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Schedule</span><h4 class="card-title mb-0">Maintenance Timeline</h4></div>
+							<div class="card-body data-list data-list-cards data-list-cards-accent data-list-hover">
+								<div class="row g-2 mb-3">
+									<div class="col-4"><div class="border rounded-3 p-2 text-center"><h5 class="mb-0 fs-15">5</h5><span class="stat-label">Upcoming</span></div></div>
+									<div class="col-4"><div class="border rounded-3 p-2 text-center"><h6 class="mb-0 text-danger">1</h6><span class="stat-label">Critical</span></div></div>
+									<div class="col-4"><div class="border rounded-3 p-2 text-center"><h6 class="mb-0 text-success">94%</h6><span class="stat-label">Health</span></div></div>
+								</div>
+								<div class="data-list-item accent-danger"><span class="avatar avatar-icon avatar-md bg-danger-transparent"><i class="ti ti-tools"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">Bus TX-1204 — Brake inspection</div><div class="data-list-meta"><span class="badge badge-soft-danger">Critical</span><span class="chip chip-muted"><span class="avatar avatar-xs avatar-rounded"><img src="assets/img/profiles/avatar-05.jpg" alt=""></span>D. Owens</span></div></div><div class="data-list-end"><div class="data-list-title">Tomorrow</div><span class="stat-label">09:00 AM</span></div></div>
+								<div class="data-list-item accent-primary"><span class="avatar avatar-icon avatar-md bg-primary-transparent"><i class="ti ti-engine"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">Bus TX-1188 — Engine service</div><div class="data-list-meta"><span class="badge badge-soft-primary">Scheduled</span><span class="chip chip-muted"><span class="avatar avatar-xs avatar-rounded"><img src="assets/img/profiles/avatar-07.jpg" alt=""></span>R. Patel</span></div></div><div class="data-list-end"><div class="data-list-title">24 Jul</div><span class="stat-label">11:00 AM</span></div></div>
+								<div class="data-list-item accent-info"><span class="avatar avatar-icon avatar-md bg-info-transparent"><i class="ti ti-wheel"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">Bus TX-1092 — Tyre replacement</div><div class="data-list-meta"><span class="badge badge-soft-info">Routine</span><span class="chip chip-muted"><span class="avatar avatar-xs avatar-rounded"><img src="assets/img/profiles/avatar-12.jpg" alt=""></span>S. Lee</span></div></div><div class="data-list-end"><div class="data-list-title">26 Jul</div><span class="stat-label">10:00 AM</span></div></div>
+								<div class="data-list-item accent-success"><span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-circle-check"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">Bus TX-1150 — Service completed</div><div class="data-list-meta"><span class="badge badge-soft-success">Done</span><span class="chip chip-muted"><span class="avatar avatar-xs avatar-rounded"><img src="assets/img/profiles/avatar-03.jpg" alt=""></span>M. Cole</span></div></div><div class="data-list-end"><div class="data-list-title">18 Jul</div><span class="stat-label">Health 98%</span></div></div>
+								<div class="data-list-item accent-warning"><span class="avatar avatar-icon avatar-md bg-warning-transparent"><i class="ti ti-snowflake"></i></span><div class="data-list-body"><div class="data-list-title text-truncate">Bus TX-1176 — AC servicing</div><div class="data-list-meta"><span class="badge badge-soft-warning">Upcoming</span><span class="chip chip-muted"><span class="avatar avatar-xs avatar-rounded"><img src="assets/img/profiles/avatar-08.jpg" alt=""></span>K. Novak</span></div></div><div class="data-list-end"><div class="data-list-title">28 Jul</div><span class="stat-label">02:00 PM</span></div></div>
+								<div class="d-flex align-items-center justify-content-between border-top pt-3 mt-3"><span class="stat-label"><i class="ti ti-clock-hour-4 me-1"></i>Next service in 14h</span>									<a href="index.html" class="link-primary fw-medium fs-13">Full schedule <i class="ti ti-arrow-right ms-1"></i></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-lg-12 d-flex">
+						<div class="card flex-fill mb-4">
+							<div class="card-header"><span class="stat-caption">Tracking</span><h4 class="card-title mb-0">Live Fleet Map</h4></div>
+							<div class="card-body pb-2">
+								<div class="map-panel">
+									<iframe src="../../www.google.com/maps/embed/pb=!1m28!1m12!1m3!1d.4911912!4m5!1s0x80c2b29ea78b877f%3a0x6b" height="200" style="width:100%; border:0; border-radius: 8px; filter: contrast(1.1) brightness(0.9) hue-rotate(-10deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+								<div class="d-flex align-items-center justify-content-between mt-3">
+									<span class="badge badge-soft-success"><i class="ti ti-gps me-1"></i>GPS Online</span>
+									<span class="chip chip-lg"><i class="ti ti-sun text-warning"></i>28°C · Clear</span>
+								</div>
+								<div class="d-flex align-items-center justify-content-between mt-3 mb-1 flex-wrap"><span class="stat-caption">Live Vehicles</span><span class="stat-label">18 tracked · 4 schools nearby</span></div>
+								<div class="pb-1">
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-success-transparent"><i class="ti ti-bus"></i></span><div class="data-list-body"><div class="data-list-title">Route 01 · North</div><span class="data-list-subtitle"><i class="ti ti-map-pin"></i> Downtown Ave · 34 km/h</span></div><span class="badge badge-soft-success">On route</span></div>
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-primary-transparent"><i class="ti ti-bus"></i></span><div class="data-list-body"><div class="data-list-title">Route 04 · East</div><span class="data-list-subtitle"><i class="ti ti-map-pin"></i> Elm Street · 41 km/h</span></div><span class="badge badge-soft-success">On route</span></div>
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-danger-transparent"><i class="ti ti-bus"></i></span><div class="data-list-body"><div class="data-list-title">Route 07 · South</div><span class="data-list-subtitle"><i class="ti ti-map-pin"></i> 5th Junction · 12 km/h</span></div><span class="badge badge-soft-danger">Traffic</span></div>
+								<div class="data-list-item"><span class="avatar avatar-icon avatar-md bg-warning-transparent"><i class="ti ti-bus-stop"></i></span><div class="data-list-body"><div class="data-list-title">Route 09 · West</div><span class="data-list-subtitle"><i class="ti ti-tools"></i> Depot · Maintenance</span></div><span class="badge badge-soft-warning">Idle</span></div>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Transport Dashboard -->
+
+			</div>
+
+		</div>
+		<!-- /Page Wrapper -->
+
+		<!-- Add Class Routine -->
+		<div class="modal fade" id="add_class_routine">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-wrapper">
+						<div class="modal-header">
+							<h4 class="modal-title">Add Class Routine</h4>
+							<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
+								<i class="ti ti-x"></i>
+							</button>
+						</div>
+						<form action="index.html">
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="mb-3">
+											<label class="form-label" for="teacher">Teacher</label>
+											<select class="select" id="teacher">
+												<option>Select</option>
+												<option>Erickson</option>
+												<option>Mori</option>
+												<option>Joseph</option>
+												<option>James</option>
+											</select>
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="class">Class</label>
+											<select class="select" id="class">
+												<option>Select</option>
+												<option>I</option>
+												<option>II</option>
+												<option>III</option>
+												<option>IV</option>
+											</select>
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="section">Section</label>
+											<select class="select" id="section">
+												<option>Select</option>
+												<option>A</option>
+												<option>B</option>
+												<option>C</option>
+											</select>
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="day">Day</label>
+											<select class="select" id="day">
+												<option>Select</option>
+												<option>Monday</option>
+												<option>Tuesday</option>
+												<option>Wedneshday</option>
+												<option>Thursday</option>
+												<option>Friday</option>
+											</select>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label" for="start-time">Start Time</label>
+													<div class="date-pic">
+														<input type="text" class="form-control timepicker" placeholder="Choose" id="start-time">
+														<span class="cal-icon"><i class="ti ti-clock"></i></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="mb-3">
+													<label class="form-label" for="end-time">End Time</label>
+													<div class="date-pic">
+														<input type="text" class="form-control timepicker" placeholder="Choose" id="end-time">
+														<span class="cal-icon"><i class="ti ti-clock"></i></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="class-room">Class Room</label>
+											<select class="select" id="class-room">
+												<option>Select</option>
+												<option>101</option>
+												<option>102</option>
+												<option>103</option>
+												<option>104</option>
+												<option>105</option>
+											</select>
+										</div>
+										<div class="modal-satus-toggle d-flex align-items-center justify-content-between">
+											<div class="status-title">
+												<h5>Status</h5>
+												<p>Change the Status by toggle </p>
+											</div>
+											<div class="status-toggle modal-status">
+												<input type="checkbox" id="user1" class="check">
+												<label for="user1" class="checktoggle"> </label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a href="index.html" class="btn btn-light me-2" data-bs-dismiss="modal">Cancel</a>
+								<button type="submit" class="btn btn-primary">Add Class Routine</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Add Class Routine -->
+
+		<!-- Add Event -->
+		<div class="modal fade" id="add_event">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">New Event</h4>
+						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
+							<i class="ti ti-x"></i>
+						</button>
+					</div>
+					<form action="index.html">
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-md-12">
+									<div>
+										<label class="form-label">Event For</label>
+										<div class="d-flex align-items-center flex-wrap">
+											<div class="form-check me-3 mb-3">
+												<input class="form-check-input" type="radio" name="event" id="all" checked="">
+												<label class="form-check-label" for="all">
+													All
+												</label>
+											</div>
+											<div class="form-check me-3 mb-3">
+												<input class="form-check-input" type="radio" name="event" id="students">
+												<label class="form-check-label" for="students">
+													Students
+												</label>
+											</div>
+											<div class="form-check me-3 mb-3">
+												<input class="form-check-input" type="radio" name="event" id="staffs">
+												<label class="form-check-label" for="staffs">
+													Staffs
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="all-content" id="all-student">
+										<div class="mb-3">
+											<label class="form-label" for="classes">Classes</label>
+											<select class="select" id="classes">
+												<option>All Classes</option>
+												<option>I</option>
+												<option>II</option>
+												<option>III</option>
+												<option>IV</option>
+											</select>
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="sections">Sections</label>
+											<select class="select" id="sections">
+												<option>All Sections</option>
+												<option>A</option>
+												<option>B</option>
+											</select>
+										</div>
+									</div>
+									<div class="all-content" id="all-staffs">
+										<div class="mb-3">
+											<div class="bg-light-500 p-3 pb-2 rounded">
+												<label class="form-label">Role</label>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-check form-check-sm mb-2">
+															<input class="form-check-input" type="checkbox" aria-label="Toggle option">Admin
+														</div>
+														<div class="form-check form-check-sm mb-2">
+															<input class="form-check-input" type="checkbox" checked="" aria-label="Toggle option">Teacher
+														</div>
+														<div class="form-check form-check-sm mb-2">
+															<input class="form-check-input" type="checkbox" aria-label="Toggle option">Driver
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-check form-check-sm mb-2">
+															<input class="form-check-input" type="checkbox" aria-label="Toggle option">Accountant
+														</div>
+														<div class="form-check form-check-sm mb-2">
+															<input class="form-check-input" type="checkbox" aria-label="Toggle option">Librarian
+														</div>
+														<div class="form-check form-check-sm mb-2">
+															<input class="form-check-input" type="checkbox" aria-label="Toggle option">Receptionist
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="all-teachers">All Teachers</label>
+											<select class="select" id="all-teachers">
+												<option>Select</option>
+												<option>I</option>
+												<option>II</option>
+												<option>III</option>
+												<option>IV</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="event-title">Event Title</label>
+									<input type="text" class="form-control" placeholder="Enter Title" id="event-title">
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="event-category">Event Category</label>
+									<select class="select" id="event-category">
+										<option>Select</option>
+										<option>Celebration</option>
+										<option>Training</option>
+										<option>Meeting</option>
+										<option>Holidays</option>
+									</select>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label" for="start-date">Start Date</label>
+										<div class="date-pic">
+											<input type="text" class="form-control datetimepicker" placeholder="15 May 2024" id="start-date">
+											<span class="cal-icon"><i class="ti ti-calendar"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label" for="end-date">End Date</label>
+										<div class="date-pic">
+											<input type="text" class="form-control datetimepicker" placeholder="21 May 2024" id="end-date">
+											<span class="cal-icon"><i class="ti ti-calendar"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label" for="start-time-2">Start Time</label>
+										<div class="date-pic">
+											<input type="text" class="form-control timepicker" placeholder="09:10 AM" id="start-time-2">
+											<span class="cal-icon"><i class="ti ti-clock"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label" for="end-time-2">End Time</label>
+										<div class="date-pic">
+											<input type="text" class="form-control timepicker" placeholder="12:50 PM" id="end-time-2">
+											<span class="cal-icon"><i class="ti ti-clock"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="mb-3">
+										<div class="bg-light p-3 pb-2 rounded">
+											<div class="mb-3">
+												<label class="form-label">Attachment</label>
+												<p>Upload size of 4MB, Accepted Format PDF</p>
+											</div>
+											<div class="d-flex align-items-center flex-wrap">
+												<div class="btn btn-primary drag-upload-btn mb-2 me-2">
+													<i class="ti ti-file-upload me-1"></i>Upload
+													<input type="file" class="form-control image_sign" multiple="" aria-label="Upload">
+												</div>
+												<p class="mb-2">Fees_Structure.pdf</p>
+											</div>
+										</div>
+									</div>
+									<div class="mb-0">
+										<label class="form-label" for="message">Message</label>
+										<textarea class="form-control" rows="4" id="message">Meeting with Staffs on the Quality Improvement s and completion of syllabus before the August,  enhance the students health issue</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a href="index.html" class="btn btn-light me-2" data-bs-dismiss="modal">Cancel</a>
+							<button type="submit" class="btn btn-primary">Save Changes</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /Add Event -->
+
+	</div>
+
+	<!-- /Main Wrapper -->
+
+	<!-- Global Search Popup (index2) -->
+	<div class="mui-search-modal" id="muiSearchModal" role="dialog" aria-modal="true" aria-label="Search" hidden="">
+		<div class="mui-search-backdrop" data-search-close=""></div>
+		<div class="mui-search-panel">
+			<div class="mui-search-top">
+				<i class="ti ti-search"></i>
+				<input type="text" id="muiSearchInput" placeholder="Search students, staff, classes, invoices..." autocomplete="off" aria-label="Search">
+				<span class="mui-search-esc">ESC</span>
+			</div>
+			<div class="mui-search-body">
+				<div class="mui-search-sec" data-search-recent="">
+					<div class="mui-search-sec-hdr">Recent</div>
+					<a href="fees-master.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Fee collection report</span><i class="ti ti-corner-down-left msr-go"></i></a>
+					<a href="student-attendance.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Today's attendance</span><i class="ti ti-corner-down-left msr-go"></i></a>
+					<a href="schedule-exam.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Term-1 exam schedule</span><i class="ti ti-corner-down-left msr-go"></i></a>
+				</div>
+				<div class="mui-search-sec">
+					<div class="mui-search-sec-hdr">Quick links</div>
+					<a href="students.html" class="mui-search-row"><span class="msr-ic ic-blue"><i class="ti ti-users-group"></i></span><span class="msr-txt">Students</span><span class="msr-tag">Page</span></a>
+					<a href="teachers.html" class="mui-search-row"><span class="msr-ic ic-green"><i class="ti ti-chalkboard"></i></span><span class="msr-txt">Teachers</span><span class="msr-tag">Page</span></a>
+					<a href="fees-master.html" class="mui-search-row"><span class="msr-ic ic-amber"><i class="ti ti-report-money"></i></span><span class="msr-txt">Fees</span><span class="msr-tag">Page</span></a>
+					<a href="exams.html" class="mui-search-row"><span class="msr-ic ic-purple"><i class="ti ti-file-certificate"></i></span><span class="msr-txt">Examinations</span><span class="msr-tag">Page</span></a>
+					<a href="library-books.html" class="mui-search-row"><span class="msr-ic ic-teal"><i class="ti ti-books"></i></span><span class="msr-txt">Library</span><span class="msr-tag">Page</span></a>
+				</div>
+				<div class="mui-search-empty" data-search-empty=""><i class="ti ti-search-off"></i>No results found</div>
+			</div>
+			<div class="mui-search-foot">
+				<span><span class="mui-kbd">↑</span><span class="mui-kbd">↓</span>navigate</span>
+				<span><span class="mui-kbd">↵</span>open</span>
+				<span><span class="mui-kbd">esc</span>close</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Global Search interactions (index2) -->
+
+
+	
+    
+	
+</body></html>
+{% endblock %}
+
+

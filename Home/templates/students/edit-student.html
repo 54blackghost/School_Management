@@ -1,0 +1,988 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block body %}
+
+		<!-- Page Wrapper -->
+		<div class="page-wrapper" style="min-height: 633px;">
+			<div class="content content-two">
+
+				<!-- Page Header -->
+				<div class="d-md-flex d-block align-items-center justify-content-between flex-wrap gap-2 mb-3">
+					<div class="my-auto mb-2">
+						<h4 class="mb-1">Edit Student</h4>
+                     	<nav>
+                       		<ol class="breadcrumb mb-0">
+                          		<li class="breadcrumb-item">
+                            		<a href="https://preskool.dreamstechnologies.com/html/index.html">Dashboard</a>
+                          		</li>
+                          		<li class="breadcrumb-item">
+                            		<a href="https://preskool.dreamstechnologies.com/html/students.html">Students</a>
+                          		</li>
+                          		<li class="breadcrumb-item active" aria-current="page">Edit Student</li>
+                        	</ol>
+                      	</nav>
+                    </div>
+				</div>
+				<!-- /Page Header -->
+				
+				<div class="row">
+
+					<div class="col-md-12">
+
+						<form action="https://preskool.dreamstechnologies.com/html/students.html">
+
+							<!-- Personal Information -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-info-square-rounded fs-16"></i>
+										</span>
+										<h4 class="text-dark">Personal Information</h4>
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="d-flex align-items-center flex-wrap row-gap-3 mb-4">                                                
+												<div class="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames">
+													<i class="ti ti-photo-plus fs-16"></i>
+												</div>                                              
+												<div class="profile-upload">
+													<div class="profile-uploader d-flex align-items-center">
+														<div class="drag-upload-btn mb-3">
+															Upload
+															<input type="file" class="form-control image-sign" multiple="" aria-label="Upload">
+														</div>
+														<a href="javascript:void(0);" class="btn btn-primary mb-3">Remove</a>
+													</div>
+													<p class="fs-12">Upload image size 4MB, Format JPG, PNG, SVG</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row row-cols-xxl-5 row-cols-md-6">
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="academic-year">Academic Year</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="academic-year" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="June 2024/25" data-custom-properties="[object Object]">June 2024/25</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="June 2024/25" data-custom-properties="[object Object]" aria-selected="true">June 2024/25</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--academic-year-item-choice-1" class="choices__item choices__item--choice is-selected choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="June 2024/25" data-select-text="" data-choice-selectable="" aria-selected="true">June 2024/25</div><div id="choices--academic-year-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="June 2023/24" data-select-text="" data-choice-selectable="">June 2023/24</div><div id="choices--academic-year-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="June 2022/23" data-select-text="" data-choice-selectable="">June 2022/23</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="admission-number">Admission Number</label>
+												<input type="text" class="form-control" value="AD9892434" id="admission-number">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="admission-date">Admission Date</label>
+												<input type="text" class="form-control datetimepicker flatpickr-input" value="15/12/1991" id="admission-date" readonly="readonly">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="roll-number">Roll Number</label>
+												<input type="text" class="form-control" value="35013" id="roll-number">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="status">Status</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="status" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Active" data-custom-properties="[object Object]">Active</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Active" data-custom-properties="[object Object]" aria-selected="true">Active</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--status-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--status-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Active" data-select-text="" data-choice-selectable="">Active</div><div id="choices--status-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Inactive" data-select-text="" data-choice-selectable="">Inactive</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="first-name">First Name</label>
+												<input type="text" class="form-control" value="Ralph" id="first-name">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="last-name">Last Name</label>
+												<input type="text" class="form-control" value="Claudia" id="last-name">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="class">Class</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="class" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="I" data-custom-properties="[object Object]">I</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="I" data-custom-properties="[object Object]" aria-selected="true">I</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--class-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--class-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="I" data-select-text="" data-choice-selectable="">I</div><div id="choices--class-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="II" data-select-text="" data-choice-selectable="">II</div><div id="choices--class-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="III" data-select-text="" data-choice-selectable="">III</div><div id="choices--class-item-choice-5" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="5" data-value="IV" data-select-text="" data-choice-selectable="">IV</div><div id="choices--class-item-choice-6" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="6" data-value="V" data-select-text="" data-choice-selectable="">V</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="section">Section</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="section" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="A" data-custom-properties="[object Object]">A</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="A" data-custom-properties="[object Object]" aria-selected="true">A</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--section-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--section-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="A" data-select-text="" data-choice-selectable="">A</div><div id="choices--section-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="B" data-select-text="" data-choice-selectable="">B</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="gender">Gender</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="gender" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Male" data-custom-properties="[object Object]">Male</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Male" data-custom-properties="[object Object]" aria-selected="true">Male</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--gender-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--gender-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Male" data-select-text="" data-choice-selectable="">Male</div><div id="choices--gender-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Female" data-select-text="" data-choice-selectable="">Female</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="date-of-birth">Date of Birth</label>
+												<input type="text" class="form-control datetimepicker flatpickr-input" value="15/12/1992" id="date-of-birth" readonly="readonly">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="blood-group">Blood Group</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="blood-group" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="O +ve" data-custom-properties="[object Object]">O +ve</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="O +ve" data-custom-properties="[object Object]" aria-selected="true">O +ve</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--blood-group-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--blood-group-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="O +ve" data-select-text="" data-choice-selectable="">O +ve</div><div id="choices--blood-group-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="B +ve" data-select-text="" data-choice-selectable="">B +ve</div><div id="choices--blood-group-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="B -ve" data-select-text="" data-choice-selectable="">B -ve</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="house">House</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="house" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Red" data-custom-properties="[object Object]">Red</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Red" data-custom-properties="[object Object]" aria-selected="true">Red</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--house-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--house-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Red" data-select-text="" data-choice-selectable="">Red</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="religion">Religion</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="religion" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Christianity" data-custom-properties="[object Object]">Christianity</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Christianity" data-custom-properties="[object Object]" aria-selected="true">Christianity</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--religion-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--religion-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Christianity" data-select-text="" data-choice-selectable="">Christianity</div><div id="choices--religion-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Buddhism" data-select-text="" data-choice-selectable="">Buddhism</div><div id="choices--religion-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="Irreligion" data-select-text="" data-choice-selectable="">Irreligion</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="category">Category</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="category" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="OBC" data-custom-properties="[object Object]">OBC</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="OBC" data-custom-properties="[object Object]" aria-selected="true">OBC</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--category-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--category-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="OBC" data-select-text="" data-choice-selectable="">OBC</div><div id="choices--category-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="BC" data-select-text="" data-choice-selectable="">BC</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="primary-contact-number">Primary Contact Number</label>
+												<input type="text" class="form-control" value="+1 46548 84498" id="primary-contact-number">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="email-address">Email Address</label>
+												<input type="email" class="form-control" value="jan@example.com" id="email-address">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="caste">Caste</label>
+												<input type="text" class="form-control" value="Catholic" id="caste">
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="mother-tongue">Mother Tongue</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="mother-tongue" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="English" data-custom-properties="[object Object]">English</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="English" data-custom-properties="[object Object]" aria-selected="true">English</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--mother-tongue-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--mother-tongue-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="English" data-select-text="" data-choice-selectable="">English</div><div id="choices--mother-tongue-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Spanish" data-select-text="" data-choice-selectable="">Spanish</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-xxl col-xl-3 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="language-known">Language Known</label>
+												<div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><input class="input-tags form-control choices__input" type="text" data-role="tagsinput" name="Label" value="English,Spanish" id="language-known" hidden="" tabindex="-1" data-choice="active"><div class="choices__list choices__list--multiple"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="English" data-custom-properties="[object Object]" aria-selected="true" data-deletable="">English<button type="button" class="choices__button" aria-label="Remove item: 'English'" data-button="">Remove item</button></div><div class="choices__item choices__item--selectable" data-item="" data-id="2" data-value="Spanish" data-custom-properties="[object Object]" aria-selected="true" data-deletable="">Spanish<button type="button" class="choices__button" aria-label="Remove item: 'Spanish'" data-button="">Remove item</button></div></div><input type="search" name="search_terms" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="null"></div><div class="choices__list choices__list--dropdown" aria-expanded="false"></div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Personal Information -->
+
+							<!-- Parents & Guardian Information -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-user-shield fs-16"></i>
+										</span>
+										<h4 class="text-dark">Parents &amp; Guardian Information</h4>
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="border-bottom mb-4">
+										<h5 class="mb-3">Father’s Info</h5>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="d-flex align-items-center flex-wrap row-gap-3 mb-4">                                                
+													<div class="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames">
+														<i class="ti ti-photo-plus fs-16"></i>
+													</div>                                              
+													<div class="profile-upload">
+														<div class="profile-uploader d-flex align-items-center">
+															<div class="drag-upload-btn mb-3">
+																Upload
+																<input type="file" class="form-control image-sign" multiple="" aria-label="Upload">
+															</div>
+															<a href="javascript:void(0);" class="btn btn-primary mb-3">Remove</a>
+														</div>
+														<p class="fs-12">Upload image size 4MB, Format JPG, PNG, SVG</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="father-name">Father Name</label>
+													<input type="text" class="form-control" value="Jerald Vicinius" id="father-name">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="email">Email</label>
+													<input type="text" class="form-control" value="jera@example.com" id="email">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="phone-number">Phone Number</label>
+													<input type="text" class="form-control" value="+1 45545 46464" id="phone-number">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="father-occupation">Father Occupation</label>
+													<input type="text" class="form-control" value="Mechanic" id="father-occupation">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="border-bottom mb-4">
+										<h5 class="mb-3">Mother’s Info</h5>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="d-flex align-items-center flex-wrap row-gap-3 mb-4">                                                
+													<div class="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames">
+														<i class="ti ti-photo-plus fs-16"></i>
+													</div>                                              
+													<div class="profile-upload">
+														<div class="profile-uploader d-flex align-items-center">
+															<div class="drag-upload-btn mb-3">
+																Upload
+																<input type="file" class="form-control image-sign" multiple="" aria-label="Upload">
+															</div>
+															<a href="javascript:void(0);" class="btn btn-primary mb-3">Remove</a>
+														</div>
+														<p class="fs-12">Upload image size 4MB, Format JPG, PNG, SVG</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="mother-name">Mother Name</label>
+													<input type="text" class="form-control" value="Roberta Webber" id="mother-name">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="email-2">Email</label>
+													<input type="text" class="form-control" value="robe@example.com" id="email-2">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="phone-number-2">Phone Number</label>
+													<input type="text" class="form-control" value="+1 46499 24357" id="phone-number-2">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="mother-occupation">Mother Occupation</label>
+													<input type="text" class="form-control" value="Homemaker" id="mother-occupation">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<h5 class="mb-3">Guardian Details</h5>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="mb-2">
+													<div class="d-flex align-items-center flex-wrap">
+														<label class="form-label text-dark fw-normal me-2">If Guardian Is</label>
+														<div class="form-check me-3 mb-2">
+															<input class="form-check-input" type="radio" name="guardian" id="parents" checked="">
+															<label class="form-check-label" for="parents">
+																Parents
+															</label>
+														</div>
+														<div class="form-check me-3 mb-2">
+															<input class="form-check-input" type="radio" name="guardian" id="guardian">
+															<label class="form-check-label" for="guardian">
+																Guardian
+															</label>
+														</div>
+														<div class="form-check mb-2">
+															<input class="form-check-input" type="radio" name="guardian" id="other">
+															<label class="form-check-label" for="other">
+																Others
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="d-flex align-items-center flex-wrap row-gap-3 mb-4">                                                
+													<div class="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames">
+														<i class="ti ti-photo-plus fs-16"></i>
+													</div>                                              
+													<div class="profile-upload">
+														<div class="profile-uploader d-flex align-items-center">
+															<div class="drag-upload-btn mb-3">
+																Upload
+																<input type="file" class="form-control image-sign" multiple="" aria-label="Upload">
+															</div>
+															<a href="javascript:void(0);" class="btn btn-primary mb-3">Remove</a>
+														</div>
+														<p class="fs-12">Upload image size 4MB, Format JPG, PNG, SVG</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="guardian-name">Guardian Name</label>
+													<input type="text" class="form-control" value="Jerald Vicinius" id="guardian-name">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="guardian-relation">Guardian Relation</label>
+													<input type="text" class="form-control" id="guardian-relation">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="phone-number-3">Phone Number</label>
+													<input type="text" class="form-control" value="+1 45545 46464" id="phone-number-3">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="email-3">Email</label>
+													<input type="email" class="form-control" value="jera@example.com" id="email-3">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="occupation">Occupation</label>
+													<input type="text" class="form-control" value="Mechanic" id="occupation">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="address">Address</label>
+													<input type="text" class="form-control" value="3495 Red Hawk Road, Buffalo Lake, MN 55314" id="address">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Parents & Guardian Information -->
+
+							<!-- Sibilings -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-users fs-16"></i>
+										</span>
+										<h4 class="text-dark">Sibilings</h4>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="addsibling-info">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="mb-2">
+													<label class="form-label">Sibiling Info</label>
+													<div class="d-flex align-items-center flex-wrap">
+														<label class="form-label text-dark fw-normal me-2">Is Sibiling studying in same school</label>
+														<div class="form-check me-3 mb-2">
+															<input class="form-check-input" type="radio" name="sibling" id="yes" checked="">
+															<label class="form-check-label" for="yes">
+																Yes
+															</label>
+														</div>
+														<div class="form-check mb-2">
+															<input class="form-check-input" type="radio" name="sibling" id="no">
+															<label class="form-check-label" for="no">
+																No
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="name">Name</label>
+													<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="name" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Ralph Claudia" data-custom-properties="[object Object]">Ralph Claudia</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Ralph Claudia" data-custom-properties="[object Object]" aria-selected="true">Ralph Claudia</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--name-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--name-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Ralph Claudia" data-select-text="" data-choice-selectable="">Ralph Claudia</div><div id="choices--name-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Julie Scott" data-select-text="" data-choice-selectable="">Julie Scott</div><div id="choices--name-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="Maria" data-select-text="" data-choice-selectable="">Maria</div></div></div></div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="roll-no">Roll No</label>
+													<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="roll-no" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="35013" data-custom-properties="[object Object]">35013</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="35013" data-custom-properties="[object Object]" aria-selected="true">35013</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--roll-no-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--roll-no-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="35013" data-select-text="" data-choice-selectable="">35013</div><div id="choices--roll-no-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="35011" data-select-text="" data-choice-selectable="">35011</div><div id="choices--roll-no-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="35010" data-select-text="" data-choice-selectable="">35010</div></div></div></div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<label class="form-label" for="admission-no">Admission No</label>
+													<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="admission-no" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="AD9892434" data-custom-properties="[object Object]">AD9892434</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="AD9892434" data-custom-properties="[object Object]" aria-selected="true">AD9892434</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--admission-no-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--admission-no-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="AD9892434" data-select-text="" data-choice-selectable="">AD9892434</div><div id="choices--admission-no-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="AD9892433" data-select-text="" data-choice-selectable="">AD9892433</div><div id="choices--admission-no-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="AD9892432" data-select-text="" data-choice-selectable="">AD9892432</div></div></div></div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<div class="mb-4">
+													<div class="d-flex align-items-center">
+														<div class="w-100">
+															<label class="form-label" for="class-2">Class</label>
+															<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select w-100 choices__input" id="class-2" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="I" data-custom-properties="[object Object]">I</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="I" data-custom-properties="[object Object]" aria-selected="true">I</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--class-2-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--class-2-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="I" data-select-text="" data-choice-selectable="">I</div><div id="choices--class-2-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="II" data-select-text="" data-choice-selectable="">II</div><div id="choices--class-2-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="III" data-select-text="" data-choice-selectable="">III</div></div></div></div>
+														</div>
+														<div>
+															<label class="form-label">&nbsp;</label>
+															<a href="javascript:void(0);" class="trash-icon ms-3"><i class="ti ti-trash-x"></i></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="border-top pt-4"> 
+										<a href="javascript:void(0);" class="add-sibling btn btn-primary d-inline-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>Add New</a>
+									</div>
+								</div>
+							</div>
+							<!-- /Sibilings -->
+
+							<!-- Address -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-map fs-16"></i>
+										</span>
+										<h4 class="text-dark">Address</h4>
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="current-address">Current Address</label>
+												<input type="text" class="form-control" placeholder="Enter Current Address" value="3495 Red Hawk Road, Buffalo Lake, MN 55314" id="current-address">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="permanent-address">Permanent Address</label>
+												<input type="text" class="form-control" value="3495 Red Hawk Road, Buffalo Lake, MN 55314" id="permanent-address">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Address -->
+
+							<!-- Transport Information -->
+							<div class="card">
+								<div class="card-header bg-light d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-bus-stop fs-16"></i>
+										</span>
+										<h4 class="text-dark">Transport Information</h4>
+									</div>
+									<div class="form-check form-switch">
+										<input class="form-check-input" type="checkbox" role="switch" aria-label="Toggle option">
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-lg-4 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="route">Route</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="route" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Newyork" data-custom-properties="[object Object]">Newyork</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Newyork" data-custom-properties="[object Object]" aria-selected="true">Newyork</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--route-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--route-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Newyork" data-select-text="" data-choice-selectable="">Newyork</div><div id="choices--route-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Denver" data-select-text="" data-choice-selectable="">Denver</div><div id="choices--route-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="Chicago" data-select-text="" data-choice-selectable="">Chicago</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="vehicle-number">Vehicle Number</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="vehicle-number" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="AM 54548" data-custom-properties="[object Object]">AM 54548</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="AM 54548" data-custom-properties="[object Object]" aria-selected="true">AM 54548</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--vehicle-number-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--vehicle-number-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="AM 54548" data-select-text="" data-choice-selectable="">AM 54548</div><div id="choices--vehicle-number-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="AM 64528" data-select-text="" data-choice-selectable="">AM 64528</div><div id="choices--vehicle-number-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="AM 123548" data-select-text="" data-choice-selectable="">AM 123548</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="pickup-point">Pickup Point</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="pickup-point" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Cincinatti" data-custom-properties="[object Object]">Cincinatti</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Cincinatti" data-custom-properties="[object Object]" aria-selected="true">Cincinatti</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--pickup-point-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--pickup-point-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Cincinatti" data-select-text="" data-choice-selectable="">Cincinatti</div><div id="choices--pickup-point-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Illinois" data-select-text="" data-choice-selectable="">Illinois</div><div id="choices--pickup-point-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="Morgan" data-select-text="" data-choice-selectable="">Morgan</div></div></div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Transport Information -->
+
+							<!-- Hostel Information -->
+							<div class="card">
+								<div class="card-header bg-light d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-building-fortress fs-16"></i>
+										</span>
+										<h4 class="text-dark">Hostel Information</h4>
+									</div>
+									<div class="form-check form-switch">
+										<input class="form-check-input" type="checkbox" role="switch" aria-label="Toggle option">
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="hostel">Hostel</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="hostel" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="Tranquil Haven" data-custom-properties="[object Object]">Tranquil Haven</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Tranquil Haven" data-custom-properties="[object Object]" aria-selected="true">Tranquil Haven</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--hostel-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--hostel-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Phoenix Residence" data-select-text="" data-choice-selectable="">Phoenix Residence</div><div id="choices--hostel-item-choice-3" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Tranquil Haven" data-select-text="" data-choice-selectable="">Tranquil Haven</div><div id="choices--hostel-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="Radiant Towers" data-select-text="" data-choice-selectable="">Radiant Towers</div><div id="choices--hostel-item-choice-5" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="5" data-value="Nova Nest" data-select-text="" data-choice-selectable="">Nova Nest</div></div></div></div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="room-no">Room No</label>
+												<div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select class="select choices__input" id="room-no" data-choices-bound="1" hidden="" tabindex="-1" data-choice="active"><option value="20" data-custom-properties="[object Object]">20</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="20" data-custom-properties="[object Object]" aria-selected="true">20</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" role="listbox"><div id="choices--room-no-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Select" data-select-text="" data-choice-selectable="" aria-selected="true">Select</div><div id="choices--room-no-item-choice-2" class="choices__item choices__item--choice is-selected choices__item--selectable" role="option" data-choice="" data-id="2" data-value="20" data-select-text="" data-choice-selectable="">20</div><div id="choices--room-no-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="22" data-select-text="" data-choice-selectable="">22</div><div id="choices--room-no-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="24" data-select-text="" data-choice-selectable="">24</div><div id="choices--room-no-item-choice-5" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="5" data-value="26" data-select-text="" data-choice-selectable="">26</div></div></div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Hostel Information -->
+
+							<!-- Documents -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-file fs-16"></i>
+										</span>
+										<h4 class="text-dark">Documents</h4>
+									</div>
+								</div>
+								<div class="card-body pb-1">
+									<div class="row">
+										<div class="col-12 col-lg-6">
+											<div class="mb-2">
+												<div class="mb-3">
+													<label class="form-label mb-1">Medical Condition</label>
+													<p>Upload image size of 4MB, Accepted Format PDF</p>
+												</div>
+												<div class="d-flex align-items-center flex-wrap">
+													<div class="btn btn-primary drag-upload-btn mb-2 me-2">
+														<i class="ti ti-file-upload me-1"></i>Change
+														<input type="file" class="form-control image_sign" multiple="" aria-label="Change">
+													</div>
+													<p class="mb-2">BirthCertificate.pdf</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-12 col-lg-6">
+											<div class="mb-2">
+												<div class="mb-3">
+													<label class="form-label mb-1">Upload Transfer Certificate</label>
+													<p>Upload image size of 4MB, Accepted Format PDF</p>
+												</div>
+												<div class="d-flex align-items-center flex-wrap">
+													<div class="btn btn-primary drag-upload-btn mb-2">
+														<i class="ti ti-file-upload me-1"></i>Upload Document
+														<input type="file" class="form-control image_sign" multiple="" aria-label="Upload Document">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Documents -->
+
+							<!-- Medical History -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-medical-cross fs-16"></i>
+										</span>
+										<h4 class="text-dark">Medical History</h4>
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="mb-2">
+												<label class="form-label">Medical Condition</label>
+												<div class="d-flex align-items-center flex-wrap">
+													<label class="form-label text-dark fw-normal me-2">Medical Condition of a Student</label>
+													<div class="form-check me-3 mb-2">
+														<input class="form-check-input" type="radio" name="condition" id="good" checked="">
+														<label class="form-check-label" for="good">
+															Good
+														</label>
+													</div>
+													<div class="form-check me-3 mb-2">
+														<input class="form-check-input" type="radio" name="condition" id="bad">
+														<label class="form-check-label" for="bad">
+															Bad
+														</label>
+													</div>
+													<div class="form-check mb-2">
+														<input class="form-check-input" type="radio" name="condition" id="others">
+														<label class="form-check-label" for="others">
+															Others
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mb-4">
+											<label class="form-label" for="allergies">Allergies</label>
+											<div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><input class="input-tags form-control choices__input" type="text" data-role="tagsinput" name="Label" value="Allergy,Skin Allergy" id="allergies" hidden="" tabindex="-1" data-choice="active"><div class="choices__list choices__list--multiple"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Allergy" data-custom-properties="[object Object]" aria-selected="true" data-deletable="">Allergy<button type="button" class="choices__button" aria-label="Remove item: 'Allergy'" data-button="">Remove item</button></div><div class="choices__item choices__item--selectable" data-item="" data-id="2" data-value="Skin Allergy" data-custom-properties="[object Object]" aria-selected="true" data-deletable="">Skin Allergy<button type="button" class="choices__button" aria-label="Remove item: 'Skin Allergy'" data-button="">Remove item</button></div></div><input type="search" name="search_terms" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="null"></div><div class="choices__list choices__list--dropdown" aria-expanded="false"></div></div>
+										</div>
+										<div class="mb-4">
+											<label class="form-label" for="medications">Medications</label>
+											<div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><input class="input-tags form-control choices__input" type="text" data-role="tagsinput" name="Label" value="Medecine Name" id="medications" hidden="" tabindex="-1" data-choice="active"><div class="choices__list choices__list--multiple"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Medecine Name" data-custom-properties="[object Object]" aria-selected="true" data-deletable="">Medecine Name<button type="button" class="choices__button" aria-label="Remove item: 'Medecine Name'" data-button="">Remove item</button></div></div><input type="search" name="search_terms" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="null"></div><div class="choices__list choices__list--dropdown" aria-expanded="false"></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Medical History -->
+
+							<!-- Previous School details -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-building fs-16"></i>
+										</span>
+										<h4 class="text-dark">Previous School Details</h4>
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="school-name">School Name</label>
+												<input type="text" class="form-control" value="Oxford Matriculation, USA" id="school-name">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-4">
+												<label class="form-label" for="address-2">Address</label>
+												<input type="text" class="form-control" value="1852 Barnes Avenue, Cincinnati, OH 45202" id="address-2">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Previous School details -->
+
+							<!-- Other Details -->
+							<div class="card">
+								<div class="card-header bg-light">
+									<div class="d-flex align-items-center">
+										<span class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+											<i class="ti ti-building-bank fs-16"></i>
+										</span>
+										<h4 class="text-dark">Other Details</h4>
+									</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-md-5">
+											<div class="mb-4">
+												<label class="form-label" for="bank-name">Bank Name</label>
+												<input type="text" class="form-control" value="Bank of America" id="bank-name">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="mb-4">
+												<label class="form-label" for="branch">Branch</label>
+												<input type="text" class="form-control" value="Cincinnati" id="branch">
+											</div>
+										</div>
+										<div class="col-md-5">
+											<div class="mb-4">
+												<label class="form-label" for="ifsc-number">IFSC Number</label>
+												<input type="text" class="form-control" value="BOA83209832" id="ifsc-number">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="mb-4">
+												<label class="form-label" for="other-information">Other Information</label>
+												<textarea class="form-control" placeholder="Other Information" rows="3" id="other-information">Depending on the specific needs of your organization or system, additional information may be collected or tracked. It's important to ensure that any data collected complies with privacy regulations and policies to protect students' sensitive information.</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Other Details -->
+
+							<div class="text-end">
+								<button type="button" class="btn btn-light me-3">Cancel</button>
+								<button type="submit" class="btn btn-primary">Save Changes</button>
+							</div>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!-- /Page Wrapper -->
+
+	
+    <div class="sidebar-contact ">
+        <div class="toggle-theme" data-bs-toggle="offcanvas" data-bs-target="#theme-setting"><i class="ti ti-settings fa-spin"></i></div>
+        </div>
+        <div class="sidebar-themesettings offcanvas offcanvas-end" id="theme-setting">
+        <div class="offcanvas-header d-flex align-items-center justify-content-between bg-light-500">
+            <div>
+                <h4 class="mb-1">Theme Customizer</h4>
+                <p>Choose your themes &amp; layouts etc.</p>
+            </div>
+            <a href="." class="custom-btn-close d-flex align-items-center justify-content-center text-white" data-bs-dismiss="offcanvas"><i class="ti ti-x"></i></a>
+        </div>
+        <div class="themesettings-inner offcanvas-body">
+            <div class="accordion accordion-customicon1 accordions-items-seperate" id="settingtheme">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#layoutsetting" aria-expanded="true" aria-controls="collapsecustomicon1One">
+                            Select Layouts
+                        </button>
+                    </h2>
+                    <div id="layoutsetting" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <div class="row gx-3">
+                                <div class="col-4">
+                                    <div class="theme-layout mb-3">
+                                        <input type="radio" name="LayoutTheme" id="defaultLayout" value="default" checked="">
+                                        <label for="defaultLayout">
+                                            <span class="d-block mb-2 layout-img">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTQiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA5NCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuMTY2NjI2IDIuNjY2NjdDMC4xNjY2MjYgMS4xOTM5MSAxLjIxMTMgMCAyLjQ5OTk2IDBIOTEuMTY2NkM5Mi40NTUxIDAgOTMuNDk5OSAxLjE5MzkxIDkzLjQ5OTkgMi42NjY2N1Y1Ljg2NjY3SDAuMTY2NjI2VjIuNjY2NjdaIiBmaWxsPSJ3aGl0ZSIvPgo8bWFzayBpZD0ibWFzazBfMzIxN180OTc3MTkiIHN0eWxlPSJtYXNrLXR5cGU6bHVtaW5hbmNlIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iOTQiIGhlaWdodD0iNiI+CjxwYXRoIGQ9Ik0wLjE2NjYyNiAyLjY2NjY3QzAuMTY2NjI2IDEuMTkzOTEgMS4yMTEzIDAgMi40OTk5NiAwSDkxLjE2NjZDOTIuNDU1MSAwIDkzLjQ5OTkgMS4xOTM5MSA5My40OTk5IDIuNjY2NjdWNS44NjY2N0gwLjE2NjYyNlYyLjY2NjY3WiIgZmlsbD0id2hpdGUiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzMyMTdfNDk3NzE5KSI+CjxwYXRoIGQ9Ik0tMC4wNjY2NTA0IDIuNjY2NjFDLTAuMDY2NjUwNCAxLjA0NjU3IDEuMDgyNDkgLTAuMjY2NzI0IDIuNTAwMDIgLTAuMjY2NzI0SDkxLjE2NjdDOTIuNTg0NCAtMC4yNjY3MjQgOTMuNzMzMyAxLjA0NjU3IDkzLjczMzMgMi42NjY2MUg5My4yNjY3QzkzLjI2NjcgMS4zNDExMyA5Mi4zMjYzIDAuMjY2NjEgOTEuMTY2NyAwLjI2NjYxSDIuNTAwMDJDMS4zNDAyMiAwLjI2NjYxIDAuNDAwMDE2IDEuMzQxMTMgMC40MDAwMTYgMi42NjY2MUgtMC4wNjY2NTA0Wk0tMC4wNjY2NTA0IDUuODY2NjFWMi42NjY2MUMtMC4wNjY2NTA0IDEuMDQ2NTcgMS4wODI0OSAtMC4yNjY3MjQgMi41MDAwMiAtMC4yNjY3MjRWMC4yNjY2MUMxLjM0MDIyIDAuMjY2NjEgMC40MDAwMTYgMS4zNDExMyAwLjQwMDAxNiAyLjY2NjYxVjUuODY2NjFILTAuMDY2NjUwNFpNOTEuMTY2NyAtMC4yNjY3MjRDOTIuNTg0NCAtMC4yNjY3MjQgOTMuNzMzMyAxLjA0NjU3IDkzLjczMzMgMi42NjY2MVY1Ljg2NjYxSDkzLjI2NjdWMi42NjY2MUM5My4yNjY3IDEuMzQxMTMgOTIuMzI2MyAwLjI2NjYxIDkxLjE2NjcgMC4yNjY2MVYtMC4yNjY3MjRaIiBmaWxsPSIjRTlFREY0Ii8+CjwvZz4KPHBhdGggZD0iTTMuMiAzLjUzMzNDMy41ODY2IDMuNTMzMyAzLjkgMy4yMTk5IDMuOSAyLjgzMzNDMy45IDIuNDQ2NyAzLjU4NjYgMi4xMzMzIDMuMiAyLjEzMzNDMi44MTM0IDIuMTMzMyAyLjUgMi40NDY3IDIuNSAyLjgzMzNDMi41IDMuMjE5OSAyLjgxMzQgMy41MzMzIDMuMiAzLjUzMzNaIiBmaWxsPSIjRTgyNjQ2Ii8+CjxwYXRoIGQ9Ik01LjUzMzI1IDMuNTMzM0M1LjkxOTg1IDMuNTMzMyA2LjIzMzI1IDMuMjE5OSA2LjIzMzI1IDIuODMzM0M2LjIzMzI1IDIuNDQ2NyA1LjkxOTg1IDIuMTMzMyA1LjUzMzI1IDIuMTMzM0M1LjE0NjY1IDIuMTMzMyA0LjgzMzI1IDIuNDQ2NyA0LjgzMzI1IDIuODMzM0M0LjgzMzI1IDMuMjE5OSA1LjE0NjY1IDMuNTMzMyA1LjUzMzI1IDMuNTMzM1oiIGZpbGw9IiMxQUJFMTciLz4KPHBhdGggZD0iTTcuODY2NjMgMy41MzMzQzguMjUzMjMgMy41MzMzIDguNTY2NjMgMy4yMTk5IDguNTY2NjMgMi44MzMzQzguNTY2NjMgMi40NDY3IDguMjUzMjMgMi4xMzMzIDcuODY2NjMgMi4xMzMzQzcuNDgwMDMgMi4xMzMzIDcuMTY2NjMgMi40NDY3IDcuMTY2NjMgMi44MzMzQzcuMTY2NjMgMy4yMTk5IDcuNDgwMDMgMy41MzMzIDcuODY2NjMgMy41MzMzWiIgZmlsbD0iI0VBQjMwMCIvPgo8cGF0aCBkPSJNMC4yODMzMjUgNkg5My4zODMzVjc3LjMzMzNDOTMuMzgzMyA3OC43MzIzIDkyLjM5MDcgNzkuODY2NyA5MS4xNjY2IDc5Ljg2NjdIMi41QzEuMjc1NzYgNzkuODY2NyAwLjI4MzMyNSA3OC43MzIzIDAuMjgzMzI1IDc3LjMzMzNWNloiIGZpbGw9IiM4MzhBOUIiLz4KPHBhdGggZD0iTTg5IDE1Qzg5IDEzLjg5NTQgODguMTA0NiAxMyA4NyAxM0gyNEMyMi44OTU0IDEzIDIyIDEzLjg5NTQgMjIgMTVWNzJDMjIgNzMuMTA0NiAyMi44OTU0IDc0IDI0IDc0SDg3Qzg4LjEwNDYgNzQgODkgNzMuMTA0NiA4OSA3MlYxNVoiIGZpbGw9IiNGNEY2RkEiLz4KPHBhdGggZD0iTTAuMjgzMzI1IDZIOTMuMzgzM1Y3Ny4zMzMzQzkzLjM4MzMgNzguNzMyMyA5Mi4zOTA3IDc5Ljg2NjcgOTEuMTY2NiA3OS44NjY3SDIuNUMxLjI3NTc2IDc5Ljg2NjcgMC4yODMzMjUgNzguNzMyMyAwLjI4MzMyNSA3Ny4zMzMzVjZaIiBzdHJva2U9IiNFOUVERjQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CjxwYXRoIGQ9Ik0xNC4xNjY2IDEwLjJIMy40MzMzNEMyLjkxNzg3IDEwLjIgMi41IDEwLjY3NzUgMi41IDExLjI2NjZDMi41IDExLjg1NTcgMi45MTc4NyAxMi4zMzMzIDMuNDMzMzQgMTIuMzMzM0gxNC4xNjY2QzE0LjY4MjEgMTIuMzMzMyAxNS4xIDExLjg1NTcgMTUuMSAxMS4yNjY2QzE1LjEgMTAuNjc3NSAxNC42ODIxIDEwLjIgMTQuMTY2NiAxMC4yWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTEwLjIgMTkuNzMzM0gzLjJDMi44MTM0IDE5LjczMzMgMi41IDIwLjA5MTQgMi41IDIwLjUzMzNDMi41IDIwLjk3NTEgMi44MTM0IDIxLjMzMzMgMy4yIDIxLjMzMzNIMTAuMkMxMC41ODY2IDIxLjMzMzMgMTAuOSAyMC45NzUxIDEwLjkgMjAuNTMzM0MxMC45IDIwLjA5MTQgMTAuNTg2NiAxOS43MzMzIDEwLjIgMTkuNzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTEwLjIgMjIuNEgzLjJDMi44MTM0IDIyLjQgMi41IDIyLjc1ODIgMi41IDIzLjJDMi41IDIzLjY0MTkgMi44MTM0IDI0IDMuMiAyNEgxMC4yQzEwLjU4NjYgMjQgMTAuOSAyMy42NDE5IDEwLjkgMjMuMkMxMC45IDIyLjc1ODIgMTAuNTg2NiAyMi40IDEwLjIgMjIuNFoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTYgMjUuMDY2N0gzLjJDMi44MTM0IDI1LjA2NjcgMi41IDI1LjQyNDcgMi41IDI1Ljg2NjZDMi41IDI2LjMwODQgMi44MTM0IDI2LjY2NjcgMy4yIDI2LjY2NjdINkM2LjM4NjYgMjYuNjY2NyA2LjcgMjYuMzA4NCA2LjcgMjUuODY2NkM2LjcgMjUuNDI0NyA2LjM4NjYgMjUuMDY2NyA2IDI1LjA2NjdaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0xMi4wNjY2IDI3LjczMzNIMy4yQzIuODEzNCAyNy43MzMzIDIuNSAyOC4wOTE0IDIuNSAyOC41MzMzQzIuNSAyOC45NzUxIDIuODEzNCAyOS4zMzMzIDMuMiAyOS4zMzMzSDEyLjA2NjZDMTIuNDUzMiAyOS4zMzMzIDEyLjc2NjYgMjguOTc1MSAxMi43NjY2IDI4LjUzMzNDMTIuNzY2NiAyOC4wOTE0IDEyLjQ1MzIgMjcuNzMzMyAxMi4wNjY2IDI3LjczMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik03Ljg2NjY3IDMwLjRIMy4yQzIuODEzNCAzMC40IDIuNSAzMC43NTgyIDIuNSAzMS4yQzIuNSAzMS42NDE5IDIuODEzNCAzMiAzLjIgMzJINy44NjY2N0M4LjI1MzI3IDMyIDguNTY2NjcgMzEuNjQxOSA4LjU2NjY3IDMxLjJDOC41NjY2NyAzMC43NTgyIDguMjUzMjcgMzAuNCA3Ljg2NjY3IDMwLjRaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0xMi4wNjY2IDMzLjA2NjdIMy4yQzIuODEzNCAzMy4wNjY3IDIuNSAzMy40MjQ3IDIuNSAzMy44NjY2QzIuNSAzNC4zMDg0IDIuODEzNCAzNC42NjY2IDMuMiAzNC42NjY2SDEyLjA2NjZDMTIuNDUzMiAzNC42NjY2IDEyLjc2NjYgMzQuMzA4NCAxMi43NjY2IDMzLjg2NjZDMTIuNzY2NiAzMy40MjQ3IDEyLjQ1MzIgMzMuMDY2NyAxMi4wNjY2IDMzLjA2NjdaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik02LjkzMzM0IDM1LjczMzNIMy4yQzIuODEzNCAzNS43MzMzIDIuNSAzNi4wOTE0IDIuNSAzNi41MzMzQzIuNSAzNi45NzUxIDIuODEzNCAzNy4zMzMzIDMuMiAzNy4zMzMzSDYuOTMzMzRDNy4zMTk5NCAzNy4zMzMzIDcuNjMzMzQgMzYuOTc1MSA3LjYzMzM0IDM2LjUzMzNDNy42MzMzNCAzNi4wOTE0IDcuMzE5OTQgMzUuNzMzMyA2LjkzMzM0IDM1LjczMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0xNC40IDM4LjRIMy4yQzIuODEzNCAzOC40IDIuNSAzOC43NTgyIDIuNSAzOS4yQzIuNSAzOS42NDE5IDIuODEzNCA0MCAzLjIgNDBIMTQuNEMxNC43ODY2IDQwIDE1LjEgMzkuNjQxOSAxNS4xIDM5LjJDMTUuMSAzOC43NTgyIDE0Ljc4NjYgMzguNCAxNC40IDM4LjRaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0xMC4yIDQxLjA2NjdIMy4yQzIuODEzNCA0MS4wNjY3IDIuNSA0MS40MjQ4IDIuNSA0MS44NjY3QzIuNSA0Mi4zMDg1IDIuODEzNCA0Mi42NjY3IDMuMiA0Mi42NjY3SDEwLjJDMTAuNTg2NiA0Mi42NjY3IDEwLjkgNDIuMzA4NSAxMC45IDQxLjg2NjdDMTAuOSA0MS40MjQ4IDEwLjU4NjYgNDEuMDY2NyAxMC4yIDQxLjA2NjdaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0xNC40IDQzLjczMzRIMy4yQzIuODEzNCA0My43MzM0IDIuNSA0NC4wOTE2IDIuNSA0NC41MzM0QzIuNSA0NC45NzUyIDIuODEzNCA0NS4zMzM0IDMuMiA0NS4zMzM0SDE0LjRDMTQuNzg2NiA0NS4zMzM0IDE1LjEgNDQuOTc1MiAxNS4xIDQ0LjUzMzRDMTUuMSA0NC4wOTE2IDE0Ljc4NjYgNDMuNzMzNCAxNC40IDQzLjczMzRaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0yLjUgNzQuMDhIMTUuMSIgc3Ryb2tlPSIjRTlFREY0IiBzdHJva2Utd2lkdGg9IjAuMiIvPgo8cGF0aCBkPSJNNi40NjY2NiA3Ny4zMzMzQzYuOTgyMTMgNzcuMzMzMyA3LjM5OTk5IDc2Ljg1NTggNy4zOTk5OSA3Ni4yNjY3QzcuMzk5OTkgNzUuNjc3NiA2Ljk4MjEzIDc1LjIgNi40NjY2NiA3NS4yQzUuOTUxMiA3NS4yIDUuNTMzMzMgNzUuNjc3NiA1LjUzMzMzIDc2LjI2NjdDNS41MzMzMyA3Ni44NTU4IDUuOTUxMiA3Ny4zMzMzIDYuNDY2NjYgNzcuMzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTguNzk5OTEgNzcuMzMzM0M5LjMxNTQzIDc3LjMzMzMgOS43MzMyMyA3Ni44NTU4IDkuNzMzMjMgNzYuMjY2N0M5LjczMzIzIDc1LjY3NzYgOS4zMTU0MyA3NS4yIDguNzk5OTEgNzUuMkM4LjI4NDQ1IDc1LjIgNy44NjY1OCA3NS42Nzc2IDcuODY2NTggNzYuMjY2N0M3Ljg2NjU4IDc2Ljg1NTggOC4yODQ0NSA3Ny4zMzMzIDguNzk5OTEgNzcuMzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTExLjEzMzQgNzcuMzMzM0MxMS42NDg4IDc3LjMzMzMgMTIuMDY2NyA3Ni44NTU4IDEyLjA2NjcgNzYuMjY2N0MxMi4wNjY3IDc1LjY3NzYgMTEuNjQ4OCA3NS4yIDExLjEzMzQgNzUuMkMxMC42MTc5IDc1LjIgMTAuMiA3NS42Nzc2IDEwLjIgNzYuMjY2N0MxMC4yIDc2Ljg1NTggMTAuNjE3OSA3Ny4zMzMzIDExLjEzMzQgNzcuMzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPG1hc2sgaWQ9Im1hc2sxXzMyMTdfNDk3NzE5IiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMTciIHk9IjUiIHdpZHRoPSI3NyIgaGVpZ2h0PSI2Ij4KPHBhdGggZD0iTTE3LjQzMzMgNS44NjY3SDkzLjVWMTAuMTMzNEgxNy40MzMzVjUuODY2N1oiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMV8zMjE3XzQ5NzcxOSkiPgo8cGF0aCBkPSJNMTcuNDMzMyA2LjEzMzMxSDkzLjVWNS41OTk5OEgxNy40MzMzVjYuMTMzMzFaIiBmaWxsPSIjRTlFREY0Ii8+CjwvZz4KPHBhdGggZD0iTTM3Ljk2NjYgNi45MzMzNUgyMC42OTk5QzIwLjE4NDQgNi45MzMzNSAxOS43NjY2IDcuNDEwOTEgMTkuNzY2NiA4LjAwMDAyQzE5Ljc2NjYgOC41ODkxMiAyMC4xODQ0IDkuMDY2NyAyMC42OTk5IDkuMDY2N0gzNy45NjY2QzM4LjQ4MiA5LjA2NjcgMzguODk5OSA4LjU4OTEyIDM4Ljg5OTkgOC4wMDAwMkMzOC44OTk5IDcuNDEwOTEgMzguNDgyIDYuOTMzMzUgMzcuOTY2NiA2LjkzMzM1WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNODEuNjMzMyA4LjgwMzM1QzgyLjE0ODcgOC44MDMzNSA4Mi41NjY3IDguMzg0NzIgODIuNTY2NyA3Ljg2ODM1QzgyLjU2NjcgNy4zNTE5NiA4Mi4xNDg3IDYuOTMzMzUgODEuNjMzMyA2LjkzMzM1QzgxLjExNzggNi45MzMzNSA4MC43IDcuMzUxOTYgODAuNyA3Ljg2ODM1QzgwLjcgOC4zODQ3MiA4MS4xMTc4IDguODAzMzUgODEuNjMzMyA4LjgwMzM1WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNODQuNDMzMyA4LjgwMzM1Qzg0Ljk0ODggOC44MDMzNSA4NS4zNjY2IDguMzg0NzIgODUuMzY2NiA3Ljg2ODM1Qzg1LjM2NjYgNy4zNTE5NiA4NC45NDg4IDYuOTMzMzUgODQuNDMzMyA2LjkzMzM1QzgzLjkxNzggNi45MzMzNSA4My41IDcuMzUxOTYgODMuNSA3Ljg2ODM1QzgzLjUgOC4zODQ3MiA4My45MTc4IDguODAzMzUgODQuNDMzMyA4LjgwMzM1WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNODcuMjMzMiA4LjgwMzM1Qzg3Ljc0ODcgOC44MDMzNSA4OC4xNjY2IDguMzg0NzIgODguMTY2NiA3Ljg2ODM1Qzg4LjE2NjYgNy4zNTE5NiA4Ny43NDg3IDYuOTMzMzUgODcuMjMzMiA2LjkzMzM1Qzg2LjcxNzggNi45MzMzNSA4Ni4yOTk5IDcuMzUxOTYgODYuMjk5OSA3Ljg2ODM1Qzg2LjI5OTkgOC4zODQ3MiA4Ni43MTc4IDguODAzMzUgODcuMjMzMiA4LjgwMzM1WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNNjMuMzk5OSA3OC41SDQ1LjE5OTlDNDQuOTQyMiA3OC41IDQ0LjczMzMgNzguMjYxMiA0NC43MzMzIDc3Ljk2NjdDNDQuNzMzMyA3Ny42NzIxIDQ0Ljk0MjIgNzcuNDMzMyA0NS4xOTk5IDc3LjQzMzNINjMuMzk5OUM2My42NTc2IDc3LjQzMzMgNjMuODY2NiA3Ny42NzIxIDYzLjg2NjYgNzcuOTY2N0M2My44NjY2IDc4LjI2MTIgNjMuNjU3NiA3OC41IDYzLjM5OTkgNzguNVoiIGZpbGw9IiNFOUVERjQiLz4KPC9zdmc+Cg==" alt="img">
+                                            </span>                                     
+                                            <span class="layout-type">Default</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="theme-layout mb-3">
+                                        <input type="radio" name="LayoutTheme" id="miniLayout" value="mini">
+                                        <label for="miniLayout">
+                                            <span class="d-block mb-2 layout-img">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTQiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA5NCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuNDUwMDczIDIuNjY2NjdDMC40NTAwNzMgMS4xOTM5MSAxLjQ5NDc0IDAgMi43ODM0MSAwSDkxLjIxNjdDOTIuNTA1MiAwIDkzLjU1MDEgMS4xOTM5MSA5My41NTAxIDIuNjY2NjdWNS44NjY2N0gwLjQ1MDA3M1YyLjY2NjY3WiIgZmlsbD0id2hpdGUiLz4KPG1hc2sgaWQ9Im1hc2swXzMyMTdfNDk3ODA1IiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijk0IiBoZWlnaHQ9IjYiPgo8cGF0aCBkPSJNMC40NTAwNzMgMi42NjY2N0MwLjQ1MDA3MyAxLjE5MzkxIDEuNDk0NzQgMCAyLjc4MzQxIDBIOTEuMjE2N0M5Mi41MDUyIDAgOTMuNTUwMSAxLjE5MzkxIDkzLjU1MDEgMi42NjY2N1Y1Ljg2NjY3SDAuNDUwMDczVjIuNjY2NjdaIiBmaWxsPSJ3aGl0ZSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfMzIxN180OTc4MDUpIj4KPHBhdGggZD0iTTAuMjE2Nzk3IDIuNjY2NjFDMC4yMTY3OTcgMS4wNDY1NyAxLjM2NTkzIC0wLjI2NjcyNCAyLjc4MzQ2IC0wLjI2NjcyNEg5MS4yMTY4QzkyLjYzNDUgLTAuMjY2NzI0IDkzLjc4MzQgMS4wNDY1NyA5My43ODM0IDIuNjY2NjFIOTMuMzE2OEM5My4zMTY4IDEuMzQxMTMgOTIuMzc2NCAwLjI2NjYxIDkxLjIxNjggMC4yNjY2MUgyLjc4MzQ2QzEuNjIzNjcgMC4yNjY2MSAwLjY4MzQ1NyAxLjM0MTEzIDAuNjgzNDU3IDIuNjY2NjFIMC4yMTY3OTdaTTAuMjE2Nzk3IDUuODY2NjFWMi42NjY2MUMwLjIxNjc5NyAxLjA0NjU3IDEuMzY1OTMgLTAuMjY2NzI0IDIuNzgzNDYgLTAuMjY2NzI0VjAuMjY2NjFDMS42MjM2NyAwLjI2NjYxIDAuNjgzNDU3IDEuMzQxMTMgMC42ODM0NTcgMi42NjY2MVY1Ljg2NjYxSDAuMjE2Nzk3Wk05MS4yMTY4IC0wLjI2NjcyNEM5Mi42MzQ1IC0wLjI2NjcyNCA5My43ODM0IDEuMDQ2NTcgOTMuNzgzNCAyLjY2NjYxVjUuODY2NjFIOTMuMzE2OFYyLjY2NjYxQzkzLjMxNjggMS4zNDExMyA5Mi4zNzY0IDAuMjY2NjEgOTEuMjE2OCAwLjI2NjYxVi0wLjI2NjcyNFoiIGZpbGw9IiNFOUVERjQiLz4KPC9nPgo8cGF0aCBkPSJNMy40ODMzMyAzLjUzMzNDMy44Njk5MiAzLjUzMzMgNC4xODMzMyAzLjIxOTkgNC4xODMzMyAyLjgzMzNDNC4xODMzMyAyLjQ0NjcgMy44Njk5MiAyLjEzMzMgMy40ODMzMyAyLjEzMzNDMy4wOTY3MyAyLjEzMzMgMi43ODMzMyAyLjQ0NjcgMi43ODMzMyAyLjgzMzNDMi43ODMzMyAzLjIxOTkgMy4wOTY3MyAzLjUzMzMgMy40ODMzMyAzLjUzMzNaIiBmaWxsPSIjRTgyNjQ2Ii8+CjxwYXRoIGQ9Ik01LjgxNjcgMy41MzMzQzYuMjAzMyAzLjUzMzMgNi41MTY3IDMuMjE5OSA2LjUxNjcgMi44MzMzQzYuNTE2NyAyLjQ0NjcgNi4yMDMzIDIuMTMzMyA1LjgxNjcgMi4xMzMzQzUuNDMwMSAyLjEzMzMgNS4xMTY3IDIuNDQ2NyA1LjExNjcgMi44MzMzQzUuMTE2NyAzLjIxOTkgNS40MzAxIDMuNTMzMyA1LjgxNjcgMy41MzMzWiIgZmlsbD0iIzFBQkUxNyIvPgo8cGF0aCBkPSJNOC4xNTAwNyAzLjUzMzNDOC41MzY2NyAzLjUzMzMgOC44NTAwNyAzLjIxOTkgOC44NTAwNyAyLjgzMzNDOC44NTAwNyAyLjQ0NjcgOC41MzY2NyAyLjEzMzMgOC4xNTAwNyAyLjEzMzNDNy43NjM0NyAyLjEzMzMgNy40NTAwNyAyLjQ0NjcgNy40NTAwNyAyLjgzMzNDNy40NTAwNyAzLjIxOTkgNy43NjM0NyAzLjUzMzMgOC4xNTAwNyAzLjUzMzNaIiBmaWxsPSIjRUFCMzAwIi8+CjxwYXRoIGQ9Ik0wLjU2NjY1IDZIOTMuNDMzM1Y3Ny4zMzMzQzkzLjQzMzMgNzguNzMyMyA5Mi40NDA3IDc5Ljg2NjcgOTEuMjE2NyA3OS44NjY3SDIuNzgzMzJDMS41NTkwOSA3OS44NjY3IDAuNTY2NjUgNzguNzMyMyAwLjU2NjY1IDc3LjMzMzNWNloiIGZpbGw9IiM4MzhBOUIiLz4KPHBhdGggZD0iTTAuNTY2NjUgNkg5My40MzMzVjc3LjMzMzNDOTMuNDMzMyA3OC43MzIzIDkyLjQ0MDcgNzkuODY2NyA5MS4yMTY3IDc5Ljg2NjdIMi43ODMzMkMxLjU1OTA5IDc5Ljg2NjcgMC41NjY2NSA3OC43MzIzIDAuNTY2NjUgNzcuMzMzM1Y2WiIgc3Ryb2tlPSIjRTlFREY0IiBzdHJva2Utd2lkdGg9IjAuNSIvPgo8cGF0aCBkPSJNMy43MTY3NiA2LjkzMzM1SDIuNzgzNDNDMi4yNjc5NyA2LjkzMzM1IDEuODUwMSA3LjQxMDkxIDEuODUwMSA4LjAwMDAyQzEuODUwMSA4LjU4OTEyIDIuMjY3OTcgOS4wNjY3IDIuNzgzNDMgOS4wNjY3SDMuNzE2NzZDNC4yMzIyMyA5LjA2NjcgNC42NTAxIDguNTg5MTIgNC42NTAxIDguMDAwMDJDNC42NTAxIDcuNDEwOTEgNC4yMzIyMyA2LjkzMzM1IDMuNzE2NzYgNi45MzMzNVoiIGZpbGw9IiM4MzhBOUIiLz4KPHBhdGggZD0iTTMuNzE2NjYgMTIuMjY2NkMzLjcxNjY2IDExLjk3MjEgMy41MDc3MiAxMS43MzMzIDMuMjQ5OTkgMTEuNzMzM0MyLjk5MjI2IDExLjczMzMgMi43ODMzMyAxMS45NzIxIDIuNzgzMzMgMTIuMjY2NlYxMy44NjY2QzIuNzgzMzMgMTQuMTYxMiAyLjk5MjI2IDE0LjM5OTkgMy4yNDk5OSAxNC4zOTk5QzMuNTA3NzIgMTQuMzk5OSAzLjcxNjY2IDE0LjE2MTIgMy43MTY2NiAxMy44NjY2VjEyLjI2NjZaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0zLjcxNjY2IDE2QzMuNzE2NjYgMTUuNzA1NSAzLjUwNzcyIDE1LjQ2NjcgMy4yNDk5OSAxNS40NjY3QzIuOTkyMjYgMTUuNDY2NyAyLjc4MzMzIDE1LjcwNTUgMi43ODMzMyAxNlYxNy4wNjY3QzIuNzgzMzMgMTcuMzYxMiAyLjk5MjI2IDE3LjYgMy4yNDk5OSAxNy42QzMuNTA3NzIgMTcuNiAzLjcxNjY2IDE3LjM2MTIgMy43MTY2NiAxNy4wNjY3VjE2WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMy43MTY2NiAxOS4yQzMuNzE2NjYgMTguOTA1NCAzLjUwNzcyIDE4LjY2NjYgMy4yNDk5OSAxOC42NjY2QzIuOTkyMjYgMTguNjY2NiAyLjc4MzMzIDE4LjkwNTQgMi43ODMzMyAxOS4yVjIwLjhDMi43ODMzMyAyMS4wOTQ1IDIuOTkyMjYgMjEuMzMzMyAzLjI0OTk5IDIxLjMzMzNDMy41MDc3MiAyMS4zMzMzIDMuNzE2NjYgMjEuMDk0NSAzLjcxNjY2IDIwLjhWMTkuMloiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTMuNzE2NjYgMjIuOTMzNEMzLjcxNjY2IDIyLjYzODggMy41MDc3MiAyMi40IDMuMjQ5OTkgMjIuNEMyLjk5MjI2IDIyLjQgMi43ODMzMyAyMi42Mzg4IDIuNzgzMzMgMjIuOTMzNFYyNEMyLjc4MzMzIDI0LjI5NDYgMi45OTIyNiAyNC41MzM0IDMuMjQ5OTkgMjQuNTMzNEMzLjUwNzcyIDI0LjUzMzQgMy43MTY2NiAyNC4yOTQ2IDMuNzE2NjYgMjRWMjIuOTMzNFoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTMuNzE2NjYgMjYuMTMzM0MzLjcxNjY2IDI1LjgzODggMy41MDc3MiAyNS42IDMuMjQ5OTkgMjUuNkMyLjk5MjI2IDI1LjYgMi43ODMzMyAyNS44Mzg4IDIuNzgzMzMgMjYuMTMzM1YyNy43MzMzQzIuNzgzMzMgMjguMDI3OSAyLjk5MjI2IDI4LjI2NjYgMy4yNDk5OSAyOC4yNjY2QzMuNTA3NzIgMjguMjY2NiAzLjcxNjY2IDI4LjAyNzkgMy43MTY2NiAyNy43MzMzVjI2LjEzMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0zLjcxNjY2IDI5Ljg2NjdDMy43MTY2NiAyOS41NzIyIDMuNTA3NzIgMjkuMzMzNCAzLjI0OTk5IDI5LjMzMzRDMi45OTIyNiAyOS4zMzM0IDIuNzgzMzMgMjkuNTcyMiAyLjc4MzMzIDI5Ljg2NjdWMzEuNDY2N0MyLjc4MzMzIDMxLjc2MTMgMi45OTIyNiAzMiAzLjI0OTk5IDMyQzMuNTA3NzIgMzIgMy43MTY2NiAzMS43NjEzIDMuNzE2NjYgMzEuNDY2N1YyOS44NjY3WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMy43MTY2NiAzMy41OTk5QzMuNzE2NjYgMzMuMzA1MyAzLjUwNzcyIDMzLjA2NjcgMy4yNDk5OSAzMy4wNjY3QzIuOTkyMjYgMzMuMDY2NyAyLjc4MzMzIDMzLjMwNTMgMi43ODMzMyAzMy41OTk5VjM0LjY2NjZDMi43ODMzMyAzNC45NjExIDIuOTkyMjYgMzUuMiAzLjI0OTk5IDM1LjJDMy41MDc3MiAzNS4yIDMuNzE2NjYgMzQuOTYxMSAzLjcxNjY2IDM0LjY2NjZWMzMuNTk5OVoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTMuNzE2NjYgMzYuODAwMUMzLjcxNjY2IDM2LjUwNTUgMy41MDc3MiAzNi4yNjY3IDMuMjQ5OTkgMzYuMjY2N0MyLjk5MjI2IDM2LjI2NjcgMi43ODMzMyAzNi41MDU1IDIuNzgzMzMgMzYuODAwMVYzNy44NjY3QzIuNzgzMzMgMzguMTYxMyAyLjk5MjI2IDM4LjQwMDEgMy4yNDk5OSAzOC40MDAxQzMuNTA3NzIgMzguNDAwMSAzLjcxNjY2IDM4LjE2MTMgMy43MTY2NiAzNy44NjY3VjM2LjgwMDFaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0zLjcxNjY2IDQwQzMuNzE2NjYgMzkuNzA1NSAzLjUwNzcyIDM5LjQ2NjcgMy4yNDk5OSAzOS40NjY3QzIuOTkyMjYgMzkuNDY2NyAyLjc4MzMzIDM5LjcwNTUgMi43ODMzMyA0MFY0MS42QzIuNzgzMzMgNDEuODk0NiAyLjk5MjI2IDQyLjEzMzMgMy4yNDk5OSA0Mi4xMzMzQzMuNTA3NzIgNDIuMTMzMyAzLjcxNjY2IDQxLjg5NDYgMy43MTY2NiA0MS42VjQwWiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMS44NTAxIDY3Ljc0NjdINC42NTAxIiBzdHJva2U9IiNFOUVERjQiIHN0cm9rZS13aWR0aD0iMC4yIi8+CjxwYXRoIGQ9Ik0zLjI0OTk4IDcyQzMuNzY1NDUgNzIgNC4xODMzMiA3MS41MjI1IDQuMTgzMzIgNzAuOTMzNEM0LjE4MzMyIDcwLjM0NDMgMy43NjU0NSA2OS44NjY3IDMuMjQ5OTggNjkuODY2N0MyLjczNDUyIDY5Ljg2NjcgMi4zMTY2NSA3MC4zNDQzIDIuMzE2NjUgNzAuOTMzNEMyLjMxNjY1IDcxLjUyMjUgMi43MzQ1MiA3MiAzLjI0OTk4IDcyWiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMy4yNDk5OCA3NC42NjY3QzMuNzY1NDUgNzQuNjY2NyA0LjE4MzMyIDc0LjE4OTEgNC4xODMzMiA3My42QzQuMTgzMzIgNzMuMDEwOSAzLjc2NTQ1IDcyLjUzMzMgMy4yNDk5OCA3Mi41MzMzQzIuNzM0NTIgNzIuNTMzMyAyLjMxNjY1IDczLjAxMDkgMi4zMTY2NSA3My42QzIuMzE2NjUgNzQuMTg5MSAyLjczNDUyIDc0LjY2NjcgMy4yNDk5OCA3NC42NjY3WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMy4yNDk5OCA3Ny4zMzMzQzMuNzY1NDUgNzcuMzMzMyA0LjE4MzMyIDc2Ljg1NTggNC4xODMzMiA3Ni4yNjY3QzQuMTgzMzIgNzUuNjc3NiAzLjc2NTQ1IDc1LjIgMy4yNDk5OCA3NS4yQzIuNzM0NTIgNzUuMiAyLjMxNjY1IDc1LjY3NzYgMi4zMTY2NSA3Ni4yNjY3QzIuMzE2NjUgNzYuODU1OCAyLjczNDUyIDc3LjMzMzMgMy4yNDk5OCA3Ny4zMzMzWiIgZmlsbD0iI0U5RURGNCIvPgo8bWFzayBpZD0ibWFzazFfMzIxN180OTc4MDUiIHN0eWxlPSJtYXNrLXR5cGU6bHVtaW5hbmNlIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI2IiB5PSI1IiB3aWR0aD0iODgiIGhlaWdodD0iNiI+CjxwYXRoIGQ9Ik02LjA1MDA1IDUuODY2N0g5My41NVYxMC4xMzM0SDYuMDUwMDVWNS44NjY3WiIgZmlsbD0id2hpdGUiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2sxXzMyMTdfNDk3ODA1KSI+CjxwYXRoIGQ9Ik02LjA1MDA1IDYuMTMzMzFIOTMuNTVWNS41OTk5OEg2LjA1MDA1VjYuMTMzMzFaIiBmaWxsPSIjRTlFREY0Ii8+CjwvZz4KPHBhdGggZD0iTTI0LjU4MzQgNi45MzMzNUg3LjMxNjhDNi44MDEyOSA2LjkzMzM1IDYuMzgzNDIgNy40MTA5MSA2LjM4MzQyIDguMDAwMDJDNi4zODM0MiA4LjU4OTEyIDYuODAxMjkgOS4wNjY3IDcuMzE2OCA5LjA2NjdIMjQuNTgzNEMyNS4wOTg5IDkuMDY2NyAyNS41MTY4IDguNTg5MTIgMjUuNTE2OCA4LjAwMDAyQzI1LjUxNjggNy40MTA5MSAyNS4wOTg5IDYuOTMzMzUgMjQuNTgzNCA2LjkzMzM1WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNODUuNjgzMyA4LjgwMzM1Qzg2LjE5ODggOC44MDMzNSA4Ni42MTY3IDguMzg0NzQgODYuNjE2NyA3Ljg2ODM1Qzg2LjYxNjcgNy4zNTE5NiA4Ni4xOTg4IDYuOTMzMzUgODUuNjgzMyA2LjkzMzM1Qzg1LjE2NzkgNi45MzMzNSA4NC43NSA3LjM1MTk2IDg0Ljc1IDcuODY4MzVDODQuNzUgOC4zODQ3NCA4NS4xNjc5IDguODAzMzUgODUuNjgzMyA4LjgwMzM1WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNODguNDgzNCA4LjgwMzM1Qzg4Ljk5ODggOC44MDMzNSA4OS40MTY3IDguMzg0NzQgODkuNDE2NyA3Ljg2ODM1Qzg5LjQxNjcgNy4zNTE5NiA4OC45OTg4IDYuOTMzMzUgODguNDgzNCA2LjkzMzM1Qzg3Ljk2NzkgNi45MzMzNSA4Ny41NSA3LjM1MTk2IDg3LjU1IDcuODY4MzVDODcuNTUgOC4zODQ3NCA4Ny45Njc5IDguODAzMzUgODguNDgzNCA4LjgwMzM1WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNOTEuMjgzNCA4LjgwMzM1QzkxLjc5ODkgOC44MDMzNSA5Mi4yMTY4IDguMzg0NzQgOTIuMjE2OCA3Ljg2ODM1QzkyLjIxNjggNy4zNTE5NiA5MS43OTg5IDYuOTMzMzUgOTEuMjgzNCA2LjkzMzM1QzkwLjc2OCA2LjkzMzM1IDkwLjM1MDEgNy4zNTE5NiA5MC4zNTAxIDcuODY4MzVDOTAuMzUwMSA4LjM4NDc0IDkwLjc2OCA4LjgwMzM1IDkxLjI4MzQgOC44MDMzNVoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTkxIDEzQzkxIDExLjg5NTQgOTAuMTA0NiAxMSA4OSAxMUg5QzcuODk1NDMgMTEgNyAxMS44OTU0IDcgMTNWNzRDNyA3NS4xMDQ2IDcuODk1NDMgNzYgOSA3Nkg4OUM5MC4xMDQ2IDc2IDkxIDc1LjEwNDYgOTEgNzRWMTNaIiBmaWxsPSIjRjRGNkZBIi8+CjxwYXRoIGQ9Ik01Ny43MzM0IDc4LjVIMzkuNTMzNEMzOS4yNzU3IDc4LjUgMzkuMDY2OCA3OC4yNjEyIDM5LjA2NjggNzcuOTY2N0MzOS4wNjY4IDc3LjY3MjEgMzkuMjc1NyA3Ny40MzMzIDM5LjUzMzQgNzcuNDMzM0g1Ny43MzM0QzU3Ljk5MTIgNzcuNDMzMyA1OC4yMDAxIDc3LjY3MjEgNTguMjAwMSA3Ny45NjY3QzU4LjIwMDEgNzguMjYxMiA1Ny45OTEyIDc4LjUgNTcuNzMzNCA3OC41WiIgZmlsbD0iI0U5RURGNCIvPgo8L3N2Zz4K" alt="img">
+                                            </span>                                    
+                                            <span class="layout-type">Mini</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="theme-layout mb-3">
+                                        <input type="radio" name="LayoutTheme" id="boxLayout" value="box">
+                                        <label for="boxLayout">
+                                            <span class="d-block mb-2 layout-img">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTQiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA5NCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuNDk5OTM5IDIuNjY2NjdDMC40OTk5MzkgMS4xOTM5MSAxLjU0NDYxIDAgMi44MzMyNyAwSDkxLjQ5OTlDOTIuNzg4NCAwIDkzLjgzMzMgMS4xOTM5MSA5My44MzMzIDIuNjY2NjdWNS44NjY2N0gwLjQ5OTkzOVYyLjY2NjY3WiIgZmlsbD0id2hpdGUiLz4KPG1hc2sgaWQ9Im1hc2swXzMyMTdfNDk3ODk4IiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijk0IiBoZWlnaHQ9IjYiPgo8cGF0aCBkPSJNMC40OTk5MzkgMi42NjY2N0MwLjQ5OTkzOSAxLjE5MzkxIDEuNTQ0NjEgMCAyLjgzMzI3IDBIOTEuNDk5OUM5Mi43ODg0IDAgOTMuODMzMyAxLjE5MzkxIDkzLjgzMzMgMi42NjY2N1Y1Ljg2NjY3SDAuNDk5OTM5VjIuNjY2NjdaIiBmaWxsPSJ3aGl0ZSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfMzIxN180OTc4OTgpIj4KPHBhdGggZD0iTTAuMjY2NjYzIDIuNjY2NjFDMC4yNjY2NjMgMS4wNDY1NyAxLjQxNTc5IC0wLjI2NjcyNCAyLjgzMzMzIC0wLjI2NjcyNEg5MS41QzkyLjkxNzcgLTAuMjY2NzI0IDk0LjA2NjYgMS4wNDY1NyA5NC4wNjY2IDIuNjY2NjFIOTMuNkM5My42IDEuMzQxMTMgOTIuNjU5NiAwLjI2NjYxIDkxLjUgMC4yNjY2MUgyLjgzMzMzQzEuNjczNTMgMC4yNjY2MSAwLjczMzMyOSAxLjM0MTEzIDAuNzMzMzI5IDIuNjY2NjFIMC4yNjY2NjNaTTAuMjY2NjYzIDUuODY2NjFWMi42NjY2MUMwLjI2NjY2MyAxLjA0NjU3IDEuNDE1NzkgLTAuMjY2NzI0IDIuODMzMzMgLTAuMjY2NzI0VjAuMjY2NjFDMS42NzM1MyAwLjI2NjYxIDAuNzMzMzI5IDEuMzQxMTMgMC43MzMzMjkgMi42NjY2MVY1Ljg2NjYxSDAuMjY2NjYzWk05MS41IC0wLjI2NjcyNEM5Mi45MTc3IC0wLjI2NjcyNCA5NC4wNjY2IDEuMDQ2NTcgOTQuMDY2NiAyLjY2NjYxVjUuODY2NjFIOTMuNlYyLjY2NjYxQzkzLjYgMS4zNDExMyA5Mi42NTk2IDAuMjY2NjEgOTEuNSAwLjI2NjYxVi0wLjI2NjcyNFoiIGZpbGw9IiNFNUU3RUIiLz4KPC9nPgo8cGF0aCBkPSJNMy41MzMzMSAzLjczMzNDMy45MTk5MSAzLjczMzMgNC4yMzMzMSAzLjM3NTEzIDQuMjMzMzEgMi45MzMzQzQuMjMzMzEgMi40OTE0NyAzLjkxOTkxIDIuMTMzMyAzLjUzMzMxIDIuMTMzM0MzLjE0NjcxIDIuMTMzMyAyLjgzMzMxIDIuNDkxNDcgMi44MzMzMSAyLjkzMzNDMi44MzMzMSAzLjM3NTEzIDMuMTQ2NzEgMy43MzMzIDMuNTMzMzEgMy43MzMzWiIgZmlsbD0iI0QwMEMwQyIvPgo8cGF0aCBkPSJNNS44NjY1NiAzLjczMzNDNi4yNTMxNiAzLjczMzMgNi41NjY1NyAzLjM3NTEzIDYuNTY2NTcgMi45MzMzQzYuNTY2NTcgMi40OTE0NyA2LjI1MzE2IDIuMTMzMyA1Ljg2NjU2IDIuMTMzM0M1LjQ3OTk2IDIuMTMzMyA1LjE2NjU2IDIuNDkxNDcgNS4xNjY1NiAyLjkzMzNDNS4xNjY1NiAzLjM3NTEzIDUuNDc5OTYgMy43MzMzIDUuODY2NTYgMy43MzMzWiIgZmlsbD0iIzAzQzk1QSIvPgo8cGF0aCBkPSJNOC4xOTk5NCAzLjczMzNDOC41ODY1NCAzLjczMzMgOC44OTk5NCAzLjM3NTEzIDguODk5OTQgMi45MzMzQzguODk5OTQgMi40OTE0NyA4LjU4NjU0IDIuMTMzMyA4LjE5OTk0IDIuMTMzM0M3LjgxMzM0IDIuMTMzMyA3LjQ5OTk0IDIuNDkxNDcgNy40OTk5NCAyLjkzMzNDNy40OTk5NCAzLjM3NTEzIDcuODEzMzQgMy43MzMzIDguMTk5OTQgMy43MzMzWiIgZmlsbD0iI0ZGQzEwNyIvPgo8cGF0aCBkPSJNMC42MTY2MzggNkg5My43MTY2Vjc3LjMzMzNDOTMuNzE2NiA3OC43MzIzIDkyLjcyNCA3OS44NjY3IDkxLjQ5OTkgNzkuODY2N0gyLjgzMzNDMS42MDkwNyA3OS44NjY3IDAuNjE2NjM4IDc4LjczMjMgMC42MTY2MzggNzcuMzMzM1Y2WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTAuNjE2NjM4IDZIOTMuNzE2NlY3Ny4zMzMzQzkzLjcxNjYgNzguNzMyMyA5Mi43MjQgNzkuODY2NyA5MS40OTk5IDc5Ljg2NjdIMi44MzMzQzEuNjA5MDcgNzkuODY2NyAwLjYxNjYzOCA3OC43MzIzIDAuNjE2NjM4IDc3LjMzMzNWNloiIHN0cm9rZT0iI0U1RTdFQiIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPHBhdGggZD0iTTkzLjU5OTkgNS44NjY3SDAuNzMzMjE1VjgwSDkzLjU5OTlWNS44NjY3WiIgZmlsbD0iIzgzOEE5QiIvPgo8cGF0aCBkPSJNMTcuNzY2NSAxMi45MzMzSDUuMTY2NTVDMy45NDIzMiAxMi45MzMzIDIuOTQ5ODkgMTQuMDY3NiAyLjk0OTg5IDE1LjQ2NjdWNzJDMi45NDk4OSA3My4zOTkyIDMuOTQyMzIgNzQuNTMzNCA1LjE2NjU1IDc0LjUzMzRIMTcuNzY2NUMxOC45OTA4IDc0LjUzMzQgMTkuOTgzMiA3My4zOTkyIDE5Ljk4MzIgNzJWMTUuNDY2N0MxOS45ODMyIDE0LjA2NzYgMTguOTkwOCAxMi45MzMzIDE3Ljc2NjUgMTIuOTMzM1oiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNy43NjY1IDEyLjkzMzNINS4xNjY1NUMzLjk0MjMyIDEyLjkzMzMgMi45NDk4OSAxNC4wNjc2IDIuOTQ5ODkgMTUuNDY2N1Y3MkMyLjk0OTg5IDczLjM5OTIgMy45NDIzMiA3NC41MzM0IDUuMTY2NTUgNzQuNTMzNEgxNy43NjY1QzE4Ljk5MDggNzQuNTMzNCAxOS45ODMyIDczLjM5OTIgMTkuOTgzMiA3MlYxNS40NjY3QzE5Ljk4MzIgMTQuMDY3NiAxOC45OTA4IDEyLjkzMzMgMTcuNzY2NSAxMi45MzMzWiIgZmlsbD0iI0Y0RjZGQSIvPgo8cGF0aCBkPSJNMTEuMjMzMiAxNi4yNjY3SDYuMDk5OTFDNS41ODQ0MyAxNi4yNjY3IDUuMTY2NTYgMTYuNzQ0MyA1LjE2NjU2IDE3LjMzMzRDNS4xNjY1NiAxNy45MjI1IDUuNTg0NDMgMTguNDAwMSA2LjA5OTkxIDE4LjQwMDFIMTEuMjMzMkMxMS43NDg3IDE4LjQwMDEgMTIuMTY2NiAxNy45MjI1IDEyLjE2NjYgMTcuMzMzNEMxMi4xNjY2IDE2Ljc0NDMgMTEuNzQ4NyAxNi4yNjY3IDExLjIzMzIgMTYuMjY2N1oiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMi44NjY2IDI0LjhINS44NjY1NkM1LjQ3OTk2IDI0LjggNS4xNjY1NiAyNS4xNTgyIDUuMTY2NTYgMjUuNkM1LjE2NjU2IDI2LjA0MTkgNS40Nzk5NiAyNi40IDUuODY2NTYgMjYuNEgxMi44NjY2QzEzLjI1MzIgMjYuNCAxMy41NjY2IDI2LjA0MTkgMTMuNTY2NiAyNS42QzEzLjU2NjYgMjUuMTU4MiAxMy4yNTMyIDI0LjggMTIuODY2NiAyNC44WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMTIuODY2NiAyNy40NjY3SDUuODY2NTZDNS40Nzk5NiAyNy40NjY3IDUuMTY2NTYgMjcuODI0OCA1LjE2NjU2IDI4LjI2NjdDNS4xNjY1NiAyOC43MDg1IDUuNDc5OTYgMjkuMDY2NyA1Ljg2NjU2IDI5LjA2NjdIMTIuODY2NkMxMy4yNTMyIDI5LjA2NjcgMTMuNTY2NiAyOC43MDg1IDEzLjU2NjYgMjguMjY2N0MxMy41NjY2IDI3LjgyNDggMTMuMjUzMiAyNy40NjY3IDEyLjg2NjYgMjcuNDY2N1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTguNjY2NTYgMzAuMTMzM0g1Ljg2NjU2QzUuNDc5OTYgMzAuMTMzMyA1LjE2NjU2IDMwLjQ5MTUgNS4xNjY1NiAzMC45MzMzQzUuMTY2NTYgMzEuMzc1MSA1LjQ3OTk2IDMxLjczMzMgNS44NjY1NiAzMS43MzMzSDguNjY2NTZDOS4wNTMxNiAzMS43MzMzIDkuMzY2NTYgMzEuMzc1MSA5LjM2NjU2IDMwLjkzMzNDOS4zNjY1NiAzMC40OTE1IDkuMDUzMTYgMzAuMTMzMyA4LjY2NjU2IDMwLjEzMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0xNC43MzMyIDMyLjhINS44NjY1NkM1LjQ3OTk2IDMyLjggNS4xNjY1NiAzMy4xNTgyIDUuMTY2NTYgMzMuNkM1LjE2NjU2IDM0LjA0MTkgNS40Nzk5NiAzNC40MDAxIDUuODY2NTYgMzQuNDAwMUgxNC43MzMyQzE1LjExOTggMzQuNDAwMSAxNS40MzMyIDM0LjA0MTkgMTUuNDMzMiAzMy42QzE1LjQzMzIgMzMuMTU4MiAxNS4xMTk4IDMyLjggMTQuNzMzMiAzMi44WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMTAuNTMzMiAzNS40NjY3SDUuODY2NTZDNS40Nzk5NiAzNS40NjY3IDUuMTY2NTYgMzUuODI0OCA1LjE2NjU2IDM2LjI2NjdDNS4xNjY1NiAzNi43MDg1IDUuNDc5OTYgMzcuMDY2NyA1Ljg2NjU2IDM3LjA2NjdIMTAuNTMzMkMxMC45MTk4IDM3LjA2NjcgMTEuMjMzMiAzNi43MDg1IDExLjIzMzIgMzYuMjY2N0MxMS4yMzMyIDM1LjgyNDggMTAuOTE5OCAzNS40NjY3IDEwLjUzMzIgMzUuNDY2N1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTE0LjczMzIgMzguMTMzM0g1Ljg2NjU2QzUuNDc5OTYgMzguMTMzMyA1LjE2NjU2IDM4LjQ5MTUgNS4xNjY1NiAzOC45MzMzQzUuMTY2NTYgMzkuMzc1MSA1LjQ3OTk2IDM5LjczMzMgNS44NjY1NiAzOS43MzMzSDE0LjczMzJDMTUuMTE5OCAzOS43MzMzIDE1LjQzMzIgMzkuMzc1MSAxNS40MzMyIDM4LjkzMzNDMTUuNDMzMiAzOC40OTE1IDE1LjExOTggMzguMTMzMyAxNC43MzMyIDM4LjEzMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik05LjU5OTg5IDQwLjhINS44NjY1NkM1LjQ3OTk2IDQwLjggNS4xNjY1NiA0MS4xNTgyIDUuMTY2NTYgNDEuNkM1LjE2NjU2IDQyLjA0MTkgNS40Nzk5NiA0Mi40IDUuODY2NTYgNDIuNEg5LjU5OTg5QzkuOTg2NTEgNDIuNCAxMC4yOTk5IDQyLjA0MTkgMTAuMjk5OSA0MS42QzEwLjI5OTkgNDEuMTU4MiA5Ljk4NjUxIDQwLjggOS41OTk4OSA0MC44WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNMTcuMDY2NiA0My40NjY3SDUuODY2NTZDNS40Nzk5NiA0My40NjY3IDUuMTY2NTYgNDMuODI0OCA1LjE2NjU2IDQ0LjI2NjdDNS4xNjY1NiA0NC43MDg1IDUuNDc5OTYgNDUuMDY2NyA1Ljg2NjU2IDQ1LjA2NjdIMTcuMDY2NkMxNy40NTMyIDQ1LjA2NjcgMTcuNzY2NiA0NC43MDg1IDE3Ljc2NjYgNDQuMjY2N0MxNy43NjY2IDQzLjgyNDggMTcuNDUzMiA0My40NjY3IDE3LjA2NjYgNDMuNDY2N1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTEyLjg2NjYgNDYuMTMzM0g1Ljg2NjU2QzUuNDc5OTYgNDYuMTMzMyA1LjE2NjU2IDQ2LjQ5MTUgNS4xNjY1NiA0Ni45MzMzQzUuMTY2NTYgNDcuMzc1MSA1LjQ3OTk2IDQ3LjczMzMgNS44NjY1NiA0Ny43MzMzSDEyLjg2NjZDMTMuMjUzMiA0Ny43MzMzIDEzLjU2NjYgNDcuMzc1MSAxMy41NjY2IDQ2LjkzMzNDMTMuNTY2NiA0Ni40OTE1IDEzLjI1MzIgNDYuMTMzMyAxMi44NjY2IDQ2LjEzMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik0xNy4wNjY2IDQ4LjhINS44NjY1NkM1LjQ3OTk2IDQ4LjggNS4xNjY1NiA0OS4xNTgyIDUuMTY2NTYgNDkuNkM1LjE2NjU2IDUwLjA0MTkgNS40Nzk5NiA1MC40IDUuODY2NTYgNTAuNEgxNy4wNjY2QzE3LjQ1MzIgNTAuNCAxNy43NjY2IDUwLjA0MTkgMTcuNzY2NiA0OS42QzE3Ljc2NjYgNDkuMTU4MiAxNy40NTMyIDQ4LjggMTcuMDY2NiA0OC44WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNNS4xNjY1NiA2OS4wMTMzSDE3Ljc2NjYiIHN0cm9rZT0iI0U5RURGNCIgc3Ryb2tlLXdpZHRoPSIwLjIiLz4KPHBhdGggZD0iTTkuMTMzMjIgNzIuMjY2NkM5LjY0ODY5IDcyLjI2NjYgMTAuMDY2NSA3MS43ODkxIDEwLjA2NjUgNzEuMkMxMC4wNjY1IDcwLjYxMDkgOS42NDg2OSA3MC4xMzMzIDkuMTMzMjIgNzAuMTMzM0M4LjYxNzc1IDcwLjEzMzMgOC4xOTk4OSA3MC42MTA5IDguMTk5ODkgNzEuMkM4LjE5OTg5IDcxLjc4OTEgOC42MTc3NSA3Mi4yNjY2IDkuMTMzMjIgNzIuMjY2NloiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTExLjQ2NjYgNzIuMjY2NkMxMS45ODIxIDcyLjI2NjYgMTIuMzk5OSA3MS43ODkxIDEyLjM5OTkgNzEuMkMxMi4zOTk5IDcwLjYxMDkgMTEuOTgyMSA3MC4xMzMzIDExLjQ2NjYgNzAuMTMzM0MxMC45NTExIDcwLjEzMzMgMTAuNTMzMyA3MC42MTA5IDEwLjUzMzMgNzEuMkMxMC41MzMzIDcxLjc4OTEgMTAuOTUxMSA3Mi4yNjY2IDExLjQ2NjYgNzIuMjY2NloiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTEzLjggNzIuMjY2NkMxNC4zMTU0IDcyLjI2NjYgMTQuNzMzMyA3MS43ODkxIDE0LjczMzMgNzEuMkMxNC43MzMzIDcwLjYxMDkgMTQuMzE1NCA3MC4xMzMzIDEzLjggNzAuMTMzM0MxMy4yODQ1IDcwLjEzMzMgMTIuODY2NiA3MC42MTA5IDEyLjg2NjYgNzEuMkMxMi44NjY2IDcxLjc4OTEgMTMuMjg0NSA3Mi4yNjY2IDEzLjggNzIuMjY2NloiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTIyLjc0OTkgMTMuODY2N0MyMi43NDk5IDEzLjM4MzMgMjMuMDg2MiAxMy4wNSAyMy40MzMzIDEzLjA1SDkxLjA5OTlDOTEuNDQ3MiAxMy4wNSA5MS43ODMzIDEzLjM4MzIgOTEuNzgzMyAxMy44NjY3VjE2QzkxLjc4MzMgMTYuNDgzNSA5MS40NDcyIDE2LjgxNjcgOTEuMDk5OSAxNi44MTY3SDIzLjQzMzNDMjMuMDg2MiAxNi44MTY3IDIyLjc0OTkgMTYuNDgzNSAyMi43NDk5IDE2VjEzLjg2NjdaIiBmaWxsPSIjRjRGNkZBIi8+CjxwYXRoIGQ9Ik0zMi41MzMzIDE0LjEzMzNIMjUuNTMzM0MyNS4xNDY3IDE0LjEzMzMgMjQuODMzMyAxNC40OTE1IDI0LjgzMzMgMTQuOTMzM0MyNC44MzMzIDE1LjM3NTEgMjUuMTQ2NyAxNS43MzMzIDI1LjUzMzMgMTUuNzMzM0gzMi41MzMzQzMyLjkxOTkgMTUuNzMzMyAzMy4yMzMzIDE1LjM3NTEgMzMuMjMzMyAxNC45MzMzQzMzLjIzMzMgMTQuNDkxNSAzMi45MTk5IDE0LjEzMzMgMzIuNTMzMyAxNC4xMzMzWiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNNDEuODY2NiAxNC4xMzMzSDM0Ljg2NjZDMzQuNDggMTQuMTMzMyAzNC4xNjY2IDE0LjQ5MTUgMzQuMTY2NiAxNC45MzMzQzM0LjE2NjYgMTUuMzc1MSAzNC40OCAxNS43MzMzIDM0Ljg2NjYgMTUuNzMzM0g0MS44NjY2QzQyLjI1MzIgMTUuNzMzMyA0Mi41NjY2IDE1LjM3NTEgNDIuNTY2NiAxNC45MzMzQzQyLjU2NjYgMTQuNDkxNSA0Mi4yNTMyIDE0LjEzMzMgNDEuODY2NiAxNC4xMzMzWiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNNDYuOTk5OSAxNC4xMzMzSDQ0LjE5OTlDNDMuODEzMyAxNC4xMzMzIDQzLjQ5OTkgMTQuNDkxNSA0My40OTk5IDE0LjkzMzNDNDMuNDk5OSAxNS4zNzUxIDQzLjgxMzMgMTUuNzMzMyA0NC4xOTk5IDE1LjczMzNINDYuOTk5OUM0Ny4zODY1IDE1LjczMzMgNDcuNjk5OSAxNS4zNzUxIDQ3LjY5OTkgMTQuOTMzM0M0Ny42OTk5IDE0LjQ5MTUgNDcuMzg2NSAxNC4xMzMzIDQ2Ljk5OTkgMTQuMTMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTU4LjE5OTkgMTQuMTMzM0g0OS4zMzMyQzQ4Ljk0NjYgMTQuMTMzMyA0OC42MzMyIDE0LjQ5MTUgNDguNjMzMiAxNC45MzMzQzQ4LjYzMzIgMTUuMzc1MSA0OC45NDY2IDE1LjczMzMgNDkuMzMzMiAxNS43MzMzSDU4LjE5OTlDNTguNTg2NSAxNS43MzMzIDU4Ljg5OTkgMTUuMzc1MSA1OC44OTk5IDE0LjkzMzNDNTguODk5OSAxNC40OTE1IDU4LjU4NjUgMTQuMTMzMyA1OC4xOTk5IDE0LjEzMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik02NS4yIDE0LjEzMzNINjAuNTMzM0M2MC4xNDY3IDE0LjEzMzMgNTkuODMzMyAxNC40OTE1IDU5LjgzMzMgMTQuOTMzM0M1OS44MzMzIDE1LjM3NTEgNjAuMTQ2NyAxNS43MzMzIDYwLjUzMzMgMTUuNzMzM0g2NS4yQzY1LjU4NjYgMTUuNzMzMyA2NS45IDE1LjM3NTEgNjUuOSAxNC45MzMzQzY1LjkgMTQuNDkxNSA2NS41ODY2IDE0LjEzMzMgNjUuMiAxNC4xMzMzWiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNNzcuNTY2NiAxNkM3OC4wODIgMTYgNzguNDk5OSAxNS41MjI1IDc4LjQ5OTkgMTQuOTMzNEM3OC40OTk5IDE0LjM0NDMgNzguMDgyIDEzLjg2NjcgNzcuNTY2NiAxMy44NjY3Qzc3LjA1MTEgMTMuODY2NyA3Ni42MzMyIDE0LjM0NDMgNzYuNjMzMiAxNC45MzM0Qzc2LjYzMzIgMTUuNTIyNSA3Ny4wNTExIDE2IDc3LjU2NjYgMTZaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik04MC4zNjY2IDE2QzgwLjg4MjEgMTYgODEuMjk5OSAxNS41MjI1IDgxLjI5OTkgMTQuOTMzNEM4MS4yOTk5IDE0LjM0NDMgODAuODgyMSAxMy44NjY3IDgwLjM2NjYgMTMuODY2N0M3OS44NTExIDEzLjg2NjcgNzkuNDMzMyAxNC4zNDQzIDc5LjQzMzMgMTQuOTMzNEM3OS40MzMzIDE1LjUyMjUgNzkuODUxMSAxNiA4MC4zNjY2IDE2WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNODMuMTY2NSAxNkM4My42ODIgMTYgODQuMDk5OSAxNS41MjI1IDg0LjA5OTkgMTQuOTMzNEM4NC4wOTk5IDE0LjM0NDMgODMuNjgyIDEzLjg2NjcgODMuMTY2NSAxMy44NjY3QzgyLjY1MTEgMTMuODY2NyA4Mi4yMzMyIDE0LjM0NDMgODIuMjMzMiAxNC45MzM0QzgyLjIzMzIgMTUuNTIyNSA4Mi42NTExIDE2IDgzLjE2NjUgMTZaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik04NS45NjY2IDE2Qzg2LjQ4MjEgMTYgODYuODk5OSAxNS41MjI1IDg2Ljg5OTkgMTQuOTMzNEM4Ni44OTk5IDE0LjM0NDMgODYuNDgyMSAxMy44NjY3IDg1Ljk2NjYgMTMuODY2N0M4NS40NTExIDEzLjg2NjcgODUuMDMzMyAxNC4zNDQzIDg1LjAzMzMgMTQuOTMzNEM4NS4wMzMzIDE1LjUyMjUgODUuNDUxMSAxNiA4NS45NjY2IDE2WiIgZmlsbD0iI0U5RURGNCIvPgo8cGF0aCBkPSJNODguNzY2NiAxNkM4OS4yODIxIDE2IDg5LjcgMTUuNTIyNSA4OS43IDE0LjkzMzRDODkuNyAxNC4zNDQzIDg5LjI4MjEgMTMuODY2NyA4OC43NjY2IDEzLjg2NjdDODguMjUxMiAxMy44NjY3IDg3LjgzMzMgMTQuMzQ0MyA4Ny44MzMzIDE0LjkzMzRDODcuODMzMyAxNS41MjI1IDg4LjI1MTIgMTYgODguNzY2NiAxNloiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTIyLjc0OTkgNzJDMjIuNzQ5OSA3MS41MTY0IDIzLjA4NjEgNzEuMTgzMyAyMy40MzMzIDcxLjE4MzNIOTEuMDk5OUM5MS40NDcyIDcxLjE4MzMgOTEuNzgzMyA3MS41MTY0IDkxLjc4MzMgNzJWNzMuMDY2N0M5MS43ODMzIDczLjU1MDMgOTEuNDQ3MiA3My44ODMzIDkxLjA5OTkgNzMuODgzM0gyMy40MzMzQzIzLjA4NjEgNzMuODgzMyAyMi43NDk5IDczLjU1MDMgMjIuNzQ5OSA3My4wNjY3VjcyWiIgZmlsbD0iI0Y0RjZGQSIvPgo8cGF0aCBkPSJNNjUuMTk5OSA3My4wNjY3SDQ2Ljk5OTlDNDYuNzQyMiA3My4wNjY3IDQ2LjUzMzMgNzIuODI3OSA0Ni41MzMzIDcyLjUzMzNDNDYuNTMzMyA3Mi4yMzg4IDQ2Ljc0MjIgNzIgNDYuOTk5OSA3Mkg2NS4xOTk5QzY1LjQ1NzYgNzIgNjUuNjY2NiA3Mi4yMzg4IDY1LjY2NjYgNzIuNTMzM0M2NS42NjY2IDcyLjgyNzkgNjUuNDU3NiA3My4wNjY3IDY1LjE5OTkgNzMuMDY2N1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTkwLjgzMzMgMTlIMjMuODMzM0MyMy4yODEgMTkgMjIuODMzMyAxOS40NDc3IDIyLjgzMzMgMjBWNjhDMjIuODMzMyA2OC41NTIzIDIzLjI4MSA2OSAyMy44MzMzIDY5SDkwLjgzMzNDOTEuMzg1NiA2OSA5MS44MzMzIDY4LjU1MjMgOTEuODMzMyA2OFYyMEM5MS44MzMzIDE5LjQ0NzcgOTEuMzg1NiAxOSA5MC44MzMzIDE5WiIgZmlsbD0iI0Y0RjZGQSIvPgo8L3N2Zz4K" alt="img">
+                                            </span>                                    
+                                            <span class="layout-type">Boxed</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://preskool.dreamstechnologies.com/html/layout-rtl.html" class="theme-layout mb-3">
+                                        <span class="d-block mb-2 layout-img">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTQiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA5NCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkwLjQ5OTkgMEgzLjE2NjYzQzEuNTA5NzcgMCAwLjE2NjYyNiAxLjM0MzE1IDAuMTY2NjI2IDNWNzdDMC4xNjY2MjYgNzguNjU2OSAxLjUwOTc3IDgwIDMuMTY2NjMgODBIOTAuNDk5OUM5Mi4xNTY4IDgwIDkzLjQ5OTkgNzguNjU2OSA5My40OTk5IDc3VjNDOTMuNDk5OSAxLjM0MzE1IDkyLjE1NjggMCA5MC40OTk5IDBaIiBmaWxsPSIjODM4QTlCIi8+CjxwYXRoIGQ9Ik0wLjE2NjYyNiAyLjY2NjY3QzAuMTY2NjI2IDEuMTkzOTEgMS4yMTEzIDAgMi40OTk5NiAwSDkxLjE2NjZDOTIuNDU1MSAwIDkzLjQ5OTkgMS4xOTM5MSA5My40OTk5IDIuNjY2NjdWNS44NjY2N0gwLjE2NjYyNlYyLjY2NjY3WiIgZmlsbD0id2hpdGUiLz4KPG1hc2sgaWQ9Im1hc2swXzMyMTdfNDk3OTkxIiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijk0IiBoZWlnaHQ9IjYiPgo8cGF0aCBkPSJNMC4xNjY2MjYgMi42NjY2N0MwLjE2NjYyNiAxLjE5MzkxIDEuMjExMyAwIDIuNDk5OTYgMEg5MS4xNjY2QzkyLjQ1NTEgMCA5My40OTk5IDEuMTkzOTEgOTMuNDk5OSAyLjY2NjY3VjUuODY2NjdIMC4xNjY2MjZWMi42NjY2N1oiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8zMjE3XzQ5Nzk5MSkiPgo8cGF0aCBkPSJNLTAuMDY2NjUwNCAyLjY2NjY3Qy0wLjA2NjY1MDQgMS4wNDY2MyAxLjA4MjQ5IC0wLjI2NjY2MyAyLjUwMDAyIC0wLjI2NjY2M0g5MS4xNjY3QzkyLjU4NDQgLTAuMjY2NjYzIDkzLjczMzMgMS4wNDY2MyA5My43MzMzIDIuNjY2NjdIOTMuMjY2N0M5My4yNjY3IDEuMzQxMTkgOTIuMzI2MyAwLjI2NjY3IDkxLjE2NjcgMC4yNjY2N0gyLjUwMDAyQzEuMzQwMjIgMC4yNjY2NyAwLjQwMDAxNiAxLjM0MTE5IDAuNDAwMDE2IDIuNjY2NjdILTAuMDY2NjUwNFpNLTAuMDY2NjUwNCA1Ljg2NjY3VjIuNjY2NjdDLTAuMDY2NjUwNCAxLjA0NjYzIDEuMDgyNDkgLTAuMjY2NjYzIDIuNTAwMDIgLTAuMjY2NjYzVjAuMjY2NjdDMS4zNDAyMiAwLjI2NjY3IDAuNDAwMDE2IDEuMzQxMTkgMC40MDAwMTYgMi42NjY2N1Y1Ljg2NjY3SC0wLjA2NjY1MDRaTTkxLjE2NjcgLTAuMjY2NjYzQzkyLjU4NDQgLTAuMjY2NjYzIDkzLjczMzMgMS4wNDY2MyA5My43MzMzIDIuNjY2NjdWNS44NjY2N0g5My4yNjY3VjIuNjY2NjdDOTMuMjY2NyAxLjM0MTE5IDkyLjMyNjMgMC4yNjY2NyA5MS4xNjY3IDAuMjY2NjdWLTAuMjY2NjYzWiIgZmlsbD0iI0U5RURGNCIvPgo8L2c+CjxwYXRoIGQ9Ik0zLjIgMy41MzMzNkMzLjU4NjYgMy41MzMzNiAzLjkgMy4yMTk5NiAzLjkgMi44MzMzNkMzLjkgMi40NDY3NiAzLjU4NjYgMi4xMzMzNiAzLjIgMi4xMzMzNkMyLjgxMzQgMi4xMzMzNiAyLjUgMi40NDY3NiAyLjUgMi44MzMzNkMyLjUgMy4yMTk5NiAyLjgxMzQgMy41MzMzNiAzLjIgMy41MzMzNloiIGZpbGw9IiNFODI2NDYiLz4KPHBhdGggZD0iTTUuNTMzMjUgMy41MzMzNkM1LjkxOTg1IDMuNTMzMzYgNi4yMzMyNSAzLjIxOTk2IDYuMjMzMjUgMi44MzMzNkM2LjIzMzI1IDIuNDQ2NzYgNS45MTk4NSAyLjEzMzM2IDUuNTMzMjUgMi4xMzMzNkM1LjE0NjY1IDIuMTMzMzYgNC44MzMyNSAyLjQ0Njc2IDQuODMzMjUgMi44MzMzNkM0LjgzMzI1IDMuMjE5OTYgNS4xNDY2NSAzLjUzMzM2IDUuNTMzMjUgMy41MzMzNloiIGZpbGw9IiMxQUJFMTciLz4KPHBhdGggZD0iTTcuODY2NjMgMy41MzMzNkM4LjI1MzIzIDMuNTMzMzYgOC41NjY2MyAzLjIxOTk2IDguNTY2NjMgMi44MzMzNkM4LjU2NjYzIDIuNDQ2NzYgOC4yNTMyMyAyLjEzMzM2IDcuODY2NjMgMi4xMzMzNkM3LjQ4MDAzIDIuMTMzMzYgNy4xNjY2MyAyLjQ0Njc2IDcuMTY2NjMgMi44MzMzNkM3LjE2NjYzIDMuMjE5OTYgNy40ODAwMyAzLjUzMzM2IDcuODY2NjMgMy41MzMzNloiIGZpbGw9IiNFQUIzMDAiLz4KPHBhdGggZD0iTTAuMjgzMzI2IDUuNzVIMC4wMzMzMjUyVjZWNzcuMzMzM0MwLjAzMzMyNTIgNzguODM3OSAxLjEwNzM3IDgwLjExNjcgMi41IDgwLjExNjdIOTEuMTY2NkM5Mi41NTkxIDgwLjExNjcgOTMuNjMzMyA3OC44Mzc5IDkzLjYzMzMgNzcuMzMzM1Y2VjUuNzVIOTMuMzgzM0gwLjI4MzMyNloiIHN0cm9rZT0iI0U5RURGNCIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPG1hc2sgaWQ9Im1hc2sxXzMyMTdfNDk3OTkxIiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iNSIgd2lkdGg9Ijc3IiBoZWlnaHQ9IjYiPgo8cGF0aCBkPSJNMC4xNjY2MjYgNS44NjY2NEg3Ni4yMzMzVjEwLjEzMzNIMC4xNjY2MjZWNS44NjY2NFoiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMV8zMjE3XzQ5Nzk5MSkiPgo8cGF0aCBkPSJNMC4xNjY2MjYgNi4xMzMzMUg3Ni4yMzMzVjUuNTk5OThIMC4xNjY2MjZWNi4xMzMzMVoiIGZpbGw9IiNFOUVERjQiLz4KPC9nPgo8cGF0aCBkPSJNMy40MzMzNCA4LjgwMzM1QzMuOTQ4OCA4LjgwMzM1IDQuMzY2NjcgOC4zODQ3NCA0LjM2NjY3IDcuODY4MzVDNC4zNjY2NyA3LjM1MTk2IDMuOTQ4OCA2LjkzMzM1IDMuNDMzMzQgNi45MzMzNUMyLjkxNzg3IDYuOTMzMzUgMi41IDcuMzUxOTYgMi41IDcuODY4MzVDMi41IDguMzg0NzQgMi45MTc4NyA4LjgwMzM1IDMuNDMzMzQgOC44MDMzNVoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTYuMjMzMjYgOC44MDMzNUM2Ljc0ODczIDguODAzMzUgNy4xNjY2IDguMzg0NzQgNy4xNjY2IDcuODY4MzVDNy4xNjY2IDcuMzUxOTYgNi43NDg3MyA2LjkzMzM1IDYuMjMzMjYgNi45MzMzNUM1LjcxNzggNi45MzMzNSA1LjI5OTkzIDcuMzUxOTYgNS4yOTk5MyA3Ljg2ODM1QzUuMjk5OTMgOC4zODQ3NCA1LjcxNzggOC44MDMzNSA2LjIzMzI2IDguODAzMzVaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik05LjAzMzMxIDguODAzMzVDOS41NDg3MyA4LjgwMzM1IDkuOTY2NjMgOC4zODQ3NCA5Ljk2NjYzIDcuODY4MzVDOS45NjY2MyA3LjM1MTk2IDkuNTQ4NzMgNi45MzMzNSA5LjAzMzMxIDYuOTMzMzVDOC41MTc4NSA2LjkzMzM1IDguMDk5OTggNy4zNTE5NiA4LjA5OTk4IDcuODY4MzVDOC4wOTk5OCA4LjM4NDc0IDguNTE3ODUgOC44MDMzNSA5LjAzMzMxIDguODAzMzVaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik03Mi45NjY2IDYuOTMzMzVINTUuNjk5OUM1NS4xODQ0IDYuOTMzMzUgNTQuNzY2NiA3LjQxMDkxIDU0Ljc2NjYgOC4wMDAwMkM1NC43NjY2IDguNTg5MTIgNTUuMTg0NCA5LjA2NjcgNTUuNjk5OSA5LjA2NjdINzIuOTY2NkM3My40ODIgOS4wNjY3IDczLjg5OTkgOC41ODkxMiA3My44OTk5IDguMDAwMDJDNzMuODk5OSA3LjQxMDkxIDczLjQ4MiA2LjkzMzM1IDcyLjk2NjYgNi45MzMzNVoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTczLjA1NDEgMTFINC45NDU5NUMzLjg3MTIzIDExIDMgMTEuODY4NyAzIDEyLjk0MDNWNzQuMDU5N0MzIDc1LjEzMTMgMy44NzEyMyA3NiA0Ljk0NTk1IDc2SDczLjA1NDFDNzQuMTI4OCA3NiA3NSA3NS4xMzEzIDc1IDc0LjA1OTdWMTIuOTQwM0M3NSAxMS44Njg3IDc0LjEyODggMTEgNzMuMDU0MSAxMVoiIGZpbGw9IiNGNEY2RkEiLz4KPHBhdGggZD0iTTQ2LjEzMzQgNzguOTMzM0gyNy45MzM0QzI3LjY3NTcgNzguOTMzMyAyNy40NjY3IDc4LjY5NDYgMjcuNDY2NyA3OC40QzI3LjQ2NjcgNzguMTA1NSAyNy42NzU3IDc3Ljg2NjcgMjcuOTMzNCA3Ny44NjY3SDQ2LjEzMzRDNDYuMzkxMSA3Ny44NjY3IDQ2LjYwMDEgNzguMTA1NSA0Ni42MDAxIDc4LjRDNDYuNjAwMSA3OC42OTQ2IDQ2LjM5MTEgNzguOTMzMyA0Ni4xMzM0IDc4LjkzMzNaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik05MC4yMzM0IDExLjJINzkuNUM3OC45ODQ1IDExLjIgNzguNTY2NyAxMS42Nzc2IDc4LjU2NjcgMTIuMjY2N0M3OC41NjY3IDEyLjg1NTggNzguOTg0NSAxMy4zMzMzIDc5LjUgMTMuMzMzM0g5MC4yMzM0QzkwLjc0ODkgMTMuMzMzMyA5MS4xNjY2IDEyLjg1NTggOTEuMTY2NiAxMi4yNjY3QzkxLjE2NjYgMTEuNjc3NiA5MC43NDg5IDExLjIgOTAuMjMzNCAxMS4yWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTg2LjI2NjYgMTkuNzMzM0g3OS4yNjY2Qzc4Ljg4IDE5LjczMzMgNzguNTY2NyAyMC4wOTE1IDc4LjU2NjcgMjAuNTMzM0M3OC41NjY3IDIwLjk3NTIgNzguODggMjEuMzMzMyA3OS4yNjY2IDIxLjMzMzNIODYuMjY2NkM4Ni42NTMyIDIxLjMzMzMgODYuOTY2NyAyMC45NzUyIDg2Ljk2NjcgMjAuNTMzM0M4Ni45NjY3IDIwLjA5MTUgODYuNjUzMiAxOS43MzMzIDg2LjI2NjYgMTkuNzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTg2LjI2NjYgMjIuNEg3OS4yNjY2Qzc4Ljg4IDIyLjQgNzguNTY2NyAyMi43NTgyIDc4LjU2NjcgMjMuMkM3OC41NjY3IDIzLjY0MTkgNzguODggMjQgNzkuMjY2NiAyNEg4Ni4yNjY2Qzg2LjY1MzIgMjQgODYuOTY2NyAyMy42NDE5IDg2Ljk2NjcgMjMuMkM4Ni45NjY3IDIyLjc1ODIgODYuNjUzMiAyMi40IDg2LjI2NjYgMjIuNFoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTgyLjA2NjcgMjUuMDY2N0g3OS4yNjY2Qzc4Ljg4IDI1LjA2NjcgNzguNTY2NyAyNS40MjQ4IDc4LjU2NjcgMjUuODY2N0M3OC41NjY3IDI2LjMwODUgNzguODggMjYuNjY2NyA3OS4yNjY2IDI2LjY2NjdIODIuMDY2N0M4Mi40NTMzIDI2LjY2NjcgODIuNzY2NiAyNi4zMDg1IDgyLjc2NjYgMjUuODY2N0M4Mi43NjY2IDI1LjQyNDggODIuNDUzMyAyNS4wNjY3IDgyLjA2NjcgMjUuMDY2N1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTg4LjEzMzMgMjcuNzMzM0g3OS4yNjY2Qzc4Ljg4IDI3LjczMzMgNzguNTY2NyAyOC4wOTE1IDc4LjU2NjcgMjguNTMzM0M3OC41NjY3IDI4Ljk3NTIgNzguODggMjkuMzMzMyA3OS4yNjY2IDI5LjMzMzNIODguMTMzM0M4OC41MTk5IDI5LjMzMzMgODguODMzNCAyOC45NzUyIDg4LjgzMzQgMjguNTMzM0M4OC44MzM0IDI4LjA5MTUgODguNTE5OSAyNy43MzMzIDg4LjEzMzMgMjcuNzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTgzLjkzMzMgMzAuNEg3OS4yNjY2Qzc4Ljg4IDMwLjQgNzguNTY2NyAzMC43NTgyIDc4LjU2NjcgMzEuMkM3OC41NjY3IDMxLjY0MTkgNzguODggMzIgNzkuMjY2NiAzMkg4My45MzMzQzg0LjMxOTkgMzIgODQuNjMzMyAzMS42NDE5IDg0LjYzMzMgMzEuMkM4NC42MzMzIDMwLjc1ODIgODQuMzE5OSAzMC40IDgzLjkzMzMgMzAuNFoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTg4LjEzMzMgMzMuMDY2N0g3OS4yNjY2Qzc4Ljg4IDMzLjA2NjcgNzguNTY2NyAzMy40MjQ4IDc4LjU2NjcgMzMuODY2N0M3OC41NjY3IDM0LjMwODUgNzguODggMzQuNjY2NyA3OS4yNjY2IDM0LjY2NjdIODguMTMzM0M4OC41MTk5IDM0LjY2NjcgODguODMzNCAzNC4zMDg1IDg4LjgzMzQgMzMuODY2N0M4OC44MzM0IDMzLjQyNDggODguNTE5OSAzMy4wNjY3IDg4LjEzMzMgMzMuMDY2N1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTgzIDM1LjczMzNINzkuMjY2NkM3OC44OCAzNS43MzMzIDc4LjU2NjcgMzYuMDkxNSA3OC41NjY3IDM2LjUzMzNDNzguNTY2NyAzNi45NzUyIDc4Ljg4IDM3LjMzMzMgNzkuMjY2NiAzNy4zMzMzSDgzQzgzLjM4NjYgMzcuMzMzMyA4My43MDAxIDM2Ljk3NTIgODMuNzAwMSAzNi41MzMzQzgzLjcwMDEgMzYuMDkxNSA4My4zODY2IDM1LjczMzMgODMgMzUuNzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTkwLjQ2NjcgMzguNEg3OS4yNjY2Qzc4Ljg4IDM4LjQgNzguNTY2NyAzOC43NTgyIDc4LjU2NjcgMzkuMkM3OC41NjY3IDM5LjY0MTkgNzguODggNDAgNzkuMjY2NiA0MEg5MC40NjY3QzkwLjg1MzMgNDAgOTEuMTY2NiAzOS42NDE5IDkxLjE2NjYgMzkuMkM5MS4xNjY2IDM4Ljc1ODIgOTAuODUzMyAzOC40IDkwLjQ2NjcgMzguNFoiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTg2LjI2NjYgNDEuMDY2N0g3OS4yNjY2Qzc4Ljg4IDQxLjA2NjcgNzguNTY2NyA0MS40MjQ4IDc4LjU2NjcgNDEuODY2N0M3OC41NjY3IDQyLjMwODUgNzguODggNDIuNjY2NyA3OS4yNjY2IDQyLjY2NjdIODYuMjY2NkM4Ni42NTMyIDQyLjY2NjcgODYuOTY2NyA0Mi4zMDg1IDg2Ljk2NjcgNDEuODY2N0M4Ni45NjY3IDQxLjQyNDggODYuNjUzMiA0MS4wNjY3IDg2LjI2NjYgNDEuMDY2N1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTkwLjQ2NjcgNDMuNzMzM0g3OS4yNjY2Qzc4Ljg4IDQzLjczMzMgNzguNTY2NyA0NC4wOTE1IDc4LjU2NjcgNDQuNTMzM0M3OC41NjY3IDQ0Ljk3NTIgNzguODggNDUuMzMzMyA3OS4yNjY2IDQ1LjMzMzNIOTAuNDY2N0M5MC44NTMzIDQ1LjMzMzMgOTEuMTY2NiA0NC45NzUyIDkxLjE2NjYgNDQuNTMzM0M5MS4xNjY2IDQ0LjA5MTUgOTAuODUzMyA0My43MzMzIDkwLjQ2NjcgNDMuNzMzM1oiIGZpbGw9IiNFOUVERjQiLz4KPHBhdGggZD0iTTc4LjU2NjcgNzQuMDhIOTEuMTY2NiIgc3Ryb2tlPSIjRTlFREY0IiBzdHJva2Utd2lkdGg9IjAuMiIvPgo8cGF0aCBkPSJNODIuNTMzNCA3Ny4wN0M4My4wNDg4IDc3LjA3IDgzLjQ2NjcgNzYuNjUxNCA4My40NjY3IDc2LjEzNUM4My40NjY3IDc1LjYxODYgODMuMDQ4OCA3NS4yIDgyLjUzMzQgNzUuMkM4Mi4wMTc5IDc1LjIgODEuNiA3NS42MTg2IDgxLjYgNzYuMTM1QzgxLjYgNzYuNjUxNCA4Mi4wMTc5IDc3LjA3IDgyLjUzMzQgNzcuMDdaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik04NC44NjY1IDc3LjA3Qzg1LjM4MiA3Ny4wNyA4NS43OTk5IDc2LjY1MTQgODUuNzk5OSA3Ni4xMzVDODUuNzk5OSA3NS42MTg2IDg1LjM4MiA3NS4yIDg0Ljg2NjUgNzUuMkM4NC4zNTExIDc1LjIgODMuOTMzMiA3NS42MTg2IDgzLjkzMzIgNzYuMTM1QzgzLjkzMzIgNzYuNjUxNCA4NC4zNTExIDc3LjA3IDg0Ljg2NjUgNzcuMDdaIiBmaWxsPSIjRTlFREY0Ii8+CjxwYXRoIGQ9Ik04Ny4xOTk5IDc3LjA3Qzg3LjcxNTQgNzcuMDcgODguMTMzMiA3Ni42NTE0IDg4LjEzMzIgNzYuMTM1Qzg4LjEzMzIgNzUuNjE4NiA4Ny43MTU0IDc1LjIgODcuMTk5OSA3NS4yQzg2LjY4NDQgNzUuMiA4Ni4yNjY2IDc1LjYxODYgODYuMjY2NiA3Ni4xMzVDODYuMjY2NiA3Ni42NTE0IDg2LjY4NDQgNzcuMDcgODcuMTk5OSA3Ny4wN1oiIGZpbGw9IiNFOUVERjQiLz4KPC9zdmc+Cg==" alt="img">
+                                        </span>                                    
+                                        <span class="layout-type">RTL</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#colorsetting" aria-expanded="true">
+                            Top Bar Color
+                        </button>
+                    </h2>
+                    <div id="colorsetting" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                           <div class="d-flex align-items-center">
+                                <div class="custom-themecolor custom-themecolor-rounded m-1 me-3">
+                                    <input type="radio" name="topbar" id="whiteTopbar" value="white" checked="">
+                                    <label for="whiteTopbar" class="white-topbar"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded m-1 me-3">
+                                    <input type="radio" name="topbar" id="darkTopbar" value="dark">
+                                    <label for="darkTopbar" class="dark-topbar bg-dark"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded m-1 me-3">
+                                    <input type="radio" name="topbar" id="primaryTopbar" value="primary">
+                                    <label for="primaryTopbar" class="primary-topbar bg-primary"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded m-1">
+                                <input type="radio" name="topbar" id="greyTopbar" value="grey">
+                                <label for="greyTopbar" class="grey-topbar bg-light"></label>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#modesetting" aria-expanded="true">
+                            Color Mode
+                        </button>
+                    </h2>
+                    <div id="modesetting" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                           <div class="row gx-3">
+                                <div class="col-6">
+                                    <div class="theme-mode">
+                                        <input type="radio" name="theme" id="lightTheme" value="light" checked="">
+                                        <label for="lightTheme" class="p-2 rounded fw-medium w-100">                            
+                                            <span class="avatar avatar-md d-inline-flex rounded me-2"><i class="ti ti-sun-filled"></i></span>Light Mode
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="theme-mode">
+                                        <input type="radio" name="theme" id="darkTheme" value="dark">
+                                        <label for="darkTheme" class="p-2 rounded fw-medium w-100">                         
+                                            <span class="avatar avatar-md d-inline-flex rounded me-2"><i class="ti ti-moon-filled"></i></span>Dark Mode
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarsetting" aria-expanded="true">
+                            Sidebar Color
+                        </button>
+                    </h2>
+                    <div id="sidebarsetting" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                           <div class="d-flex align-items-center">
+                                <div class="custom-themecolor custom-themecolor-rounded m-1 me-3">
+                                    <input type="radio" name="sidebar" id="lightSidebar" value="light" checked="">
+                                    <label for="lightSidebar" class="d-block rounded mb-2">
+                                    </label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded m-1 me-3">
+                                    <input type="radio" name="sidebar" id="darkSidebar" value="dark">
+                                    <label for="darkSidebar" class="d-block rounded bg-dark mb-2">
+                                    </label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded m-1 me-3">
+                                    <input type="radio" name="sidebar" id="primarySidebar" value="primary">
+                                    <label for="primarySidebar" class="d-block rounded bg-primary mb-2">
+                                    </label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded m-1 me-3">
+                                    <input type="radio" name="sidebar" id="darkblackSidebar" value="darkblack">
+                                    <label for="darkblackSidebar" class="d-block rounded bg-darkblack mb-2">
+                                    </label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded m-1">
+                                    <input type="radio" name="sidebar" id="darkblueSidebar" value="darkblue">
+                                    <label for="darkblueSidebar" class="d-block rounded bg-darkblue mb-2">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button text-dark fs-16" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarcolor" aria-expanded="true">
+                            Theme Colors
+                        </button>
+                    </h2>
+                    <div id="sidebarcolor" class="accordion-collapse collapse show">
+                        <div class="accordion-body pb-2">
+                           <div class="d-flex align-items-center">
+                                <div class="custom-themecolor custom-themecolor-rounded me-3 mb-2">
+                                    <input type="radio" name="color" id="primaryColor" value="primary" checked="">
+                                    <label for="primaryColor" class="bg-primary"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded me-3 mb-2">
+                                    <input type="radio" name="color" id="violetColor" value="violet">
+                                    <label for="violetColor" class="bg-violet"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded me-3 mb-2">
+                                    <input type="radio" name="color" id="pinkColor" value="pink">
+                                    <label for="pinkColor" class="bg-pink"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded me-3 mb-2">
+                                    <input type="radio" name="color" id="orangeColor" value="orange">
+                                    <label for="orangeColor" class="bg-orange"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded me-3 mb-2">
+                                    <input type="radio" name="color" id="greenColor" value="green">
+                                    <label for="greenColor" class="bg-green"></label>
+                                </div>
+                                <div class="custom-themecolor custom-themecolor-rounded me-3 mb-2">
+                                    <input type="radio" name="color" id="redColor" value="red">
+                                    <label for="redColor" class="bg-red"></label>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>     
+        </div>
+        <div class="bg-light-500 p-3">
+            <div class="row gx-3">
+                <div class="col-6">
+                    <a href="." id="resetbutton" class="btn btn-light close-theme w-100">Reset</a>
+                </div>
+                <div class="col-6">
+                    <a href="https://1.envato.market/52Ndo" target="_blank" class="btn btn-primary w-100">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        </div>
+                </div>
+		<!-- Global Search Popup -->
+	<div class="mui-search-modal" id="muiSearchModal" role="dialog" aria-modal="true" aria-label="Search" hidden="">
+		<div class="mui-search-backdrop" data-search-close=""></div>
+		<div class="mui-search-panel">
+			<div class="mui-search-top">
+				<i class="ti ti-search"></i>
+				<input type="text" id="muiSearchInput" placeholder="Search students, staff, classes, invoices..." autocomplete="off" aria-label="Search">
+				<span class="mui-search-esc" data-search-close="">ESC</span>
+			</div>
+			<div class="mui-search-body">
+				<div class="mui-search-sec" data-search-recent="">
+					<div class="mui-search-sec-hdr">Recent</div>
+					<a href="https://preskool.dreamstechnologies.com/html/fees-master.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Fee collection report</span><i class="ti ti-corner-down-left msr-go"></i></a>
+					<a href="https://preskool.dreamstechnologies.com/html/student-attendance.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Today's attendance</span><i class="ti ti-corner-down-left msr-go"></i></a>
+					<a href="https://preskool.dreamstechnologies.com/html/schedule-exam.html" class="mui-search-row"><span class="msr-ic"><i class="ti ti-clock"></i></span><span class="msr-txt">Term-1 exam schedule</span><i class="ti ti-corner-down-left msr-go"></i></a>
+				</div>
+				<div class="mui-search-sec">
+					<div class="mui-search-sec-hdr">Quick links</div>
+					<a href="https://preskool.dreamstechnologies.com/html/students.html" class="mui-search-row"><span class="msr-ic ic-blue"><i class="ti ti-users-group"></i></span><span class="msr-txt">Students</span><span class="msr-tag">Page</span></a>
+					<a href="https://preskool.dreamstechnologies.com/html/teachers.html" class="mui-search-row"><span class="msr-ic ic-green"><i class="ti ti-chalkboard"></i></span><span class="msr-txt">Teachers</span><span class="msr-tag">Page</span></a>
+					<a href="https://preskool.dreamstechnologies.com/html/fees-master.html" class="mui-search-row"><span class="msr-ic ic-amber"><i class="ti ti-report-money"></i></span><span class="msr-txt">Fees</span><span class="msr-tag">Page</span></a>
+					<a href="https://preskool.dreamstechnologies.com/html/exams.html" class="mui-search-row"><span class="msr-ic ic-purple"><i class="ti ti-file-certificate"></i></span><span class="msr-txt">Examinations</span><span class="msr-tag">Page</span></a>
+					<a href="https://preskool.dreamstechnologies.com/html/library-books.html" class="mui-search-row"><span class="msr-ic ic-teal"><i class="ti ti-books"></i></span><span class="msr-txt">Library</span><span class="msr-tag">Page</span></a>
+				</div>
+				<div class="mui-search-empty" data-search-empty=""><i class="ti ti-search-off"></i>No results found</div>
+			</div>
+			<div class="mui-search-foot">
+				<span><span class="mui-kbd">↑</span><span class="mui-kbd">↓</span>navigate</span>
+				<span><span class="mui-kbd">↵</span>open</span>
+				<span><span class="mui-kbd">esc</span>close</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- /Main Wrapper -->
+
+
+
+
+
+</body>
